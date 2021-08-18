@@ -1,7 +1,8 @@
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const {CleanWebpackPlugin} = require('clean-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const webpack = require('webpack')
+// const WorkboxPlugin = require('workbox-webpack-plugin'); // <--sw
 
 module.exports = {
     mode: process.env.NODE_ENV,
@@ -81,6 +82,26 @@ module.exports = {
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',
-        })
+        }),
+        //   //sw -->
+        //  new WorkboxPlugin.GenerateSW({
+        //      // Do not precache images
+        //      exclude: [/\.(?:png|jpg|jpeg|svg)$/],
+        //      // Define runtime caching rules.
+        //      runtimeCaching: [{
+        //          // Match any request that ends with .png, .jpg, .jpeg or .svg.
+        //          urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
+        //          // Apply a cache-first strategy.
+        //          handler: 'CacheFirst',
+        //          options: {
+        //              // Use a custom cache name.
+        //              cacheName: 'images',
+        //              // Only cache 10 images.
+        //              expiration: {
+        //                  maxEntries: 10,
+        //              }
+        //          }
+        //      }]
+        //  }) 
     ],
 }

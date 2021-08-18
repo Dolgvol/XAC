@@ -15,6 +15,8 @@ import 'select2';
 
 import '../src/js/main';
 
+import './js/sw';
+
 
 
  

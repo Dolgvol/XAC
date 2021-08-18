@@ -16,94 +16,151 @@ body {
     
     & header {
 
-        .head_block1 {
-            height: 36px;
-        
-            & div .cont {
-                text-decoration: none;
-                user-select: none; 
-                color:#333;
-                font-weight: 600;
-                margin-right: 13px;
-               
-                &:hover {
-                    color: #000;
-                }
-        
-                &:active {
-                    color: #fff;
-                }
-            }
-        
-            & div .form-select {
-                border: none;
-                padding: 0;
-                width: 50px;
-                font-size: 14px;
-                cursor: pointer;
+        & .first_head {
 
-        
-                & option {
+            .head_block1 {
+                height: 36px;
+            
+                & div .cont {
+                    text-decoration: none;
+                    user-select: none; 
+                    color:#333;
+                    font-weight: 600;
+                    margin-right: 13px;
+                
+                    &:hover {
+                        color: #000;
+                    }
+            
+                    &:active {
+                        color: #fff;
+                    }
+                }
+            
+                & div .form-select {
                     border: none;
+                    padding: 0;
+                    width: 50px;
+                    font-size: 14px;
+                    cursor: pointer;
+
+            
+                    & option {
+                        border: none;
+                    }
+                }
+        
+                & div .btn_cabina {
+                    border: none;
+                    padding: 2px;
+                    margin-right: 24px;
+                
+                    &:hover {
+                        background-color: #F4F4F4;
+                        color: #000
+                    }
+                
+                    & .cabina_block {
+                        font-size: 9px;
+                        font-weight: 600;
+                        margin-left: 8px;
+                    }
                 }
             }
-    
-            & div .btn_cabina {
-                border: none;
-                padding: 2px;
-                margin-right: 24px;
-            
-                &:hover {
-                    background-color: #F4F4F4;
-                    color: #000
+        
+        
+            .head_block2 {
+                height: 92px;
+        
+                & div .input-group {
+                    width: 590px;
+        
+                    .btn_search {
+                        height: 32px;
+                        width: 64px;
+                    }
+                    
+                    .search1 {
+                        height: 32px;
+                        width: 526px;
+                    }
                 }
-            
-                & .cabina_block {
-                    font-size: 9px;
+        
+                & div .btn_korzina {
+                    border: none;
+                
+                    &:hover {
+                        background-color: #F4F4F4;
+                        color: #000
+                    }
+                
+                    & .korzina_block {
+                        font-size: 12px;
+                        font-weight: 600;
+                        padding: 0 10px 0 10px;
+                        margin-left: 6px;
+                        border-radius: 8px;
+                        border: 1.5px solid #333333;
+                    }
+                }
+            } 
+        }
+
+        & .second_head {
+
+            & .head_block3 {
+                height: 48px;
+
+                & div .cont {
+                    text-decoration: none;
+                    user-select: none; 
+                    color:#333;
                     font-weight: 600;
-                    margin-left: 8px;
+                    margin-right: 13px;
+                
+                    &:hover {
+                        color: #000;
+                    }
+            
+                    &:active {
+                        color: #fff;
+                    }
+                }
+
+                & div .input-group {
+                    width: 590px;
+        
+                    .btn_search {
+                        height: 32px;
+                        width: 64px;
+                    }
+                    
+                    .search1 {
+                        height: 32px;
+                        width: 526px;
+                    }
+                }
+        
+                & div .btn_korzina {
+                    border: none;
+                
+                    &:hover {
+                        background-color: #F4F4F4;
+                        color: #000
+                    }
+                
+                    & .korzina_block {
+                        font-size: 12px;
+                        font-weight: 600;
+                        padding: 0 10px 0 10px;
+                        margin-left: 6px;
+                        border-radius: 8px;
+                        border: 1.5px solid #333333;
+                    }
                 }
             }
         }
-    
-       
-    
-        .head_block2 {
-            height: 92px;
-    
-          
-            & div .input-group {
-                width: 590px;
-    
-                .btn_search {
-                    height: 32px;
-                    width: 64px;
-                }
-                
-                .search1 {
-                    height: 32px;
-                    width: 526px;
-                }
-            }
-    
-            & div .btn_korzina {
-                border: none;
-            
-                &:hover {
-                    background-color: #F4F4F4;
-                    color: #000
-                }
-            
-                & .korzina_block {
-                    font-size: 12px;
-                    font-weight: 600;
-                    padding: 0 10px 0 10px;
-                    margin-left: 6px;
-                    border-radius: 8px;
-                    border: 1.5px solid #333333;
-                }
-            }
-        } 
+
     }
 
 
@@ -184,7 +241,6 @@ body {
             height: 762px;
 
             
-
             & .block1_img1 {
                 height: 462px;
                 margin: 22px 0 58px 0;
@@ -1045,7 +1101,7 @@ body {
 
                 & .modal_review_head {
                     height: 110px;
-                    background: url(/assets/images/govno.svg) center center no-repeat;
+                    background: url(/assets/images/modal_back_top.svg) center center no-repeat;
 
                     & .review_head_btn {
                         height: 25px;
@@ -1088,18 +1144,27 @@ body {
                         margin: 6px 0 20px 0;
 
                         & .modal_star {
-                            margin-right: 6px;
+                            min-width: 26px;
+                            min-height: 20px;
+                            padding-right: 6px;
+                            position: relative;
 
                             & .star {
                                 display: block;
-                                position: relative;
+                                position: absolute;
+                                height: 100%;
+                                left: 0;
+                                top: 0;
+                                z-index: 10;
                             }
     
                             & .star_empty {
                                 display: block;
-                                position: absolute;
-                                top: 0;
-                                
+                                position: absolute;  
+                                height: 100%;
+                                left: 0;
+                                top: 0;   
+                                z-index: 5;                           
                             }
                         }                       
                     }                
