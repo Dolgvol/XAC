@@ -53,36 +53,121 @@ myCollapsible.addEventListener('hidden.bs.collapse', () => {
 const STARS = Array.from(document.querySelectorAll('.star'))
 const MODAL_STARS = Array.from(document.querySelectorAll('.modal_star'))
 
-let starNumber
-// на сервер отправить последнее значение starNumber при нажатии кнопки подтвердить
-let oldStarNumber = MODAL_STARS.length
+// на сервер отправить последнее значение (0-4) starNumberSave при нажатии кнопки подтвердить
+let starNumberSave = (MODAL_STARS.length - 1)
+let starNumber = (MODAL_STARS.length - 1)
 
 for (let blockStar of MODAL_STARS) {
     blockStar.addEventListener('click', () => {
-
-        chooseStars(blockStar)
+        chooseStars(blockStar, true)
     })
 
+    blockStar.addEventListener('mouseover', () => {
+        chooseStars(blockStar, false)
+    })
+
+    blockStar.addEventListener('mouseout', () => {
+        makeStars(STARS, starNumberSave, 'remLastStars')
+        makeStars(STARS, starNumberSave, 'addFirstStars')
+    })
 }
 
-function chooseStars(elementOfArray) {
+function chooseStars(elementOfArray, save) {
 
-    starNumber = MODAL_STARS.indexOf(elementOfArray)
-    // console.log(starNumber)
-    // console.log(oldStarNumber)
+    if (save === true) {
+        starNumberSave = MODAL_STARS.indexOf(elementOfArray)
 
-    if (starNumber <= oldStarNumber) {
-        const NEW_STARS_REM = STARS.slice((starNumber + 1))
-        for (let elementStarRem of NEW_STARS_REM) {
-            elementStarRem.style.display = 'none'
+        makeStars(STARS, starNumberSave, 'remLastStars')
+        makeStars(STARS, starNumberSave, 'addFirstStars')
+
+    } else
+        if (save === false) {
+            starNumber = MODAL_STARS.indexOf(elementOfArray)
+
+            makeStars(STARS, starNumber, 'remLastStars')
+            makeStars(STARS, starNumber, 'addFirstStars')
         }
-    }
-    if (starNumber > oldStarNumber) {
-        const NEW_STARS_ADD = STARS.slice(0, (starNumber + 1))
-        for (let elementStarAdd of NEW_STARS_ADD) {
-            elementStarAdd.style.display = 'block'
-        }
-    }
-
-    oldStarNumber = starNumber
 }
+
+function makeStars(inputArray, inputIndex, action) {
+    if (action == 'addFirstStars') {
+        const NEW_STARS_ADD = inputArray.slice(0, (inputIndex + 1))
+        for (let elementStar of NEW_STARS_ADD) {
+            elementStar.style.display = 'block'
+        }
+    }
+    if (action == 'remLastStars') {
+        const NEW_STARS_REM = inputArray.slice((inputIndex + 1))
+        for (let elementStar of NEW_STARS_REM) {
+            elementStar.style.display = 'none'
+        }
+    }
+}
+
+
+
+
+// // создание массива анимированных при скролле элементов
+// const animItems = document.querySelectorAll('._anim_items')
+
+// if (animItems.length > 0) {
+//     window.addEventListener('scroll', animOnScroll())
+//     function animOnScroll() {
+//         // цикл проходит по всем элементам массива аналог for/of
+//         for (let index = 0; index < animItems.length; index++) {
+
+//             // назначение переменной с соответствующим индексом из коллекции (хранит блок)
+//             const animItem = animItems[index]
+//             // хранит высоту блока
+//             const animItemHeight = animItem.offsetHeight
+//             // коэффициент для вычисления части от высоты блока
+//             const animStart = 2
+//             // вычисляет и хранит расстояние от верха страницы до блока
+//             const animItemOffset = offset(animItem).top
+
+//             // расстояние от начала окна до блока выехавшого на нужное расстояние
+//             let animItemPoint = window.innerHeight - animItemHeight / animStart
+//             // Сравнивает расстояние на которое прокрутилась страница по вертикали с положением блока (насколько он выехал)
+//             // Положение блока не задается явно через animItemHeight / animStart , так как если страница уже прокручена, 
+//             // то в pageYOffset уже заложена некая константа, которую необходимо вычесть
+//             if (pageYOffset > (animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+//                 animItem.classList.add('._anim_active')
+//             } else {
+//                 animItem.classList.remove('._anim_active')
+//             }
+
+//         }
+//         // находит расстояние от верха страницы
+//         function offset(el) {
+//             // возвращает набор координат относительно текущего положения окна браузера
+//             const rect = el.getBoundingClientRect(),
+//                 scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+//                 scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+//             return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+//         }
+//     }
+// }
+
+
+// Шапка 
+const firstHead = document.querySelector('.first_head')
+const secondHead = document.querySelector('.second_head')
+
+window.addEventListener('scroll', changeHeaderOnScroll)
+window.onload = changeHeaderOnScroll
+function changeHeaderOnScroll() {
+
+    const firstHeadHeight = firstHead.offsetHeight
+    // const secondHeadHeight = secondHead.offsetHeight
+
+    if (window.pageYOffset > (firstHeadHeight / 2)) {
+        firstHead.classList.add('_head1_active')
+        secondHead.classList.add('_head2_active')
+    } else {
+        firstHead.classList.remove('_head1_active')
+        secondHead.classList.remove('_head2_active')
+    }
+}
+
+
+// Меню бургер

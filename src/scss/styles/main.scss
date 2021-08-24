@@ -16,6 +16,17 @@ body {
     
     & header {
 
+        & ._head1_active {
+            visibility: hidden!important;
+            // transition: visibility 0.5s ease 0;
+        }
+
+        & ._head1 {
+            visibility: visible;
+            // position: relative;
+            // z-index: 70;
+        }
+
         & .first_head {
 
             .head_block1 {
@@ -106,11 +117,26 @@ body {
             } 
         }
 
-        & .second_head {
 
+        & ._head2_active {
+            visibility: visible!important;
+        }
+    
+        & ._head2 {
+            visibility: hidden;
+            position: fixed; 
+            width: 100%; 
+            top: 0px; 
+            left: 0px;
+            right: 0px;
+            z-index: 50;
+        }
+    
+        & .second_head {
+    
             & .head_block3 {
                 height: 48px;
-
+    
                 & div .cont {
                     text-decoration: none;
                     user-select: none; 
@@ -126,7 +152,7 @@ body {
                         color: #fff;
                     }
                 }
-
+    
                 & div .input-group {
                     width: 590px;
         
@@ -164,9 +190,16 @@ body {
     }
 
 
+
     
 
     & .navv {
+        // position: fixed; 
+        // width: 100%; 
+        // top: 48px; 
+        // left: 0px;
+        // z-index: 50;
+
         background-color:  #F4F4F4;
     
         & nav {
@@ -1149,13 +1182,20 @@ body {
                             padding-right: 6px;
                             position: relative;
 
+                            // &:hover ~ .modal_star > .star {
+                            //     visibility: hidden!important;
+                            // }
+
                             & .star {
+                                // visibility: visible;
                                 display: block;
                                 position: absolute;
                                 height: 100%;
                                 left: 0;
                                 top: 0;
                                 z-index: 10;
+
+                              
                             }
     
                             & .star_empty {
