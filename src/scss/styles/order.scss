@@ -1,0 +1,37 @@
+
+
+body {
+
+   & .wrapper {
+ 
+      & main {
+         & .block_order {
+            height: 600px;
+        }
+ 
+        & .order_number{
+            padding: 20px;
+ 
+            & .order_number_text {
+                margin: 0 10px;
+            }
+        }
+ 
+        & .order_form {
+            width: 600px;
+            
+ 
+            & .btn_order_last {
+                font-size: 14px;
+                font-weight: 600;
+                color:#FFFFFF;
+                padding: 9px 86px 9px 86px;
+                margin-bottom: 80px;
+            }
+        }
+      
+
+      }
+   }
+}
+

@@ -1,7 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="RU">
 
 <head>
+    <title>ХарьковАвтоспектр</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon.ico">
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,8 +17,8 @@
     <!-- Bootstrap CSS -->
     <link href="../dist/app.css" rel="stylesheet">
 
-    <title>ХарьковАвтоспектр</title>
-    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon.ico">
+    <!-- JavaScript -->
+    <script src="../dist/app.js" defer></script>
 </head>
 
 <body>
@@ -91,55 +94,52 @@
                                     data-bs-target="#Modal1">
                                     <div class="d-flex align-items-center">
                                         <img src="../assets/images/korzina.svg">
-                                        <div class="korzina_block">2</div>
+                                        <div class="korzina_block basket-number-block-in-head">0</div>
                                     </div>
                                 </button>
                             </div>
-
                         </div>
-                    </div>
-                </div>
-                <!-- First head -->
+                        <!-- First head -->
 
-                <!-- Second head -->
-                <div class="second_head _head2 bg-primary">
-                    <div class="container">
+                        <!-- Second head -->
+                        <div class="second_head _head2 bg-primary">
+                            <div class="container">
 
-                        <div class="row justify-content-between align-items-center head_block3 ">
+                                <div class="row justify-content-between align-items-center head_block3 ">
 
-                            <div class="col-3 d-flex justify-content-start align-items-center">
-                                <a href="#" class="cont">+38 099 99 99 999</a>
-                                <a href="#" class="cont"><img src="../assets/images/viber.svg"></a>
-                                <a href="#" class="cont"><img src="../assets/images/tg.svg"></a>
-                            </div>
+                                    <div class="col-3 d-flex justify-content-start align-items-center">
+                                        <a href="#" class="cont">+38 099 99 99 999</a>
+                                        <a href="#" class="cont"><img src="../assets/images/viber.svg"></a>
+                                        <a href="#" class="cont"><img src="../assets/images/tg.svg"></a>
+                                    </div>
 
-                            <div class="col-7">
-                                <form class="d-flex justify-content-center">
-                                    <div class="input-group">
-                                        <input class="form-control search1" name="s"
-                                            placeholder="Введите ключевое слово для поиска: артикул, номер...."
-                                            type="search">
-                                        <button type="submit" class="btn btn-secondary btn_search">
-                                            <img src="../assets/images/search.svg" class="img-fluid">
+                                    <div class="col-7">
+                                        <form class="d-flex justify-content-center">
+                                            <div class="input-group">
+                                                <input class="form-control search1" name="s"
+                                                    placeholder="Введите ключевое слово для поиска: артикул, номер...."
+                                                    type="search">
+                                                <button type="submit" class="btn btn-secondary btn_search">
+                                                    <img src="../assets/images/search.svg" class="img-fluid">
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <div class="col-2 d-flex justify-content-end">
+                                        <button class="btn btn-outline-secondary btn_korzina" data-bs-toggle="modal"
+                                            data-bs-target="#Modal1">
+                                            <div class="d-flex align-items-center">
+                                                <img src="../assets/images/korzina.svg">
+                                                <div class="korzina_block basket-number-block-in-head">0</div>
+                                            </div>
                                         </button>
                                     </div>
-                                </form>
-                            </div>
 
-                            <div class="col-2 d-flex justify-content-end">
-                                <button class="btn btn-outline-secondary btn_korzina" data-bs-toggle="modal"
-                                    data-bs-target="#Modal1">
-                                    <div class="d-flex align-items-center">
-                                        <img src="../assets/images/korzina.svg">
-                                        <div class="korzina_block">2</div>
-                                    </div>
-                                </button>
+                                </div>
                             </div>
-
                         </div>
-                    </div>
-                </div>
-                <!-- Second head -->
+                        <!-- Second head -->
 
             </header>
 
@@ -876,6 +876,7 @@
 
 
         </main>
+
         <footer>
             <div class="container">
                 <div class="row justify-content-between align-items-start">
@@ -887,8 +888,9 @@
                         <a href="catalogue.html" class="reg_w ft-b12">МТЗ</a>
                     </div>
                     <div class="col-xl-3 col-sm-12">
-                        <a href="delivery.html" class="bold_w ft-b21">Доставка и оплата</a>
-                        <a href="about.html" class="bold_w">Условия работы <br>с юридическими лицами</a>
+                        <a href="delivery.html" class="bold_w ft-b11">Доставка и оплата</a>
+                        <a href="about.html" class="bold_w ft-b11">О нас</a>
+                        <a href="contacts.html" class="bold_w">Контакты</a>
                     </div>
                     <div class="col-xl-3 col-sm-12">
                         <div class="bold_w ft-b11">График работы:</div>
@@ -933,19 +935,166 @@
 
     <!-- Modal1 -->
     <div class="modal block_modal_korzina" id="Modal1" tabindex="-1" aria-labelledby="ModalLabel1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog ">
             <div class="modal-content">
-                <div class="d-flex">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div>
-                    <div class="modal-title" id="ModalLabel1">Корзина заказов</div>
-                </div>
-                <div>
+                <div class="modal_korzina_kontainer">
 
-                </div>
-                <div class="">
-                    <a href="order.html" type="button" class="btn btn-primary">Оформить заказ</a>
+                    <div class="modal_korzina_head d-flex flex-column">
+                        <div class="korzina_head_button d-flex justify-content-end">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="korzina_head_title modal-title" id="ModalLabel1">Корзина заказов</div>
+                        <div class="inner_underscore"></div>
+                    </div>
+
+                    <div class="modal_korzina_body d-flex flex-column justify-content-start">
+
+                        <div class="korzina_item d-flex">
+                            <div class="korzina_item_image">
+                                <img src="../assets/images/gaika.png" class="img-fluid" width="100px" height="100px">
+                            </div>
+
+                            <div class="korzina_item_mainbox d-flex flex-column justify-content-between">
+
+                                <div class="mainbox_top d-flex justify-content-between align-items-center">
+                                    <div class="mainbox_title">
+                                        Гайка большая 23-345 (Завод)
+                                    </div>
+                                    <div class="mainbox_trash">
+                                        <img src="../assets/images/trash.svg" class="img-fluid">
+                                    </div>
+                                </div>
+
+                                <div class="mainbox_middle d-flex justify-content-start">
+                                    <div class="mainbox_subtitle">
+                                        Артикул: А10187
+                                    </div>
+                                </div>
+
+                                <div class="mainbox_bottom d-flex justify-content-between align-items-center">
+                                    <div class="mainbox_amount d-flex align-items-center">
+                                        <div class="amount_minus">
+                                            <img src="../assets/images/minus.svg" class="img-fluid">
+                                        </div>
+                                        <div
+                                            class="amount_number amount-for-order d-flex justify-content-center align-items-center">
+                                            1
+                                        </div>
+                                        <div class="amount_plus">
+                                            <img src="../assets/images/plus.svg" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="mainbox_price">
+                                        20 грн
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="korzina_item d-flex">
+                            <div class="korzina_item_image">
+                                <img src="../assets/images/gaika.png" class="img-fluid" width="100px" height="100px">
+                            </div>
+
+                            <div class="korzina_item_mainbox d-flex flex-column justify-content-between">
+
+                                <div class="mainbox_top d-flex justify-content-between align-items-center">
+                                    <div class="mainbox_title">
+                                        Гайка большая 23-345 (Завод)
+                                    </div>
+                                    <div class="mainbox_trash">
+                                        <img src="../assets/images/trash.svg" class="img-fluid">
+                                    </div>
+                                </div>
+
+                                <div class="mainbox_middle d-flex justify-content-start">
+                                    <div class="mainbox_subtitle">
+                                        Артикул: А10187
+                                    </div>
+                                </div>
+
+                                <div class="mainbox_bottom d-flex justify-content-between align-items-center">
+                                    <div class="mainbox_amount d-flex align-items-center">
+                                        <div class="amount_minus">
+                                            <img src="../assets/images/minus.svg" class="img-fluid">
+                                        </div>
+                                        <div
+                                            class="amount_number amount-for-order d-flex justify-content-center align-items-center">
+                                            1
+                                        </div>
+                                        <div class="amount_plus">
+                                            <img src="../assets/images/plus.svg" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="mainbox_price">
+                                        20 грн
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="korzina_item d-flex">
+                            <div class="korzina_item_image">
+                                <img src="../assets/images/gaika.png" class="img-fluid" width="100px" height="100px">
+                            </div>
+
+                            <div class="korzina_item_mainbox d-flex flex-column justify-content-between">
+
+                                <div class="mainbox_top d-flex justify-content-between align-items-center">
+                                    <div class="mainbox_title">
+                                        Гайка большая 23-345 (Завод)
+                                    </div>
+                                    <div class="mainbox_trash">
+                                        <img src="../assets/images/trash.svg" class="img-fluid">
+                                    </div>
+                                </div>
+
+                                <div class="mainbox_middle d-flex justify-content-start">
+                                    <div class="mainbox_subtitle">
+                                        Артикул: А10187
+                                    </div>
+                                </div>
+
+                                <div class="mainbox_bottom d-flex justify-content-between align-items-center">
+                                    <div class="mainbox_amount d-flex align-items-center">
+                                        <div class="amount_minus">
+                                            <img src="../assets/images/minus.svg" class="img-fluid">
+                                        </div>
+                                        <div
+                                            class="amount_number amount-for-order d-flex justify-content-center align-items-center">
+                                            1
+                                        </div>
+                                        <div class="amount_plus">
+                                            <img src="../assets/images/plus.svg" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="mainbox_price">
+                                        20 грн
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="modal_korzina_foot d-flex flex-column justify-content-between">
+                        <div class="korzina_first_button d-flex justify-content-center">
+                            <a type="button" class="first_button btn btn-link" data-bs-dismiss="modal">
+                                Продолжить покупки
+                            </a>
+                        </div>
+                        <div class="korzina_second_button d-flex justify-content-center">
+                            <a href="order.html" type="button" class="second_button btn btn-primary">
+                                Оформить заказ
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1088,7 +1237,7 @@
                 </div>
 
                 <div class="modal_review_foot d-flex align-items-start justify-content-center">
-                    <a href="#" type="button" class="btn btn-primary mb-3">Оставить отзыв</a>
+                    <a href="#" type="button" class="btn btn-primary mb-3" data-bs-dismiss="modal">Оставить отзыв</a>
                 </div>
 
             </div>
@@ -1109,7 +1258,6 @@
                     </div>
 
                     <div class="modal-title" id="ModalLabel4">Быстрый заказ</div>
-
                 </div>
 
                 <div class="modal_fast_body">
@@ -1123,7 +1271,8 @@
                 </div>
 
                 <div class="modal_fast_foot">
-                    <a href="#" type="button" class="btn btn-primary">Заказать</a>
+                    <a href="#" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal5"
+                        data-bs-dismiss="modal">Заказать</a>
                 </div>
             </div>
         </div>
@@ -1132,14 +1281,64 @@
 
 
     <!-- Modal5 -->
+    <div class="modal block_modal_ordersent" id="Modal5" tabindex="-1" aria-labelledby="ModalLabel5" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal_ordersent_head">
+                    <div class="d-flex justify-content-end ordersent_head_close">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="ordersent_head_text">
+                        Ваш запрос отправлен в обработку
+                    </div>
+                </div>
+
+                <div class="modal_ordersent_body d-flex justify-content-center align-items-center">
+                    <div class="ordersent_body_text">
+                        Наш менеджер свяжется с Вами <br>в ближайшее время <br>для уточнения информации!
+                    </div>
+                </div>
+
+                <div class="modal_ordersent_foot d-flex justify-content-center align-items-center">
+                    <div class="ordersent_foot_text">
+                        Благодарим за внимание к нашей фирме!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Modal5 -->
 
 
     <!-- Modal6 -->
+    <div class="block_modal_cookie">
+        <div class="cookie_top">
+            <div class="cookie_text">
+                Для улучшения работы сайта и его взаимодействия мы используем файлы cookies. Продолжая работу с сайтом,
+                Вы
+                разрешаете использование
+                cookie-файлов, необходимых для функционирования сайта. Вы всегда можете отключить файлы cookie в
+                настройках
+                Вашего браузера.
+            </div>
+        </div>
+        <div class="cookie_bottom d-flex align-items-start justify-content-end">
+            <div class="cookie_info">
+                <a href=cookie.html class="btn btn-outline-secondary cookie_info_btn">
+                    Подробнее
+                </a>
+            </div>
+            <div class="cookie_accept">
+                <a class="btn btn-secondary cookie_accept_btn">
+                    Принимаю
+                </a>
+            </div>
+        </div>
+    </div>
     <!-- Modal6 -->
 
 
-    <script src="../dist/app.js"></script>
 </body>
 
 </html>

@@ -30,6 +30,10 @@ $(() => {
     $('.select2-enable').select2();
 });
 
+// Поломка слика -->
+// document.body.style.display = 'none'
+// setTimeout(() => document.body.style.display = 'block', 200)
+
 
 // Сворачивание текста
 const btn1 = document.getElementById('block4Btn1')
@@ -168,6 +172,60 @@ function changeHeaderOnScroll() {
         secondHead.classList.remove('_head2_active')
     }
 }
+
+
+// Куки
+// повесить еще один листнер на кнопку со страницы cookie.html; на данной странице модальное окно не отображать
+const COOKIE_ACCEPT_BTN1 = document.querySelector('.cookie_accept_btn')
+const COOKIE_BLOCK = document.querySelector('.block_modal_cookie')
+
+removeCookieWarning()
+function removeCookieWarning() {
+    // !(localStorage.getItem('cookieBtn'))
+    if ((localStorage.getItem('cookieBtn')) === null) {
+
+        COOKIE_BLOCK.style.display = 'block'
+
+        COOKIE_ACCEPT_BTN1.addEventListener('click', () => {
+            COOKIE_BLOCK.style.display = 'none'
+            localStorage.setItem('cookieBtn', 1)
+        })
+    }
+}
+
+
+//Счетчик товаров общий
+let itemsInBasket = document.getElementsByClassName('korzina_item')
+let basketInHead = document.getElementsByClassName('basket-number-block-in-head')
+
+countItemsInBasket()
+function countItemsInBasket() {
+    let itemInBasketAmount = itemsInBasket.length
+
+    for (let elementBasket of basketInHead) {
+        elementBasket.innerText = itemInBasketAmount
+    }
+}
+
+
+// Счетчик в корзине
+
+
+// Удаление из корзины
+const TRASH_BUTTON = document.querySelectorAll('.mainbox_trash')
+
+for (let elementTrash of TRASH_BUTTON) {
+    elementTrash.addEventListener('click', deleteByTrashButton)
+}
+
+function deleteByTrashButton() {
+    const ITEM_IN_BASKET = elementTrash.closest('korzina_item')
+
+}
+
+
+
+// Блоки на странице заказа
 
 
 // Меню бургер
