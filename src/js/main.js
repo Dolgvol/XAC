@@ -20,19 +20,52 @@ $(() => {
         waitForAnimate: false,
     });
 
-    // Слайдер 3 catalogue
+    // Слайдер 3 catalogue & product
+    $('.items_mini').slick({
+        infinite: true,
+        dots: false,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        touchThreshold: 10,
+        waitForAnimate: false,
+    });
 
     // Слайдер 4 product
+    $('.add_prod').slick({
+        infinite: true,
+        arrows: false,
+        dots: false,
+        slidesToScroll: 1,
+        slidesToShow: 4,
+        waitForAnimate: false,
+        vertical: true,
+        verticalSwiping: true,
+        focusOnSelect: true,
+        draggable: false,
+        // centerMode: true,
 
-    // Слайдер 5 product
+        asNavFor: ".main_prod",
+    });
+
+    $('.main_prod').slick({
+        infinite: true,
+        arrows: false,
+        dots: false,
+        slidesToScroll: 1,
+        slidesToShow: 1,
+        waitForAnimate: false,
+        vertical: true,
+        verticalSwiping: true,
+        draggable: false,
+
+        // fade: true,
+        asNavFor: ".add_prod",
+    });
 
 
-    $('.select2-enable').select2();
+    // $('.head_select_form').select2();
 });
 
-// Поломка слика -->
-// document.body.style.display = 'none'
-// setTimeout(() => document.body.style.display = 'block', 200)
 
 
 // Сворачивание текста
@@ -40,17 +73,23 @@ const btn1 = document.getElementById('block4Btn1')
 const block1 = document.getElementById('block4Invisible')
 const myCollapsible = document.getElementById('collapseText1')
 
-myCollapsible.addEventListener('show.bs.collapse', () => {
-    btn1.innerText = 'Скрыть'
-    block1.style.display = 'none'
-})
+collapseText()
+function collapseText() {
+    if (myCollapsible) {
+        myCollapsible.addEventListener('show.bs.collapse', () => {
+            btn1.innerText = 'Скрыть'
+            block1.style.display = 'none'
+        })
 
-myCollapsible.addEventListener('hide.bs.collapse', () => {
-    btn1.innerText = 'Читать полностью'
-})
-myCollapsible.addEventListener('hidden.bs.collapse', () => {
-    block1.style.display = 'block'
-})
+        myCollapsible.addEventListener('hide.bs.collapse', () => {
+            btn1.innerText = 'Читать полностью'
+        })
+        myCollapsible.addEventListener('hidden.bs.collapse', () => {
+            block1.style.display = 'block'
+        })
+    }
+}
+
 
 
 // Звезды 
@@ -105,6 +144,30 @@ function makeStars(inputArray, inputIndex, action) {
         for (let elementStar of NEW_STARS_REM) {
             elementStar.style.display = 'none'
         }
+    }
+}
+
+
+// Кнопка в окне отзывов
+const reviewCheckBox = document.getElementById('reviewCheckBox1')
+const reviewBottomButton = document.getElementById('reviewButton1')
+const reviewBottomButtonDisabled = document.getElementById('reviewButton2')
+
+changeCheckBox()
+function changeCheckBox() {
+    if (reviewCheckBox) {
+        reviewCheckBox.checked = false
+
+        reviewCheckBox.addEventListener("change", () => {
+            if (reviewCheckBox.checked) {
+                reviewBottomButton.style.display = 'block'
+                reviewBottomButtonDisabled.style.display = 'none'
+            }
+            else {
+                reviewBottomButton.style.display = 'none'
+                reviewBottomButtonDisabled.style.display = 'block'
+            }
+        })
     }
 }
 
@@ -174,9 +237,74 @@ function changeHeaderOnScroll() {
 }
 
 
+// Каталог (передвижение на странице каталога)
+
+
+
+//Счетчик товаров общий
+const itemsInBasket = document.getElementsByClassName('korzina_item')
+const basketInHead = document.getElementsByClassName('basket-number-block-in-head')
+
+countItemsInBasket()
+function countItemsInBasket() {
+    for (let elementBasket of basketInHead) {
+        elementBasket.innerText = itemsInBasket.length
+    }
+}
+
+
+// Удаление из корзины
+const TRASH_BUTTON = document.querySelectorAll('.mainbox_trash')
+const BASKET_MAIN_BLOCK = document.querySelector('.block_modal_korzina')
+
+let elementTrash
+for (elementTrash of TRASH_BUTTON) {
+    const ITEM_IN_BASKET = elementTrash.closest('.korzina_item')
+    elementTrash.addEventListener('click', event => {
+        event.stopPropagation()
+        ITEM_IN_BASKET.remove()
+        countItemsInBasket()
+    })
+}
+
+
+
+// Счетчик в корзине
+const MINUS_BUTTONS = document.querySelectorAll('.amount_minus')
+const PLUS_BUTTONS = document.querySelectorAll('.amount_plus')
+
+for (let minusButton of MINUS_BUTTONS) {
+    minusButton.addEventListener('click', () => {
+        let amuontMinus = minusButton.nextElementSibling.textContent
+        if (Number(amuontMinus) > 1) {
+            minusButton.nextElementSibling.textContent = +amuontMinus - 1
+        }
+    })
+}
+
+for (let plusButton of PLUS_BUTTONS) {
+    plusButton.addEventListener('click', () => {
+        let amuontPlus = plusButton.previousElementSibling.textContent
+        plusButton.previousElementSibling.textContent = +amuontPlus + 1
+    })
+}
+const ITEMS_COUNTERS = document.querySelectorAll('.amount-for-order')
+
+
+// Выбор языка в шапке
+
+
+// Блоки на странице заказа
+
+
+// Меню бургер
+
+
+
+
 // Куки
 // повесить еще один листнер на кнопку со страницы cookie.html; на данной странице модальное окно не отображать
-const COOKIE_ACCEPT_BTN1 = document.querySelector('.cookie_accept_btn')
+const COOKIE_ACCEPT_BTN = document.querySelectorAll('.cookie_accept_btn')
 const COOKIE_BLOCK = document.querySelector('.block_modal_cookie')
 
 removeCookieWarning()
@@ -184,48 +312,15 @@ function removeCookieWarning() {
     // !(localStorage.getItem('cookieBtn'))
     if ((localStorage.getItem('cookieBtn')) === null) {
 
-        COOKIE_BLOCK.style.display = 'block'
+        if (COOKIE_BLOCK) {
+            COOKIE_BLOCK.style.display = 'block'
+        }
 
-        COOKIE_ACCEPT_BTN1.addEventListener('click', () => {
-            COOKIE_BLOCK.style.display = 'none'
-            localStorage.setItem('cookieBtn', 1)
-        })
+        for (let elementBtn of COOKIE_ACCEPT_BTN) {
+            elementBtn.addEventListener('click', () => {
+                localStorage.setItem('cookieBtn', 1)
+                COOKIE_BLOCK.style.display = 'none'
+            })
+        }
     }
 }
-
-
-//Счетчик товаров общий
-let itemsInBasket = document.getElementsByClassName('korzina_item')
-let basketInHead = document.getElementsByClassName('basket-number-block-in-head')
-
-countItemsInBasket()
-function countItemsInBasket() {
-    let itemInBasketAmount = itemsInBasket.length
-
-    for (let elementBasket of basketInHead) {
-        elementBasket.innerText = itemInBasketAmount
-    }
-}
-
-
-// Счетчик в корзине
-
-
-// Удаление из корзины
-const TRASH_BUTTON = document.querySelectorAll('.mainbox_trash')
-
-for (let elementTrash of TRASH_BUTTON) {
-    elementTrash.addEventListener('click', deleteByTrashButton)
-}
-
-function deleteByTrashButton() {
-    const ITEM_IN_BASKET = elementTrash.closest('korzina_item')
-
-}
-
-
-
-// Блоки на странице заказа
-
-
-// Меню бургер

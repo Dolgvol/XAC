@@ -1,1 +1,250 @@
- 
+
+
+body {
+
+   & .wrapper {
+
+      & main {
+
+         & .delivery_block {
+
+            & .delivery_head {
+
+               & .delivery_head_text {
+                  height: 30px;
+                  margin: 20px auto 20px 0;
+                  width: max-content;
+                  position: relative;
+
+                  & .delivery_text {
+                     position: relative;
+                     left: 0;
+                     z-index: 10;
+                     color: #333333;
+                     font-size: 22px;
+                     font-weight: 400;
+                     line-height: 30px;
+                  }
+
+                  & .delivery_decor {
+                     position: absolute;
+                     bottom: 2px;
+                     left: 0;
+                     right: -5px;
+                     z-index: 5;
+                     height: 8px;
+                     background-color: $primary;
+                  }
+               }
+            }
+
+
+            & .take_block {
+               margin: 0px 30px;
+
+               & .take_block_delivery {
+                  margin: 20px 0px;
+
+                  & .take_delivery_head {
+                     color: #333333;
+                     font-size: 16px;
+                     font-weight: 400;
+                     line-height: 26px;
+                     margin: 0 0 24px 0;
+                  }
+
+                  & .take_delivery_body {
+                     color: #333333;
+                     font-size: 16px;
+                     font-weight: 400;
+                     line-height: 26px;
+                     margin: 0 0 40px 0;
+                  }
+
+                  & .add_info {
+                     color: #33333380;   
+                     font-size: 12px;
+                     font-weight: 400;
+                     line-height: 19px;
+                  }
+               }
+               
+               & .take_block_pickup {
+                  margin: 20px 0px;
+
+                  & .take_pickup_head {
+                     color: #333333;
+                     font-size: 16px;
+                     font-weight: 400;
+                     line-height: 26px;
+                     margin: 0 0 24px 0;
+                  }
+
+                  & .take_pickup_body {
+                     color: #333333;
+                     font-size: 16px;
+                     font-weight: 400;
+                     line-height: 26px;
+                     margin: 0;
+                  }
+               }
+   
+            }
+
+
+
+            & .payment_block {
+
+               & .payment_legal {
+
+                  & .legal_img {
+                     margin: auto;
+                     width: max-content;
+                  }
+
+                  & .legal_head1 {
+                     color: #333333;
+                     font-size: 18px;
+                     font-weight: 600;
+                     line-height: 25px;
+                     margin: 10px auto 30px;
+                     width: max-content;
+                  }
+
+                  & .legal_body {
+
+                     & .legal_head2 {
+                        color: #333333;
+                        font-size: 16px;
+                        font-weight: 600;
+                        line-height: 22px;
+                        margin-bottom: 24px;
+                     }
+
+                     & .legal_body_block {
+                        display: flex;
+                        justify-content: start;
+                        margin-bottom: 24px;
+
+                        & .legal_body_number {
+                           text-align: center;
+                           height: 24px;
+                           width: 24px;
+                           border-radius: 50%;
+                           background-color: $primary;
+                           color: #fff;
+                           font-size: 18px;
+                           font-weight: 600;
+                           line-height: 26px;
+                           margin-right: 16px;
+                        }
+
+                        & .legal_body_text {
+                           color: #333333;
+                           font-size: 16px;
+                           font-weight: 400;
+                           line-height: 26px;                        
+                        }
+                     }
+                  }
+   
+               }  
+
+               & .middlescore {
+                  padding: 0;
+                  border-left: 1px solid #5555554D;
+                  margin: 30px 0;
+               }
+
+               & .payment_natural {
+
+                  & .natural_img {
+                     margin: auto;
+                     width: max-content;
+                  }
+
+                  & .natural_head1 {
+                     color: #333333;
+                     font-size: 18px;
+                     font-weight: 600;
+                     line-height: 25px;
+                     margin: 10px auto 30px;
+                     width: max-content;
+                  }
+
+                  & .natural_body {
+
+                     & .natural_head2 {
+                        color: #333333;
+                        font-size: 16px;
+                        font-weight: 600;
+                        line-height: 22px;
+                        margin-bottom: 24px;
+                     }
+
+                     & .natural_body_block {
+                        margin-bottom: 24px;
+
+                        & .natural_mainblock {
+                           display: flex;
+                           justify-content: start;
+
+                           & .natural_body_number {
+                              text-align: center;
+                              height: 24px;
+                              width: 24px;
+                              border-radius: 50%;
+                              background-color: $primary;
+                              color: #fff;
+                              font-size: 18px;
+                              font-weight: 600;
+                              line-height: 26px;
+                              margin-right: 16px;
+                           }
+
+                           & .natural_body_text {
+                              color: #333333;
+                              font-size: 16px;
+                              font-weight: 400;
+                              line-height: 26px;
+                           }
+                        }
+
+                        & .natural_extrablock {
+                           color: #333333;
+                           font-size: 12px;
+                           font-weight: 400;
+                           line-height: 19px;
+                           padding-left: 51px;
+                           margin-top: 6px;
+                           & ul {
+                              padding: 0;
+                           }
+                        }
+                     }
+
+
+                  }
+               }
+            }
+
+            & .delivery_foot {
+               margin: 35px auto 50px auto;
+               width: max-content;
+
+               & .delivery_foot_text {
+                  color: #222222;
+                  font-size: 18px;
+                  font-weight: 400;
+                  line-height: 29px;
+
+                  & span {
+                     font-weight: 600;
+                  }
+               }
+            }
+
+         }
+      }
+   }
+}

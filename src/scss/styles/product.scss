@@ -1,1 +1,347 @@
  
+body {
+
+   & .wrapper {
+
+      & main {
+
+         & .breadcrumb_block {
+
+            & .breadcrumb_nav.breadcrumb_product {
+            border-bottom: none;
+            }
+         }
+
+         & .product_page_maininfo {
+
+            & .maininfo_left_block {
+               display: flex;
+               
+               & .slider.add_prod {
+                  min-width: 0;
+                  margin-right: 20px;
+                  margin-bottom: 30px;
+
+                  & .slick-list {
+                     overflow: hidden;
+                     // padding-top: 0!important;
+
+                     & .slick-track {
+                        display: flex;
+                        flex-direction: column;
+
+                        & .add_slider_obertka {
+                           opacity: 0.4;
+
+                           & .add_slider_item {
+                              width: 84px;
+                              height: 84px;
+                              border: 1px solid #4444444D;
+                              display: flex;
+                              flex-direction: column;
+                              justify-content: center;
+                              margin-bottom: 10px;
+                              cursor: pointer;
+                              
+                              
+                              & img {
+                                 width: 100%;
+                              }
+                           }
+                        }
+
+                        & .add_slider_obertka.slick-current {
+                           opacity: 1;
+                        }
+                     
+
+                     }
+                  }
+
+               }
+
+               & .slider.main_prod {
+                  min-width: 0;
+
+                  & .slick-list {
+                     overflow: hidden;
+
+                     & .slick-track {
+                        display: flex;
+                        flex-direction: column;
+
+                        & .main_slider_obertka {
+
+                           & .main_slider_item {
+                              width: 487px;
+                              height: 487px;
+                              border: 1px solid #4444444D;
+                              display: flex;
+                              flex-direction: column;
+                              justify-content: center;
+         
+                              & img {
+                                 width: 100%;
+                              }
+                           }
+                        }  
+
+                     }
+                  }
+  
+                
+               }
+            }
+
+            & .maininfo_right_block {
+            
+               & .maininfo_right_head {
+                  color: #333333;
+                  font-size: 30px;
+                  font-weight: 600;
+                  line-height: 41px;
+                  margin-bottom: 40px;
+               }
+
+               & .maininfo_right_number {
+                  color: #333333;
+                  font-size: 16px;
+                  font-weight: 600;
+                  line-height: 22px;
+                  margin-bottom: 16px;
+               }
+
+               & .maininfo_right_presence {
+                  color: #068603;
+                  font-size: 14px;
+                  font-weight: 600;
+                  line-height: 19px;
+                  margin-bottom: 16px;
+               }
+
+               & .maininfo_right_cod {
+                  color: #333333;
+                  font-size: 14px;
+                  font-weight: 300;
+                  line-height: 19px;
+                  margin-bottom: 50px;
+               }
+
+               & .maininfo_right_price {
+                  color: #333333;
+                  font-size: 30px;
+                  font-weight: 400;
+                  line-height: 41px;
+                  margin-bottom: 57px;
+               }
+
+               & .maininfo_right_btnblock {
+                  margin-bottom: 120px;
+                  display: flex;
+
+                  
+                  & .maininfo_btn {
+                     display: flex;
+                     font-size: 14px;
+                     font-weight: 400;
+                     color:#FFFFFF;
+                     padding: 10px 52.5px;
+                     margin-right: 15px;
+
+                     & div {
+                        margin-left: 9px;
+                     }
+                  }
+
+                  & .maininfo_btn_one {
+                     font-size: 14px;
+                     font-weight: 400;
+                     padding: 10px 37.5px ;
+     
+                     &:hover {
+                         color:#FFFFFF;
+                     }
+                  }
+               }
+            }
+         }
+
+
+         & .product_page_addinfo {
+            
+            & .addinfo_left_block {
+               margin: 30px 0 60px;
+               
+               & .addinfo_left_head {
+                  color: #333333;
+                  font-size: 22px;
+                  font-weight: 400;
+                  line-height: 30px;
+                  margin-bottom: 20px;
+               }
+
+               & .addinfo_left_body {
+                  color: #333333;
+                  font-size: 14px;
+                  font-weight: 400;
+                  line-height: 22px;
+               }
+            }
+
+            & .addinfo_right_block {
+               margin: 30px 0 60px;
+               
+               & .addinfo_right_head {
+                  color: #333333;
+                  font-size: 22px;
+                  font-weight: 400;
+                  line-height: 30px;
+                  margin-bottom: 20px;
+               }
+
+               & .addinfo_right_body {
+
+                  & .row {
+                     margin-bottom: 8px;
+
+                     & .char_name {
+                        color: #333333;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 19px;
+                        width: 160px;
+                     }
+   
+                     & .char_text {
+                        color: #333333;
+                        font-size: 14px;
+                        font-weight: 300;
+                        line-height: 19px;
+                     }
+                  }
+                  
+
+               }
+            }
+         }
+      
+
+         & .product_page_slider {
+            
+            & .product_slider_head {
+               color: #333333;
+               font-size: 22px;
+               font-weight: 400;
+               line-height: 30px;
+               margin: 30px 0;
+            }
+
+
+            & .slider.items_mini {
+               position: relative;
+               padding: 0 40px;
+               margin-bottom: 60px;
+
+               &  .slick-arrow.slick-prev {
+                   position: absolute;
+                   left: 0;
+                   font-size: 0;
+                   background: url(/assets/images/pointer1.svg) center center no-repeat;
+                   height: 80px;
+                   width: 30px;
+                   border: 1px solid #4444444D;
+                   top: 50%;
+                   margin-top: -40px;
+               }
+
+               &  .slick-arrow.slick-next {
+                   position: absolute;
+                   right: 0;
+                   font-size: 0;
+                   background: url(/assets/images/pointer2.svg) center center no-repeat;
+                   height: 80px;
+                   width: 30px;
+                   border: 1px solid #4444444D;
+                   top: 50%;
+                   margin-top: -40px;
+               }
+
+               & .slick-list {
+                  overflow: hidden;
+
+                  & .slick-track {
+                      display: flex;
+
+                      & .obertka_mini {
+                         
+                        & .card_mini {
+                           width: 200px;
+                           height: 320px;
+                           border: 1px solid #4444444D;
+                           margin: 0 auto;
+               
+                           & .cartina_mini {
+                               height: 150px;
+                               width: 170px;
+                               margin: 15px auto 0;
+                           }
+                           
+                           & .card-body_mini {
+                              height: 155px;
+                              margin: 0 15px;
+
+                              & .card-title_mini {
+                                 color: #333333;
+                                 font-size: 11px;
+                                 font-weight: 300;
+                                 line-height: 15px;
+                                 margin: 6px 0;
+                             }
+                 
+                             & .card-text_a_mini {
+                                 text-decoration: none;
+  
+                                 & .card-text_mini {
+                                     color: #333333;
+                                     font-size: 14px;
+                                     font-weight: 400;
+                                     line-height: 19px;
+                                     height: 60px;
+                                     margin-bottom: 6px;
+                                 }
+                             }
+                             
+                 
+                             & .presence_mini {
+                                 color: #068603;
+                                 font-size: 12px;
+                                 font-weight: 400;
+                                 line-height: 16px;
+                                 margin-bottom: 6px;
+                             }
+                 
+                             & .price_mini {
+                                 color: #333333;
+                                 font-size: 20px;
+                                 font-weight: 400;
+                                 line-height: 27px;
+                             }
+                 
+                             & .buy_btn_mini {
+                              cursor: pointer;
+                             }
+                 
+
+
+                           }
+
+                        }
+                      }
+                  }
+               }
+            }
+         }
+
+      }
+   }
+}

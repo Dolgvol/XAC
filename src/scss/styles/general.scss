@@ -7,6 +7,212 @@ body {
       border-bottom: 1px solid #5F5E5E4D;    
   }
 
+
+  & .btn.btn-primary {
+    position: relative;
+    z-index: 40;
+
+    color:#FFFFFF;
+    transition: all 0.2s ease-in;
+
+    & > * {
+        position: relative;
+        z-index: 40;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, #FFD647 0%, #FF8206 104.29%);  
+        opacity: 0;
+        visibility: hidden;   
+        transition: all 0.2s ease-in;
+        z-index: 30;                      
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, #FFD647 0%, #FF8206 104.29%);  
+        opacity: 0;
+        visibility: hidden; 
+        transition: all 0.2s ease-in;
+        z-index: 30;                      
+    }
+
+    &:hover {
+        color:#FFFFFF;
+        background-color: #ffc05e;
+        border-color: #ffbc54;
+
+        &::before {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &::after {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    &:active {
+
+        
+        &::before {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        &::after {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &:focus {
+       box-shadow: 0 0 0 0.25rem #ffb64183;  
+    }
+}
+
+
+
+
+  & .btn.btn-outline-primary {
+
+    position: relative;
+    z-index: 40;
+
+    transition: all 0.2s ease-in;
+
+    & > * {
+        position: relative;
+        z-index: 40;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, #FFD647 0%, #FF8206 104.29%);  
+        opacity: 0;
+        visibility: hidden;   
+        transition: all 0.2s ease-in;
+        z-index: 30;                      
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, #FFD647 0%, #FF8206 104.29%);  
+        opacity: 0;
+        visibility: hidden; 
+        transition: all 0.2s ease-in;
+        z-index: 30;                      
+    }
+
+    &:hover {
+        color:#FFFFFF;
+        background-color: #ffc05e;
+        border-color: #ffbc54;
+
+        &::before {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &::after {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    &:active {
+
+        
+        &::before {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        &::after {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &:focus {
+       box-shadow: 0 0 0 0.25rem #ffb64183;  
+    }
+  }
+
+
+
+  & .btn.btn-outline-secondary.head_btn {
+    border: none;
+    background-color: $primary;
+    transition: all 0.1s ease-in;
+
+    &:hover {
+        transition: all 0.1s ease-in;
+        transform: scale(1.1);
+        color: #333333;
+    }
+
+    &:active {
+        transition: all 0.1s ease-in;
+        transform: scale(1.1);
+        color: #333333;
+    }
+
+    &:focus {
+        box-shadow: none; 
+        background-color: $primary;
+    }
+  }
+  & .btn.btn-outline-secondary.head_btn.dropdown-toggle.show {
+    transform: scale(1.1);
+    background-color: $primary;
+  } 
+
+
+
+
+  & .buy_btn_mini {
+
+    & svg {
+        transition: all 0.15s ease-in;
+
+        &:hover {
+           transition: all 0.15s ease-in;
+           fill: rgb(255, 145, 0);
+        }
+        &:active {
+           transition: all 0.15s ease-in;
+           fill: $primary;
+        }
+     }
+
+  }
+
+
+
+
    & .wrapper {
        display: flex;
        flex-direction: column;
@@ -19,26 +225,34 @@ body {
 
             & ._head1_active {
                visibility: hidden!important;
-               // transition: visibility 0.5s ease 0;
             }
 
             & ._head1 {
                visibility: visible;
-               // position: relative;
-               // z-index: 70;
             }
 
             & .first_head {
 
-               .head_block1 {
+               & .head_block1 {
                      height: 36px;
                
                      & div .cont {
+                        cursor: pointer;
                         text-decoration: none;
                         user-select: none; 
                         color:#333;
                         font-weight: 600;
                         margin-right: 13px;
+
+                        & svg {
+                            &:hover {
+                                fill: #000;
+                             }
+                    
+                             &:active {
+                                fill: #fff;
+                             }
+                        }
                      
                         &:hover {
                            color: #000;
@@ -49,16 +263,36 @@ body {
                         }
                      }
                
-                     & div .form-select {
-                        border: none;
-                        padding: 0;
-                        width: 50px;
-                        font-size: 14px;
-                        cursor: pointer;
+                    //  & div .head_select_form {
+                    //     border: none;
+                    //     padding: 0;
+                    //     width: 50px;
+                    //     font-size: 14px;
+                    //     cursor: pointer;
+                    //  }
 
-               
-                        & option {
-                           border: none;
+                     & .head_lang {
+
+                        & .head_lang_btn {
+                            border: none;
+                            font-size: 12px;
+                            font-weight: 400;   
+                            color: #333333; 
+                        }
+
+                        & .dropdown-menu.lang_menu {
+                            min-width: 50px;
+
+                            & li {
+                                width: 100%;
+
+                                & .dropdown-item.lang_item {
+                                    width: 100%;
+                                    font-size: 12px;
+                                    font-weight: 400;   
+                                    color: #333333; 
+                                }
+                            }
                         }
                      }
             
@@ -66,12 +300,7 @@ body {
                         border: none;
                         padding: 2px;
                         margin-right: 24px;
-                     
-                        &:hover {
-                           background-color: #F4F4F4;
-                           color: #000
-                        }
-                     
+                                         
                         & .cabina_block {
                            font-size: 9px;
                            font-weight: 600;
@@ -81,8 +310,13 @@ body {
                }
             
             
-               .head_block2 {
+               & .head_block2 {
                      height: 92px;
+
+                     & .logo_link {
+                        user-select: none;
+                     }
+
             
                      & div .input-group {
                         width: 590px;
@@ -95,16 +329,16 @@ body {
                         .search1 {
                            height: 32px;
                            width: 526px;
+
+                           &:focus {
+                               box-shadow: none;
+                           }
                         }
                      }
             
                      & div .btn_korzina {
                         border: none;
                      
-                        &:hover {
-                           background-color: #F4F4F4;
-                           color: #000
-                        }
                      
                         & .korzina_block {
                            font-size: 12px;
@@ -139,11 +373,22 @@ body {
                      height: 48px;
          
                      & div .cont {
+                        cursor: pointer;
                         text-decoration: none;
                         user-select: none; 
                         color:#333;
                         font-weight: 600;
                         margin-right: 13px;
+
+                        & svg {
+                            &:hover {
+                                fill: #000;
+                             }
+                    
+                             &:active {
+                                fill: #fff;
+                             }
+                        }
                      
                         &:hover {
                            color: #000;
@@ -165,16 +410,16 @@ body {
                         .search1 {
                            height: 32px;
                            width: 526px;
+
+                           &:focus {
+                            box-shadow: none;
+                        }
                         }
                      }
             
                      & div .btn_korzina {
                         border: none;
                      
-                        &:hover {
-                           background-color: #F4F4F4;
-                           color: #000
-                        }
                      
                         & .korzina_block {
                            font-size: 12px;
@@ -205,6 +450,7 @@ body {
                font-size: 16px;
          
                & a {
+                    user-select: none;
                      color: #222;
                      display: block;
                      padding: 0 70px 0 0;
@@ -221,8 +467,41 @@ body {
          }
       }
 
+      & main {
+        // background-color: #E5E5E5;
+        background-color: #fff;
+        min-height: calc(100vh - 390px);
+        max-height: max-content;
 
+        & .breadcrumb_block {
 
+            & .breadcrumb_nav {
+               --bs-breadcrumb-divider: url(/assets/images/breadcrumb.svg);
+               height: 50px;
+               border-bottom: 1px solid #3333331A;
+
+               & .breadcrumb {
+                  margin: auto;
+                  padding: 14.5px 0;
+
+                  & a {
+                     color: #333333;
+                     font-size: 10px;
+                     font-weight: 300;
+                     line-height: 14px;
+                     text-decoration: none;
+   
+                     &:hover {
+                        color: $primary;
+                     }
+                    &:active {
+                        color: #000;
+                     }
+                  }
+               }
+            }
+         }
+      }
 
       & footer {
          display: flex;
@@ -284,6 +563,20 @@ body {
                   & div .ft-b51 {
                      margin-bottom: 29px;
                   }
+
+                & .social_link_svg {
+                    width: 24px;
+
+                    cursor: pointer;
+                    & svg {
+                        &:hover {
+                            fill: #000000;
+                        }
+                        &:active {
+                            fill: #333333;
+                        }
+                    }
+                }
             }           
          }
       }
@@ -291,32 +584,22 @@ body {
 
 
 
-   & .modal.block_modal_korzina {
-
-       & .modal-dialog {
-           max-width: max-content;
-           transform: translate(427px);
-           transition: transform 0.7s ease-in-out;
-           margin-right: -20px;
-           margin-top: 0;           
-
-           & .modal-content{
-               max-height: max-content;
-               min-height: 788px;
-               width: 437px;
-               background-color: #fff;
-               border-radius: 0;
-               border: none;
+   & .offcanvas.offcanvas-end.block_modal_korzina {
+    transition: transform 0.7s ease-in-out;
+    max-height: max-content;
+    width: 427px;
+    background-color: #fff;
+    border-radius: 0;
+    border: none;
 
                 & .modal_korzina_kontainer{
-                    margin-right: 10px;
+                    height: 100vh;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
-                    min-height: 788px;
 
                     & .modal_korzina_head {
-                        height: 82px;
+                        flex: 82px 0 0;
 
                         & .korzina_head_button {
                             height: 25px;
@@ -345,10 +628,11 @@ body {
                     }
 
                     & .modal_korzina_body{
-                        min-height: 612px;
+                        overflow: auto;
+                        flex: calc(100vh - 228px) 0 0;
 
                         & .korzina_item {
-                            height: 162px;
+                            flex: 162px 0 0;
                             width: 100%;
                             border-bottom: 1px solid #5F5E5E4D;
 
@@ -361,17 +645,32 @@ body {
                                 margin: 30px 20px 30px 0;
                                 
                                 & .mainbox_top{
+                                    max-width: 282px;
+                                    overflow: auto;
                                     
                                     & .mainbox_title{
                                         color: #333333;
                                         font-size: 14px;
                                         font-weight: 400;
                                         line-height: 19px;
+                                        max-width: 100%;
                                     }
 
                                     & .mainbox_trash{
+                                        flex: 16px 0 0;
+                                        margin-left: 10px;
                                         cursor: pointer;
                                         user-select: none; 
+
+                                        & .mainbox_trash_svg{
+
+                                            &:hover {
+                                                fill: #9e0b0b;
+                                            }
+                                            &:active {
+                                                fill: #9e0b0b;
+                                            }
+                                        }
                                     }
                                 }
 
@@ -393,8 +692,18 @@ body {
                                     & .mainbox_amount{
 
                                         & .amount_plus{
+                                            width: 20px;
                                             cursor: pointer;
                                             user-select: none; 
+
+                                            & svg {
+                                                &:hover {
+                                                    fill: #FFB541;
+                                                }
+                                                &:active {
+                                                    fill: #000000;
+                                                }
+                                            }
                                         }     
 
                                         & .amount_number{
@@ -409,8 +718,18 @@ body {
                                         }
 
                                         & .amount_minus{
+                                            width: 20px;
                                             cursor: pointer;
                                             user-select: none; 
+
+                                            & svg {
+                                                &:hover {
+                                                    fill: #FFB541;
+                                                }
+                                                &:active {
+                                                    fill: #000000;
+                                                }
+                                            }
                                         }
                                     }
 
@@ -427,10 +746,11 @@ body {
                     }
 
                     & .modal_korzina_foot {
-                        height: 134px;
-                        margin-top: 20px;
+                        flex: 146px 0 0;
 
                         & .korzina_first_button {
+                            margin-top: 20px;
+                            margin-bottom: 26px;
                             
                             & .first_button {
                                 text-decoration: underline;
@@ -455,12 +775,10 @@ body {
                         }    
                     }
                 }
-           }
-       }
 
-       &.show .modal-dialog{
-           transform: translate(0);
-       }
+    //    &.show .modal-dialog{
+    //        transform: translate(0);
+    //    }
    }
 
 
@@ -614,6 +932,7 @@ body {
 
 
    & .modal.block_modal_review {
+       user-select: none;
 
        & .modal-dialog {
            max-width: max-content;
@@ -670,6 +989,7 @@ body {
                        margin: 6px 0 20px 0;
 
                        & .modal_star {
+                           cursor: pointer;
                            min-width: 26px;
                            min-height: 20px;
                            padding-right: 6px;
@@ -686,9 +1006,7 @@ body {
                                height: 100%;
                                left: 0;
                                top: 0;
-                               z-index: 10;
-
-                             
+                               z-index: 10;                             
                            }
    
                            & .star_empty {
@@ -700,22 +1018,42 @@ body {
                                z-index: 5;                           
                            }
                        }                       
-                   }                
+                   } 
+                   
+                   & .review_check_block {
+                        cursor: pointer;
+
+                        & .review_conf_link {
+                            color: #333333;
+                            text-decoration: none;
+                        }
+                   }
                }
 
-               & .modal_review_foot {                    
+               & .modal_review_foot {   
+                   
+                & .review_button_disable {                        
+                    font-size: 14px;
+                    font-weight: 600;
+                    color:#333333;
+                    background-color:  #C9C9C9;
+                    padding: 10px 87px;
+                    text-decoration: none;
+                    margin-bottom: 40px;
+                }
 
-                   & .btn {                        
-                       font-size: 14px;
-                       font-weight: 600;
-                       color:#FFFFFF;
-                       padding: 9px 86px 9px 86px;
-                       margin-bottom: 40px;
-
-                       &:active {
-                           background: linear-gradient(180deg, #FFD647 0%, #FF8206 104.29%);                           
-                       }
-                   }
+                & .review_button {    
+                    display: none;                    
+                    font-size: 14px;
+                    font-weight: 600;
+                    color:#FFFFFF;
+                    padding: 9px 86px;
+                    margin-bottom: 40px!important;
+                    
+                    &:active {
+                        background: linear-gradient(180deg, #FFD647 0%, #FF8206 104.29%);                           
+                    }
+                }
                }
            }
        }

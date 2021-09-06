@@ -5,117 +5,147 @@ body {
     & .wrapper {
 
         & main {
-            // background-color: #E5E5E5;
-            background-color: #fff;
-
-
-
-            & .filter_block_general {
-                margin-top: 20px;
-
-                & .filter_block {
-                    margin-top: 6px;
-        
-                    & .filter_block_name{
-                        color: #333333;
-                        font-size: 14px;
-                        font-weight: 600;
-                        margin: 0  0 10px 0;
-                    }
-        
-                    & .filter_element_pack {
-                        margin-bottom: 10px;
-        
-                        & .form-check {
-                            margin-bottom: 6px;
-        
-                            & .filter_element_name1 {
-                                color: #333333;
-                                font-size: 14px;
-                                font-weight: 400;
-                
-                            }
-                
-                            & .filter_element_name2 {
-                                color: #333333;
-                                font-size: 14px;
-                                font-weight: 400;
-                                
-                            }
-                        }     
-                    }       
-                }
-            }
-        
-        
 
 
             & .block1 {
                 height: 762px;
 
-                
-                & .block1_img1 {
-                    height: 462px;
-                    margin: 22px 0 58px 0;
+                & .block1_left{
+                    margin-top: 12px;
+                    margin-bottom: 40px;
 
-                    & .img_traxtor {
-                        max-height: 100%;
-                        max-width: 100%;
+                    & .left_list {
+                        max-height: 748px;
+                        min-width: 285px;
+                        overflow: auto;
+                        // direction: rtl;
+                        // text-align: start!important;
 
+                        & .items_main_head {
+                            margin-bottom: 5px;
+
+                            & .list_main_head {
+                                color: #FFFFFF;
+                                font-size: 19px;
+                                font-weight: 400;
+                                background-color: $secondary;
+                                user-select: none;
+                                border-radius: 2px;
+                            }
+                        }
+
+                        & .items_group_head {
+                            margin: 3px 0;
+
+                            & .head_list_item {
+                                color: $secondary;
+                                font-size: 16px;
+                                font-weight: 400;
+                                background-color: #F4F4F4;
+                                border-radius: 2px;
+
+                                &:hover {
+                                    color: #FFFFFF;
+                                    background-color: $secondary;
+                                }
+
+                                &:active {
+                                    color: #FFFFFF;
+                                    background-color: $secondary;
+                                }
+
+                                &:hover svg {
+                                    fill: #FFFFFF;
+                                }
+                                    
+                                &:active svg {
+                                    fill: #FFFFFF;
+                                }
+                            }
+                        }
+
+
+                        & .items_group_body {
+
+                            & .body_list_item {
+                                color: #333333;
+                                font-size: 14px;
+                                font-weight: 400;
+                                line-height: 19px;
+                                border-radius: 2px;
+                            }
+                        }
                     }
 
                 }
 
-                & .block1_row2 {
+                & .block1_right{
+                    margin-top: 12px;
+                    margin-bottom: 40px;
 
-                    & a {
-                        text-decoration: none;
+                    & .block1_img1 {
+                        height: 462px;
+                        margin: 10px 0 58px 0;
 
-                        & .block1_ural {
-                            
-                            height: 180px;
-                            width: 377px;
-                            border: 1px solid #4444444D;
-                            margin-right: 30px;
+                        & .img_traxtor {
+                            max-height: 100%;
+                            max-width: 100%;
 
-                            & .block1_img3 {
-                                height: 160px;
-                                width: 240px;
-                                margin: 10px 0 10px 10px;
+                        }
 
-                                & .img_detali {
-                                    max-height: 100%;
-                                    max-width: 100%;
+                    }
+
+                    & .block1_row2 {
+
+                        & a {
+                            text-decoration: none;
+
+                            & .block1_ural {
+                                
+                                height: 180px;
+                                width: 377px;
+                                border: 1px solid #4444444D;
+                                margin-right: 30px;
+
+                                & .block1_img3 {
+                                    height: 160px;
+                                    width: 240px;
+                                    margin: 10px 0 10px 10px;
+
+                                    & .img_detali {
+                                        max-height: 100%;
+                                        max-width: 100%;
+                                    }
+
+                                }
+
+                                & .block1_ural_text {                        
+                                
+                                    margin-top: 10px;
+                                    text-align: right;
+                                    color: #000;
+                                    font-size: 18px;
+                                    font-weight: 400;
                                 }
 
                             }
 
-                            & .block1_ural_text {                        
+                        }
+
                             
-                                margin-top: 10px;
-                                text-align: right;
-                                color: #000;
-                                font-size: 18px;
-                                font-weight: 400;
+
+                        & .block1_img2 {
+                            height: 180px;
+                            width: 488px;
+                            border: 1px solid #4444444D;
+
+                            & .img_ludi {
+                                max-height: 100%;
+                                max-width: 100%;
                             }
-
                         }
-
-                    }
-
-                        
-
-                    & .block1_img2 {
-                        height: 180px;
-                        width: 488px;
-                        border: 1px solid #4444444D;
-
-                        & .img_ludi {
-                            max-height: 100%;
-                            max-width: 100%;
-                        }
-                    }
-                }                        
+                    }  
+                }                      
             }
         
 
@@ -212,13 +242,20 @@ body {
                                     }
                         
                                     & .buy_btn {
+                                        display: flex;
                                         font-size: 14px;
+                                        font-weight: 400;
                                         color:#FFFFFF;
                                         padding: 3.25px 5px 3.25px 5px;
+
+                                        & div {
+                                            margin-left: 9px;
+                                        }
                                     }
                         
                                     & .buy_btn_one {
-                                        font-size: 14px;
+                                        font-size: 13px;
+                                        font-weight: 400;
                                         padding: 4.25px 5px 4.25px 5px;
                         
                                         &:hover {
@@ -328,13 +365,20 @@ body {
                                     }
                         
                                     & .buy_btn {
+                                        display: flex;
                                         font-size: 14px;
+                                        font-weight: 400;
                                         color:#FFFFFF;
                                         padding: 3.25px 5px 3.25px 5px;
+
+                                        & div {
+                                            margin-left: 9px;
+                                        }
                                     }
                         
                                     & .btn-outline-primary {
-                                        font-size: 14px;
+                                        font-size: 13px;
+                                        font-weight: 400;
                                         padding: 4.25px 5px 4.25px 5px;
                         
                                         &:hover {

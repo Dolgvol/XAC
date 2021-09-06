@@ -11,15 +11,14 @@ import 'bootstrap';
 
 import 'slick-carousel/slick/slick.min.js';
 
-import 'select2'; 
+import 'select2';
 
 import '../src/js/main';
 
-import './js/sw';
 
 
 
- 
+
 
 
 

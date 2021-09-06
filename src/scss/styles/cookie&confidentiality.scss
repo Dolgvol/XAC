@@ -1,0 +1,103 @@
+
+body {
+
+   & .wrapper {
+
+      & main {
+
+         & .maintext_block {
+
+            & .maintext_header {
+
+               & .maintext_header_text {
+                  height: 30px;
+                  margin: 12px auto 39px 0;
+                  width: max-content;
+                  position: relative;
+
+                  & .maintext_text {
+                     position: relative;
+                     left: 0;
+                     z-index: 10;
+                     color: #333333;
+                     font-size: 22px;
+                     font-weight: 400;
+                     line-height: 30px;
+                  }
+
+                  & .maintext_header_decor {
+                     position: absolute;
+                     bottom: 2px;
+                     left: 0;
+                     right: -5px;
+                     z-index: 5;
+                     height: 8px;
+                     background-color: $primary;
+                  }
+               }
+            }
+
+            & .maintext_body {
+
+               & .maintext_body_text {
+                  color: #333333;
+                  font-size: 16px;
+                  font-weight: 400;
+                  line-height: 26px;
+                  margin-bottom: 36px;
+
+                  &:last-child {
+                     margin-bottom: 0;
+                  }
+
+                  & ul {
+                     margin: 0;
+                  }
+
+                  & ol {
+                     margin: 0;
+                     padding: 0;
+                     list-style-type: none; /* Убираем исходные маркеры */
+                     counter-reset:  item; /* Обнуляем счетчик списка */
+
+                     & li:before {
+                        content: counter(item) ') '; /* Добавляем к числам скобку */
+                        counter-increment: item; /* Задаём имя счетчика */
+                       }
+                  }
+               } 
+
+               & .maintext_body_header {
+                  color: #333333;
+                  font-size: 18px;
+                  font-weight: 600;
+                  line-height: 25px;
+                  margin-bottom: 20px;
+               }
+            }
+
+            & .maintext_footer {
+
+               & .maintext_footer_btn {
+                  width: max-content;
+                  margin: 50px auto 75px auto;
+
+                  & .cookie_btn {
+                     color: #fff;
+                     font-size: 22px;
+                     font-weight: 600;
+                     line-height: 30px;
+                     padding: 17px 131px;
+
+                     &:active {
+                        background: linear-gradient(180deg, #FFD647 0%, #FF8206 104.29%);                           
+                    }
+                  }
+               }
+            }
+
+         }
+
+       }
+   }
+}
