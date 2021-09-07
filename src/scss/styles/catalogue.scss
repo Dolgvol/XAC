@@ -170,6 +170,10 @@ body {
          
                         & .form-check {
                               margin-bottom: 6px;
+
+                              & .form-check-input {
+                                 border-color: $primary;
+                              }
          
                               & .filter_element_name1 {
                                  color: #333333;

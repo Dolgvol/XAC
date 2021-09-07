@@ -173,7 +173,6 @@ function changeCheckBox() {
 
 
 
-
 // // создание массива анимированных при скролле элементов
 // const animItems = document.querySelectorAll('._anim_items')
 
@@ -291,10 +290,40 @@ for (let plusButton of PLUS_BUTTONS) {
 const ITEMS_COUNTERS = document.querySelectorAll('.amount-for-order')
 
 
-// Выбор языка в шапке
-
 
 // Блоки на странице заказа
+const infoPickup = document.getElementById('deliveryInfoPickup')
+const infoDelivery = document.getElementById('deliveryInfoDelivery')
+const AddinfoBlock1 = document.getElementById('deliveryAddinfoBlock1')
+const AddinfoBlock2 = document.getElementById('deliveryAddinfoBlock2')
+
+choosePickupOrDelivery()
+function choosePickupOrDelivery() {
+    if (infoPickup) {
+        infoPickup.checked = false
+
+        infoPickup.addEventListener("change", () => {
+            if (infoPickup.checked) {
+                AddinfoBlock1.style.display = 'block'
+                AddinfoBlock2.style.display = 'none'
+            }
+        })
+    }
+
+    if (infoDelivery) {
+        infoDelivery.checked = false
+
+        infoDelivery.addEventListener("change", () => {
+            if (infoDelivery.checked) {
+                AddinfoBlock1.style.display = 'none'
+                AddinfoBlock2.style.display = 'block'
+            }
+        })
+    }
+}
+
+
+
 
 
 // Меню бургер
@@ -303,7 +332,6 @@ const ITEMS_COUNTERS = document.querySelectorAll('.amount-for-order')
 
 
 // Куки
-// повесить еще один листнер на кнопку со страницы cookie.html; на данной странице модальное окно не отображать
 const COOKIE_ACCEPT_BTN = document.querySelectorAll('.cookie_accept_btn')
 const COOKIE_BLOCK = document.querySelector('.block_modal_cookie')
 
