@@ -104,7 +104,7 @@
 
                         <div class="row justify-content-between align-items-center head_block2">
 
-                            <div class="col-3">
+                            <div class="col-lg-3 col-4">
                                 <div class="row justify-content-start">
                                     <div class="col">
                                         <a href="./main.html" class="logo_link">
@@ -114,17 +114,22 @@
                                 </div>
                             </div>
 
-                            <div class="col-7">
+                            <div class="col-lg-7 col-6">
+
                                 <form class="d-flex justify-content-center">
                                     <div class="input-group">
+
                                         <input class="form-control search1" name="s"
                                             placeholder="Введите ключевое слово для поиска: артикул, номер...."
                                             type="search">
+
                                         <button type="submit" class="btn btn-secondary btn_search">
                                             <img src="../assets/images/search.svg" class="img-fluid">
                                         </button>
+
                                     </div>
                                 </form>
+
                             </div>
 
                             <div class="col-2 d-flex justify-content-end">
@@ -149,7 +154,7 @@
 
                                 <div class="row justify-content-between align-items-center head_block3 ">
 
-                                    <div class="col-3 d-flex justify-content-start align-items-center">
+                                    <div class="col-lg-3 col-4 d-flex justify-content-start align-items-center">
                                         <a href="#" class="cont">+38 099 99 99 999</a>
                                         <a href="#" class="cont">
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="#333333"
@@ -178,7 +183,7 @@
                                         </a>
                                     </div>
 
-                                    <div class="col-7">
+                                    <div class="col-lg-7 col-6">
                                         <form class="d-flex justify-content-center">
                                             <div class="input-group">
                                                 <input class="form-control search1" name="s"
@@ -202,7 +207,9 @@
                                                     aria-controls="Modal1">
                                                 <div class="korzina_block basket-number-block-in-head" type="button"
                                                     data-bs-toggle="offcanvas" data-bs-target="#Modal1"
-                                                    aria-controls="Modal1">0</div>
+                                                    aria-controls="Modal1">
+                                                    0
+                                                </div>
                                             </div>
                                         </button>
                                     </div>
@@ -229,6 +236,71 @@
                 </div>
             </div>
 
+
+            <div class="header_mob bg-primary">
+                <div class="container">
+
+                    <div class="header_mob_top row align-items-center justify-content-between">
+                        <div class="header_mob_col-l col-2 d-flex justify-content-start">
+                            <button class="btn btn-outline-secondary head_btn header_burger_menu" type="button"
+                            data-bs-toggle="offcanvas" data-bs-target="#Modal0" aria-controls="Modal0">
+                                <img src="../assets/images/burger_menu.svg" type="button"
+                                data-bs-toggle="offcanvas" data-bs-target="#Modal0" aria-controls="Modal0">
+                            </button>
+                        </div>
+
+                        <div class="col-8 d-flex justify-content-center">
+                            <a href="./main.html" class="logo_link_mob">
+                                <img src="../assets/images/logo_head_mobile.svg">
+                            </a>
+                        </div>
+
+                        <div class="header_mob_col-r col-2 d-flex justify-content-end">
+
+                            <button class="btn btn-outline-secondary head_btn btn_korzina" type="button"
+                            data-bs-toggle="offcanvas" data-bs-target="#Modal1" aria-controls="Modal1">
+
+                                <div class="d-flex align-items-center" type="button"
+                                    data-bs-toggle="offcanvas" data-bs-target="#Modal1"
+                                    aria-controls="Modal1">
+                                    <img src="../assets/images/korzina.svg" type="button"
+                                        data-bs-toggle="offcanvas" data-bs-target="#Modal1"
+                                        aria-controls="Modal1">
+                                    <div class="korzina_block basket-number-block-in-head" type="button"
+                                        data-bs-toggle="offcanvas" data-bs-target="#Modal1"
+                                        aria-controls="Modal1">
+                                        0
+                                    </div>
+                                </div>
+
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <div class="header_mob_bottom row align-items-start justify-content-center">
+                        <div class="col-12">
+
+                            <form class="d-flex justify-content-center">
+                                <div class="input-group">
+
+                                    <input class="form-control search1" name="s"
+                                        placeholder="Поиск товаров"
+                                        type="search">
+
+                                    <button type="submit" class="btn btn-secondary btn_search">
+                                        <img src="../assets/images/search.svg" class="img-fluid">
+                                    </button>
+
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
         </top>
 
 
@@ -236,7 +308,7 @@
             <div class="block1 container">
                 <div class="row">
 
-                    <div class="col-3 block1_left">
+                    <div class="col-xl-3 col-lg-4 col-md-5 block1_left">
 
                         <div class="left_list">
 
@@ -345,84 +417,24 @@
                         </div>
 
 
-
-
-
-
-                        <!-- <div class="filter_block_general">
-                            <div class="filter_block">
-                                <div class="filter_block_name">
-                                    Наличие
-                                </div>
-
-                                <div class="filter_element_pack">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="exampleRadios" id="pack1"
-                                            value="option1" checked>
-                                        <label class="form-check-label filter_element_name1" for="pack1">
-                                            Есть в наличии
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="exampleRadios" id="pack2"
-                                            value="option1" checked>
-                                        <label class="form-check-label filter_element_name1" for="pack2">
-                                            Нет в наличии
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="underscore"></div>
-
-                            <div class="filter_block">
-                                <div class="filter_block_name">
-                                    Марка машины
-                                </div>
-
-                                <div class="filter_element_pack">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="exampleRadios2" id="pack3"
-                                            value="option2" checked>
-                                        <label class="form-check-label filter_element_name2" for="pack3">
-                                            КАМАЗ
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="exampleRadios2" id="pack4"
-                                            value="option2" checked>
-                                        <label class="form-check-label filter_element_name2" for="pack4">
-                                            УРАЛ
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="exampleRadios2" id="pack5"
-                                            value="option2" checked>
-                                        <label class="form-check-label filter_element_name2" for="pack5">
-                                            МАЗ
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="exampleRadios2" id="pack6"
-                                            value="option2" checked>
-                                        <label class="form-check-label filter_element_name2" for="pack6">
-                                            МТЗ
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-
                     </div>
 
 
-                    <div class="col-9 block1_right">
+                    <div class="col-xl-9 col-lg-8 col-md-7 block1_right">
 
-                        <div class="d-flex justify-content-end block1_img1">
+                        <div class="block1_img1">
                             <img class="img_traxtor" src="../assets/images/traxtor.png" width="895px" height="462px">
                         </div>
 
-                        <div class="d-flex justify-content-end block1_row2">
+                        <div class="block1_img4">
+                            <img class="img_banner" src="../assets/images/banner_mob.png" width="553px" height="553px">
+                        </div>
+
+                        <div class="block1_btn_cat">
+                            <a class="block1_btn_cat1 btn btn-secondary" tabindex="0">Категории запчастей</a>
+                        </div>
+
+                        <div class="d-flex justify-content-xl-end flex-xl-row flex-md-column-reverse justify-content-md-start align-items-md-start block1_row2">
 
                             <a href="catalogue.html">
                                 <div class="d-flex block1_ural">
@@ -445,6 +457,9 @@
                                 </div>
                             </a>
                         </div>
+
+
+
                     </div>
 
                 </div>
@@ -463,11 +478,13 @@
                     <div class="obertka">
                         <div class="card d-flex justify-content-center carta">
                             <a href="product.html">
-                                <div class="cartina"><img src="../assets/images/gaika.png" class="img-fluid"
-                                        width="238px" height="180px"></div>
+                                <div class="cartina">
+                                    <img src="../assets/images/gaika.png" class="img-fluid"
+                                        width="238px" height="180px">
+                                </div>
                             </a>
-                            <div class="card-body">
-                                <div class="card-title">
+                            <div class="card_body card-body">
+                                <div class="card_title card-title">
                                     Код товара: А10187
                                 </div>
                                 <a class="card-text_a" href="product.html">
@@ -476,27 +493,33 @@
                                 <div class="presence">В наличии</div>
                                 <div class="price">10 грн</div>
                                 <div class="d-flex justify-content-between">
-                                    <a class="btn btn-primary buy_btn">
-                                        <img src="../assets/images/korzina_w.svg">
+                                    <a class="btn btn-primary buy_btn" data-bs-toggle="modal"
+                                    data-bs-target="#Modal6">
+                                        <img src="../assets/images/korzina_w.svg" width="20px" height="21px">
                                         <div>Купить</div>
                                     </a>
+                                    <!-- 
                                     <a class="btn btn-outline-primary buy_btn_one" data-bs-toggle="modal"
                                         data-bs-target="#Modal4">
                                         <div>Купить в 1 клик</div>
                                     </a>
+                                    -->
                                 </div>
                             </div>
                         </div>
                     </div>
 
+
                     <div class="obertka">
                         <div class="card d-flex justify-content-center carta">
                             <a href="product.html">
-                                <div class="cartina"><img src="../assets/images/gaika.png" class="img-fluid"
-                                        width="238px" height="180px"></div>
+                                <div class="cartina">
+                                    <img src="../assets/images/gaika.png" class="img-fluid"
+                                        width="238px" height="180px">
+                                </div>
                             </a>
-                            <div class="card-body">
-                                <div class="card-title">
+                            <div class="card_body card-body">
+                                <div class="card_title card-title">
                                     Код товара: А10187
                                 </div>
                                 <a class="card-text_a" href="product.html">
@@ -505,27 +528,33 @@
                                 <div class="presence">В наличии</div>
                                 <div class="price">10 грн</div>
                                 <div class="d-flex justify-content-between">
-                                    <a class="btn btn-primary buy_btn">
-                                        <img src="../assets/images/korzina_w.svg">
+                                    <a class="btn btn-primary buy_btn" data-bs-toggle="modal"
+                                    data-bs-target="#Modal6">
+                                        <img src="../assets/images/korzina_w.svg" width="20px" height="21px">
                                         <div>Купить</div>
                                     </a>
+                                    <!-- 
                                     <a class="btn btn-outline-primary buy_btn_one" data-bs-toggle="modal"
                                         data-bs-target="#Modal4">
                                         <div>Купить в 1 клик</div>
                                     </a>
+                                    -->
                                 </div>
                             </div>
                         </div>
                     </div>
 
+
                     <div class="obertka">
                         <div class="card d-flex justify-content-center carta">
                             <a href="product.html">
-                                <div class="cartina"><img src="../assets/images/gaika.png" class="img-fluid"
-                                        width="238px" height="180px"></div>
+                                <div class="cartina">
+                                    <img src="../assets/images/gaika.png" class="img-fluid"
+                                        width="238px" height="180px">
+                                </div>
                             </a>
-                            <div class="card-body">
-                                <div class="card-title">
+                            <div class="card_body card-body">
+                                <div class="card_title card-title">
                                     Код товара: А10187
                                 </div>
                                 <a class="card-text_a" href="product.html">
@@ -534,27 +563,33 @@
                                 <div class="presence">В наличии</div>
                                 <div class="price">10 грн</div>
                                 <div class="d-flex justify-content-between">
-                                    <a class="btn btn-primary buy_btn">
-                                        <img src="../assets/images/korzina_w.svg">
+                                    <a class="btn btn-primary buy_btn" data-bs-toggle="modal"
+                                    data-bs-target="#Modal6">
+                                        <img src="../assets/images/korzina_w.svg" width="20px" height="21px">
                                         <div>Купить</div>
                                     </a>
+                                    <!-- 
                                     <a class="btn btn-outline-primary buy_btn_one" data-bs-toggle="modal"
                                         data-bs-target="#Modal4">
                                         <div>Купить в 1 клик</div>
                                     </a>
+                                    -->
                                 </div>
                             </div>
                         </div>
                     </div>
 
+
                     <div class="obertka">
                         <div class="card d-flex justify-content-center carta">
                             <a href="product.html">
-                                <div class="cartina"><img src="../assets/images/gaika.png" class="img-fluid"
-                                        width="238px" height="180px"></div>
+                                <div class="cartina">
+                                    <img src="../assets/images/gaika.png" class="img-fluid"
+                                        width="238px" height="180px">
+                                </div>
                             </a>
-                            <div class="card-body">
-                                <div class="card-title">
+                            <div class="card_body card-body">
+                                <div class="card_title card-title">
                                     Код товара: А10187
                                 </div>
                                 <a class="card-text_a" href="product.html">
@@ -563,27 +598,33 @@
                                 <div class="presence">В наличии</div>
                                 <div class="price">10 грн</div>
                                 <div class="d-flex justify-content-between">
-                                    <a class="btn btn-primary buy_btn">
-                                        <img src="../assets/images/korzina_w.svg">
+                                    <a class="btn btn-primary buy_btn" data-bs-toggle="modal"
+                                    data-bs-target="#Modal6">
+                                        <img src="../assets/images/korzina_w.svg" width="20px" height="21px">
                                         <div>Купить</div>
                                     </a>
+                                    <!-- 
                                     <a class="btn btn-outline-primary buy_btn_one" data-bs-toggle="modal"
                                         data-bs-target="#Modal4">
                                         <div>Купить в 1 клик</div>
                                     </a>
+                                    -->
                                 </div>
                             </div>
                         </div>
                     </div>
 
+
                     <div class="obertka">
                         <div class="card d-flex justify-content-center carta">
                             <a href="product.html">
-                                <div class="cartina"><img src="../assets/images/gaika.png" class="img-fluid"
-                                        width="238px" height="180px"></div>
+                                <div class="cartina">
+                                    <img src="../assets/images/gaika.png" class="img-fluid"
+                                        width="238px" height="180px">
+                                </div>
                             </a>
-                            <div class="card-body">
-                                <div class="card-title">
+                            <div class="card_body card-body">
+                                <div class="card_title card-title">
                                     Код товара: А10187
                                 </div>
                                 <a class="card-text_a" href="product.html">
@@ -592,18 +633,127 @@
                                 <div class="presence">В наличии</div>
                                 <div class="price">10 грн</div>
                                 <div class="d-flex justify-content-between">
-                                    <a class="btn btn-primary buy_btn">
-                                        <img src="../assets/images/korzina_w.svg">
+                                    <a class="btn btn-primary buy_btn" data-bs-toggle="modal"
+                                    data-bs-target="#Modal6">
+                                        <img src="../assets/images/korzina_w.svg" width="20px" height="21px">
                                         <div>Купить</div>
                                     </a>
+                                    <!-- 
                                     <a class="btn btn-outline-primary buy_btn_one" data-bs-toggle="modal"
                                         data-bs-target="#Modal4">
                                         <div>Купить в 1 клик</div>
                                     </a>
+                                    -->
                                 </div>
                             </div>
                         </div>
                     </div>
+
+
+                    <div class="obertka">
+                        <div class="card d-flex justify-content-center carta">
+                            <a href="product.html">
+                                <div class="cartina">
+                                    <img src="../assets/images/gaika.png" class="img-fluid"
+                                        width="238px" height="180px">
+                                </div>
+                            </a>
+                            <div class="card_body card-body">
+                                <div class="card_title card-title">
+                                    Код товара: А10187
+                                </div>
+                                <a class="card-text_a" href="product.html">
+                                    <div class="card-text">Гайка средняя 22-345 (Завод)</div>
+                                </a>
+                                <div class="presence">В наличии</div>
+                                <div class="price">10 грн</div>
+                                <div class="d-flex justify-content-between">
+                                    <a class="btn btn-primary buy_btn" data-bs-toggle="modal"
+                                    data-bs-target="#Modal6">
+                                        <img src="../assets/images/korzina_w.svg" width="20px" height="21px">
+                                        <div>Купить</div>
+                                    </a>
+                                    <!-- 
+                                    <a class="btn btn-outline-primary buy_btn_one" data-bs-toggle="modal"
+                                        data-bs-target="#Modal4">
+                                        <div>Купить в 1 клик</div>
+                                    </a>
+                                    -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="obertka">
+                        <div class="card d-flex justify-content-center carta">
+                            <a href="product.html">
+                                <div class="cartina">
+                                    <img src="../assets/images/gaika.png" class="img-fluid"
+                                        width="238px" height="180px">
+                                </div>
+                            </a>
+                            <div class="card_body card-body">
+                                <div class="card_title card-title">
+                                    Код товара: А10187
+                                </div>
+                                <a class="card-text_a" href="product.html">
+                                    <div class="card-text">Гайка средняя 22-345 (Завод)</div>
+                                </a>
+                                <div class="presence">В наличии</div>
+                                <div class="price">10 грн</div>
+                                <div class="d-flex justify-content-between">
+                                    <a class="btn btn-primary buy_btn" data-bs-toggle="modal"
+                                    data-bs-target="#Modal6">
+                                        <img src="../assets/images/korzina_w.svg" width="20px" height="21px">
+                                        <div>Купить</div>
+                                    </a>
+                                    <!-- 
+                                    <a class="btn btn-outline-primary buy_btn_one" data-bs-toggle="modal"
+                                        data-bs-target="#Modal4">
+                                        <div>Купить в 1 клик</div>
+                                    </a>
+                                    -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="obertka">
+                        <div class="card d-flex justify-content-center carta">
+                            <a href="product.html">
+                                <div class="cartina">
+                                    <img src="../assets/images/gaika.png" class="img-fluid"
+                                        width="238px" height="180px">
+                                </div>
+                            </a>
+                            <div class="card_body card-body">
+                                <div class="card_title card-title">
+                                    Код товара: А10187
+                                </div>
+                                <a class="card-text_a" href="product.html">
+                                    <div class="card-text">Гайка средняя 22-345 (Завод)</div>
+                                </a>
+                                <div class="presence">В наличии</div>
+                                <div class="price">10 грн</div>
+                                <div class="d-flex justify-content-between">
+                                    <a class="btn btn-primary buy_btn" data-bs-toggle="modal"
+                                    data-bs-target="#Modal6">
+                                        <img src="../assets/images/korzina_w.svg" width="20px" height="21px">
+                                        <div>Купить</div>
+                                    </a>
+                                    <!-- 
+                                    <a class="btn btn-outline-primary buy_btn_one" data-bs-toggle="modal"
+                                        data-bs-target="#Modal4">
+                                        <div>Купить в 1 клик</div>
+                                    </a>
+                                    -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
 
                 </div>
 
@@ -620,14 +770,17 @@
 
                 <div class="slider items_prod">
 
+
                     <div class="obertka">
                         <div class="card d-flex justify-content-center carta">
                             <a href="product.html">
-                                <div class="cartina"><img src="../assets/images/gaika.png" class="img-fluid"
-                                        width="238px" height="180px"></div>
+                                <div class="cartina">
+                                    <img src="../assets/images/gaika.png" class="img-fluid"
+                                        width="238px" height="180px">
+                                </div>
                             </a>
-                            <div class="card-body">
-                                <div class="card-title">
+                            <div class="card_body card-body">
+                                <div class="card_title card-title">
                                     Код товара: А10187
                                 </div>
                                 <a class="card-text_a" href="product.html">
@@ -636,27 +789,33 @@
                                 <div class="presence">В наличии</div>
                                 <div class="price">10 грн</div>
                                 <div class="d-flex justify-content-between">
-                                    <a class="btn btn-primary buy_btn">
-                                        <img src="../assets/images/korzina_w.svg">
+                                    <a class="btn btn-primary buy_btn" data-bs-toggle="modal"
+                                    data-bs-target="#Modal6">
+                                        <img src="../assets/images/korzina_w.svg" width="20px" height="21px">
                                         <div>Купить</div>
                                     </a>
+                                    <!-- 
                                     <a class="btn btn-outline-primary buy_btn_one" data-bs-toggle="modal"
                                         data-bs-target="#Modal4">
                                         <div>Купить в 1 клик</div>
                                     </a>
+                                    -->
                                 </div>
                             </div>
                         </div>
                     </div>
 
+
                     <div class="obertka">
                         <div class="card d-flex justify-content-center carta">
                             <a href="product.html">
-                                <div class="cartina"><img src="../assets/images/gaika.png" class="img-fluid"
-                                        width="238px" height="180px"></div>
+                                <div class="cartina">
+                                    <img src="../assets/images/gaika.png" class="img-fluid"
+                                        width="238px" height="180px">
+                                </div>
                             </a>
-                            <div class="card-body">
-                                <div class="card-title">
+                            <div class="card_body card-body">
+                                <div class="card_title card-title">
                                     Код товара: А10187
                                 </div>
                                 <a class="card-text_a" href="product.html">
@@ -665,27 +824,33 @@
                                 <div class="presence">В наличии</div>
                                 <div class="price">10 грн</div>
                                 <div class="d-flex justify-content-between">
-                                    <a class="btn btn-primary buy_btn">
-                                        <img src="../assets/images/korzina_w.svg">
+                                    <a class="btn btn-primary buy_btn" data-bs-toggle="modal"
+                                    data-bs-target="#Modal6">
+                                        <img src="../assets/images/korzina_w.svg" width="20px" height="21px">
                                         <div>Купить</div>
                                     </a>
+                                    <!-- 
                                     <a class="btn btn-outline-primary buy_btn_one" data-bs-toggle="modal"
                                         data-bs-target="#Modal4">
                                         <div>Купить в 1 клик</div>
                                     </a>
+                                    -->
                                 </div>
                             </div>
                         </div>
                     </div>
 
+
                     <div class="obertka">
                         <div class="card d-flex justify-content-center carta">
                             <a href="product.html">
-                                <div class="cartina"><img src="../assets/images/gaika.png" class="img-fluid"
-                                        width="238px" height="180px"></div>
+                                <div class="cartina">
+                                    <img src="../assets/images/gaika.png" class="img-fluid"
+                                        width="238px" height="180px">
+                                </div>
                             </a>
-                            <div class="card-body">
-                                <div class="card-title">
+                            <div class="card_body card-body">
+                                <div class="card_title card-title">
                                     Код товара: А10187
                                 </div>
                                 <a class="card-text_a" href="product.html">
@@ -694,27 +859,33 @@
                                 <div class="presence">В наличии</div>
                                 <div class="price">10 грн</div>
                                 <div class="d-flex justify-content-between">
-                                    <a class="btn btn-primary buy_btn">
-                                        <img src="../assets/images/korzina_w.svg">
+                                    <a class="btn btn-primary buy_btn" data-bs-toggle="modal"
+                                    data-bs-target="#Modal6">
+                                        <img src="../assets/images/korzina_w.svg" width="20px" height="21px">
                                         <div>Купить</div>
                                     </a>
+                                    <!-- 
                                     <a class="btn btn-outline-primary buy_btn_one" data-bs-toggle="modal"
                                         data-bs-target="#Modal4">
                                         <div>Купить в 1 клик</div>
                                     </a>
+                                    -->
                                 </div>
                             </div>
                         </div>
                     </div>
 
+
                     <div class="obertka">
                         <div class="card d-flex justify-content-center carta">
                             <a href="product.html">
-                                <div class="cartina"><img src="../assets/images/gaika.png" class="img-fluid"
-                                        width="238px" height="180px"></div>
+                                <div class="cartina">
+                                    <img src="../assets/images/gaika.png" class="img-fluid"
+                                        width="238px" height="180px">
+                                </div>
                             </a>
-                            <div class="card-body">
-                                <div class="card-title">
+                            <div class="card_body card-body">
+                                <div class="card_title card-title">
                                     Код товара: А10187
                                 </div>
                                 <a class="card-text_a" href="product.html">
@@ -723,27 +894,33 @@
                                 <div class="presence">В наличии</div>
                                 <div class="price">10 грн</div>
                                 <div class="d-flex justify-content-between">
-                                    <a class="btn btn-primary buy_btn">
-                                        <img src="../assets/images/korzina_w.svg">
+                                    <a class="btn btn-primary buy_btn" data-bs-toggle="modal"
+                                    data-bs-target="#Modal6">
+                                        <img src="../assets/images/korzina_w.svg" width="20px" height="21px">
                                         <div>Купить</div>
                                     </a>
+                                    <!-- 
                                     <a class="btn btn-outline-primary buy_btn_one" data-bs-toggle="modal"
                                         data-bs-target="#Modal4">
                                         <div>Купить в 1 клик</div>
                                     </a>
+                                    -->
                                 </div>
                             </div>
                         </div>
                     </div>
 
+
                     <div class="obertka">
                         <div class="card d-flex justify-content-center carta">
                             <a href="product.html">
-                                <div class="cartina"><img src="../assets/images/gaika.png" class="img-fluid"
-                                        width="238px" height="180px"></div>
+                                <div class="cartina">
+                                    <img src="../assets/images/gaika.png" class="img-fluid"
+                                        width="238px" height="180px">
+                                </div>
                             </a>
-                            <div class="card-body">
-                                <div class="card-title">
+                            <div class="card_body card-body">
+                                <div class="card_title card-title">
                                     Код товара: А10187
                                 </div>
                                 <a class="card-text_a" href="product.html">
@@ -752,18 +929,127 @@
                                 <div class="presence">В наличии</div>
                                 <div class="price">10 грн</div>
                                 <div class="d-flex justify-content-between">
-                                    <a class="btn btn-primary buy_btn">
-                                        <img src="../assets/images/korzina_w.svg">
+                                    <a class="btn btn-primary buy_btn" data-bs-toggle="modal"
+                                    data-bs-target="#Modal6">
+                                        <img src="../assets/images/korzina_w.svg" width="20px" height="21px">
                                         <div>Купить</div>
                                     </a>
+                                    <!-- 
                                     <a class="btn btn-outline-primary buy_btn_one" data-bs-toggle="modal"
                                         data-bs-target="#Modal4">
                                         <div>Купить в 1 клик</div>
                                     </a>
+                                    -->
                                 </div>
                             </div>
                         </div>
                     </div>
+
+
+                    <div class="obertka">
+                        <div class="card d-flex justify-content-center carta">
+                            <a href="product.html">
+                                <div class="cartina">
+                                    <img src="../assets/images/gaika.png" class="img-fluid"
+                                        width="238px" height="180px">
+                                </div>
+                            </a>
+                            <div class="card_body card-body">
+                                <div class="card_title card-title">
+                                    Код товара: А10187
+                                </div>
+                                <a class="card-text_a" href="product.html">
+                                    <div class="card-text">Гайка средняя 22-345 (Завод)</div>
+                                </a>
+                                <div class="presence">В наличии</div>
+                                <div class="price">10 грн</div>
+                                <div class="d-flex justify-content-between">
+                                    <a class="btn btn-primary buy_btn" data-bs-toggle="modal"
+                                    data-bs-target="#Modal6">
+                                        <img src="../assets/images/korzina_w.svg" width="20px" height="21px">
+                                        <div>Купить</div>
+                                    </a>
+                                    <!-- 
+                                    <a class="btn btn-outline-primary buy_btn_one" data-bs-toggle="modal"
+                                        data-bs-target="#Modal4">
+                                        <div>Купить в 1 клик</div>
+                                    </a>
+                                    -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="obertka">
+                        <div class="card d-flex justify-content-center carta">
+                            <a href="product.html">
+                                <div class="cartina">
+                                    <img src="../assets/images/gaika.png" class="img-fluid"
+                                        width="238px" height="180px">
+                                </div>
+                            </a>
+                            <div class="card_body card-body">
+                                <div class="card_title card-title">
+                                    Код товара: А10187
+                                </div>
+                                <a class="card-text_a" href="product.html">
+                                    <div class="card-text">Гайка средняя 22-345 (Завод)</div>
+                                </a>
+                                <div class="presence">В наличии</div>
+                                <div class="price">10 грн</div>
+                                <div class="d-flex justify-content-between">
+                                    <a class="btn btn-primary buy_btn" data-bs-toggle="modal"
+                                    data-bs-target="#Modal6">
+                                        <img src="../assets/images/korzina_w.svg" width="20px" height="21px">
+                                        <div>Купить</div>
+                                    </a>
+                                    <!-- 
+                                    <a class="btn btn-outline-primary buy_btn_one" data-bs-toggle="modal"
+                                        data-bs-target="#Modal4">
+                                        <div>Купить в 1 клик</div>
+                                    </a>
+                                    -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="obertka">
+                        <div class="card d-flex justify-content-center carta">
+                            <a href="product.html">
+                                <div class="cartina">
+                                    <img src="../assets/images/gaika.png" class="img-fluid"
+                                        width="238px" height="180px">
+                                </div>
+                            </a>
+                            <div class="card_body card-body">
+                                <div class="card_title card-title">
+                                    Код товара: А10187
+                                </div>
+                                <a class="card-text_a" href="product.html">
+                                    <div class="card-text">Гайка средняя 22-345 (Завод)</div>
+                                </a>
+                                <div class="presence">В наличии</div>
+                                <div class="price">10 грн</div>
+                                <div class="d-flex justify-content-between">
+                                    <a class="btn btn-primary buy_btn" data-bs-toggle="modal"
+                                    data-bs-target="#Modal6">
+                                        <img src="../assets/images/korzina_w.svg" width="20px" height="21px">
+                                        <div>Купить</div>
+                                    </a>
+                                    <!-- 
+                                    <a class="btn btn-outline-primary buy_btn_one" data-bs-toggle="modal"
+                                        data-bs-target="#Modal4">
+                                        <div>Купить в 1 клик</div>
+                                    </a>
+                                    -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
 
                 </div>
             </div>
@@ -779,105 +1065,61 @@
                 <div class="block4_text_about">
                     <div class="block4_text_about1">
                         <p>
-                            Наша компания предоставляет полный спектр услуг в поставке и обеспечении запчастями для
-                            КАМАЗов.
-                            Мы предлагаем полный список детального ряда, как официального производства, так и
-                            достойные
-                            реплики,
-                            лишь Вам решить, какой именно вариант Вам подходит.
+                            Наша компания «Харьков Автоспектр» предоставляет полный спектр услуг в поставке запчастей
+                            для КАМАЗА. Мы предлагаем полный список детального ряда запчасти на все категории КАМАЗ, как
+                            официального производства, так и достойные аналоги, лишь Вам решать, какой именно вариант
+                            Вам подходит.
                         </p>
                         <p>
-                            Наша компания располагается в Харькове, однако также мы предлагаем доставку разными
-                            службами
-                            (Delivery, Just Inn,
-                            Новая Почта) по Украине.
+                            У нас Вы можете приобрести запчасти КАМАЗ с самовывозом из Харькова. Мы также предлагаем
+                            запчасти КАМАЗ с доставкой по Украине разными службами (Delivery, Новая Почта, Автолюкс,
+                            SAT).
                         </p>
                         <p class="block_visible">
-                            Мы работаем с разным типом клиентов. Являетесь Вы физическим лицом или юридическим, мы
-                            предоставим
-                            нужный тип
-                            документации и обеспечим комфортный процесс сотрудничества.
+                            В интернет магазине Харьков Автоспектр можно купить запчасти КАМАЗ. Для Вас найдется
+                            выгодное предложение из широкого ассортиментного ряда будь это запчасти на КАМАЗ 5320 или
+                            запчасти на КАМАЗ 6520. На выгодных условиях можно приобрести необходимые детали КАМАЗ:
+                            радиатор масляный КАМАЗ, ремкомплект рулевых тяг КАМАЗ, петля дышла прицепа с гайкой, насос
+                            масляный КАМАЗ, крышка РМШ, Диск нажимной в сборе КАМАЗ.
                         </p>
                         <div class="block_invisible" id="block4Invisible"></div>
                     </div>
 
                     <div class="collapse block4_text_about2" id="collapseText1">
-                        <p>Інтернет-магазин меблів «Новий Стиль»: для Вас знайдеться вигідна пропозиція! Наш
-                            онлайн-магазин
-                            меблів пропонує
-                            продукцію від виробника «Новий Стиль», який працює на українському ринку понад 20 років.
-                            В
-                            асортименті меблевої
-                            фабрики понад 200 тисяч товарів, 200 модифікацій виробів! Ви зможете на вигідних умовах
-                            придбати
-                            меблі своєї
-                            мрії: недорогі крісла, стільці, столи, шафи і багато іншого. Різні комбінації кольору,
-                            оздоблювальних матеріалів,
-                            багатофункціональність рішень і модульність дозволять підібрати варіант, який оптимально
-                            підійде
-                            саме до вашого
-                            інтер’єру.
+                        <p>
+                            Наш интернет магазин запчастей КАМАЗ по выгодной цене предлагает купить:
+                        <ul>
+                            <li>ось балансира КАМАЗ</li>
+                            <li>радиатор КАМАЗ</li>
+                            <li>запчасти на евро КАМАЗ</li>
+                            <li>штанга реактивная КАМАЗ</li>
+                            <li>теплообменник длинный КАМАЗ</li>
+                            <li>насос ГУР КАМАЗ</li>
+                            <li>диск нажимной в сборе КАМАЗ</li>
+                            <li>головка блока 740.1003010 КАМАЗ</li>
+                            <li>диск сцепления ведомый КАМАЗ</li>
+                            <li>втулка оси платформы в сборе КАМАЗ</li>
+                        </ul>
                         </p>
-                        <p>Всі меблі на одному сайті Якісні та ергономічні меблі фабричного виробництва стануть
-                            «візитною
-                            карткою»
-                            будь-якого будинку, офісу, адміністративного або розважального закладу. Вони гармонійно
-                            впишуться в
-                            інтер'єр і доповнять його. Каталог нашого сайту постійно оновлюється. «Новий Стиль»
-                            завжди в
-                            курсі
-                            сучасних тенденцій в області меблевого виробництва. Кращі ідеї знаходять відображення у
-                            виготовленні
-                            нових моделей. Із фотографіями виробів в різних ракурсах, а також їх технічними
-                            параметрами
-                            ви
-                            можете
-                            ознайомитися на нашому сайті. В інтернет-магазині «Новий Стиль» за доступною ціною можна
-                            придбати:
-                            офісні меблі; домашні меблі; меблі для КаБаРе (кафе, барів і ресторанів); меблі для
-                            школи.
+                        <p>Если же Вас интересует какая-то специфическая деталь на КАМАЗ: Вы всегда можете оформить
+                            запчасти КАМАЗ под заказ. Мы постараемся доставить её в кратчайшие сроки.
                         </p>
                         <p>
-                            Вся продукція від фабрики «Новий Стиль» відрізняється довговічністю і бездоганною
-                            якістю,
-                            так як
-                            при її виробництві застосовується сучасна фурнітура та матеріали з відмінними
-                            експлуатаційними
-                            характеристиками. Клієнт може вибрати як бюджетні рішення, так і меблеві конструкції
-                            преміум-класу.
-                            На всі вироби надається гарантія від заводу-виробника терміном до п'яти років!
+                            Мы работаем с разным типом клиентов: физические или юридические лица: предоставим нужный тип
+                            документации и обеспечим комфортный процесс сотрудничества. Наш магазин предлагает
+                            возможность приобретения запчасти КАМАЗ с НДС Украина.
                         </p>
                         <p>
-                            Чому вигідно стати нашим клієнтом? Актуальна вартість меблевої продукції вказана на
-                            сайті.
-                            Хочете максимально заощадити? Скористайтеся акційною пропозицією і придбайте «Товар
-                            тижня»
-                            або «Товар місяця» за найдоступнішою для вас ціною.
+                            Гарантируем качество и информационную поддержку, наши менеджеры всегда готовы предложить и
+                            подсказать Вам наилучший вариант, а также помочь в оформлении заказа запчасти КАМАЗ оптом,
+                            дабы Ваша покупка запчасти КАМАЗ Украина была комфортной и оперативной.
                         </p>
                         <p>
-                            Якщо виникли складнощі, менеджери безкоштовно проконсультують вас і допоможуть прийняти
-                            правильне рішення. Оформлюйте замовлення в інтернет-магазині «Новий Стиль» прямо зараз,
-                            і протягом декількох днів ви зможете отримати свій товар. Доставка здійснюється в
-                            будь-яку
-                            точку
-                            України.
-                        </p>
-                        <p>Нашим клієнтом бути вигідно! Ви оціните наступні переваги: фабричне виробництво,
-                            перевірене
-                            часом;
-                            післягарантійне обслуговування і доступний ремонт меблів; широкий спектр цін (охоплює
-                            економ-,
-                            середній і преміум-клас); можливість вибрати зручний варіант оплати (банківським
-                            переказом,
-                            готівкою, безготівковим розрахунком, післяплатою);
-                        </p>
-                        <p>в наявності широкий асортимент товару (якщо потрібної позиції не виявилося на складах,
-                            в найкоротші терміни виготовимо меблі, які вам потрібні. Не відмовляйте собі в
-                            задоволенні
-                            купити ергономічні і надійні меблі! В інтернет-магазині «Новий Стиль» ви це зможете
-                            зробити
-                            за
-                            приємною ціною.
+                            Нашим клиентом быть выгодно! Ведь, наша команда старается обеспечить Вам лучший сервис по
+                            самой выгодной цене. У нас всегда найдутся нужные запчасти КАМАЗ по низким ценам. Широкий
+                            спектр цен и ассортимента, возможность выбора удобного способа оплаты и доставки, и не
+                            только это ожидает Вас при сотрудничестве с Харьков Автоспектр. Всегда рады Вам в нашем
+                            магазине!
                         </p>
                     </div>
 
@@ -893,11 +1135,16 @@
 
 
             <div class="block5 container">
+
+                <div class="underscore"></div>
+
                 <div class="row justify-content-center block5_head">
                     <div class="col-auto">Наши преимущества</div>
                 </div>
-                <div class="row justify-content-evenly align-items-center row_1">
-                    <div class="col-auto">
+
+                <div class="row justify-content-lg-evenly justify-content-around align-items-center row_1">
+
+                    <div class="el_adv col-auto">
                         <div class="d-flex flex-column align-items-center">
                             <div class="img_block">
                                 <img src="../assets/images/advantage_1.jpg" class="img-fluid">
@@ -905,7 +1152,8 @@
                             <div class="text_block">Сможем доставить заказы<br>по всей Украине</div>
                         </div>
                     </div>
-                    <div class="col-auto">
+
+                    <div class="el_adv col-auto">
                         <div class="d-flex flex-column align-items-center">
                             <div class="img_block">
                                 <img src="../assets/images/advantage_2.jpg" class="img-fluid">
@@ -913,9 +1161,12 @@
                             <div class="text_block">Мы также предлагаем<br>возможность оплаты с НДС</div>
                         </div>
                     </div>
+
                 </div>
-                <div class="row justify-content-between align-items-center row_2">
-                    <div class="col-auto">
+
+                <div class="row justify-content-lg-between justify-content-around align-items-center row_2">
+
+                    <div class="el_adv col-auto">
                         <div class="d-flex flex-column align-items-center">
                             <div class="img_block">
                                 <img src="../assets/images/advantage_3.jpg" class="img-fluid">
@@ -923,7 +1174,8 @@
                             <div class="text_block">У нас Вы можете заказать<br>и оплатить товары онлайн</div>
                         </div>
                     </div>
-                    <div class="col-auto">
+
+                    <div class="el_adv col-auto">
                         <div class="d-flex flex-column align-items-center">
                             <div class="img_block">
                                 <img src="../assets/images/advantage_4.jpg" class="img-fluid">
@@ -931,7 +1183,8 @@
                             <div class="text_block">Мы предоставляем наличие<br>широкого ассортимента</div>
                         </div>
                     </div>
-                    <div class="col-auto">
+
+                    <div class="el_adv col-auto">
                         <div class="d-flex flex-column align-items-center">
                             <div class="img_block">
                                 <img src="../assets/images/advantage_5.jpg" class="img-fluid">
@@ -939,8 +1192,12 @@
                             <div class="text_block">У нас доступен самовывоз<br>из офиса в Харькове</div>
                         </div>
                     </div>
+
                 </div>
+
             </div>
+
+            
 
 
             <div class="block6 container">
@@ -1046,33 +1303,110 @@
             </div>
 
 
+            <div class="block4_mob container">
+                <div class="underscore"></div>
 
+                <div class="block4_head">
+                    О Компании
+                </div>
+
+                <div class="block4_text_about">
+                    <div class="block4_text_about1">
+                        <p>
+                            Наша компания «Харьков Автоспектр» предоставляет полный спектр услуг в поставке запчастей
+                            для КАМАЗА. Мы предлагаем полный список детального ряда запчасти на все категории КАМАЗ, как
+                            официального производства, так и достойные аналоги, лишь Вам решать, какой именно вариант
+                            Вам подходит.
+                        </p>
+                        <p class="block_visible">
+                            У нас Вы можете приобрести запчасти КАМАЗ с самовывозом из Харькова. Мы также предлагаем
+                            запчасти КАМАЗ с доставкой по Украине разными службами (Delivery, Новая Почта, Автолюкс,
+                            SAT).
+                        </p>
+                        <div class="block_invisible" id="block4Invisible_mob"></div>
+                    </div>
+
+                    <div class="collapse block4_text_about2" id="collapseText1">
+                        <p>
+                            В интернет магазине Харьков Автоспектр можно купить запчасти КАМАЗ. Для Вас найдется
+                            выгодное предложение из широкого ассортиментного ряда будь это запчасти на КАМАЗ 5320 или
+                            запчасти на КАМАЗ 6520. На выгодных условиях можно приобрести необходимые детали КАМАЗ:
+                            радиатор масляный КАМАЗ, ремкомплект рулевых тяг КАМАЗ, петля дышла прицепа с гайкой, насос
+                            масляный КАМАЗ, крышка РМШ, Диск нажимной в сборе КАМАЗ.
+                        </p>
+                        <p>
+                            Наш интернет магазин запчастей КАМАЗ по выгодной цене предлагает купить:
+                        <ul>
+                            <li>ось балансира КАМАЗ</li>
+                            <li>радиатор КАМАЗ</li>
+                            <li>запчасти на евро КАМАЗ</li>
+                            <li>штанга реактивная КАМАЗ</li>
+                            <li>теплообменник длинный КАМАЗ</li>
+                            <li>насос ГУР КАМАЗ</li>
+                            <li>диск нажимной в сборе КАМАЗ</li>
+                            <li>головка блока 740.1003010 КАМАЗ</li>
+                            <li>диск сцепления ведомый КАМАЗ</li>
+                            <li>втулка оси платформы в сборе КАМАЗ</li>
+                        </ul>
+                        </p>
+                        <p>Если же Вас интересует какая-то специфическая деталь на КАМАЗ: Вы всегда можете оформить
+                            запчасти КАМАЗ под заказ. Мы постараемся доставить её в кратчайшие сроки.
+                        </p>
+                        <p>
+                            Мы работаем с разным типом клиентов: физические или юридические лица: предоставим нужный тип
+                            документации и обеспечим комфортный процесс сотрудничества. Наш магазин предлагает
+                            возможность приобретения запчасти КАМАЗ с НДС Украина.
+                        </p>
+                        <p>
+                            Гарантируем качество и информационную поддержку, наши менеджеры всегда готовы предложить и
+                            подсказать Вам наилучший вариант, а также помочь в оформлении заказа запчасти КАМАЗ оптом,
+                            дабы Ваша покупка запчасти КАМАЗ Украина была комфортной и оперативной.
+                        </p>
+                        <p>
+                            Нашим клиентом быть выгодно! Ведь, наша команда старается обеспечить Вам лучший сервис по
+                            самой выгодной цене. У нас всегда найдутся нужные запчасти КАМАЗ по низким ценам. Широкий
+                            спектр цен и ассортимента, возможность выбора удобного способа оплаты и доставки, и не
+                            только это ожидает Вас при сотрудничестве с Харьков Автоспектр. Всегда рады Вам в нашем
+                            магазине!
+                        </p>
+                    </div>
+
+                </div>
+
+                <a class="block4_btn" id="block4Btn1" data-bs-toggle="collapse" data-bs-target="#collapseText1"
+                    aria-expanded="false" aria-controls="collapseText1">
+                    Читать полностью
+                </a>
+
+                <div class="underscore"></div>
+            </div>
 
 
             <div class="block7 container">
                 <div class="row">
-                    <div class="col-4">
-                        <div class="block7_head">Мы всегда рады<br>видеть Вас у нас</div>
+                    <div class="col-xl-4 col-12">
+                        <div class="block7_head">Мы всегда рады <br class="block7_head_br">видеть Вас у нас</div>
                         <div class="row">
                             <div class="col-auto block7_name">Офис:</div>
-                            <div class="col-auto block7_text">ул. Зерновая, 4-В, г. Харьков</div>
+                            <div class="col-auto block7_text">ул. Зерновая, 4-В,<br class="block7_br"> г. Харьков</div>
                         </div>
                         <div class="row">
                             <div class="col-auto block7_name">Магазин:</div>
-                            <div class="col-auto block7_text">пл. Юрия Кононенко, 1,<br>авторынок “ЛОСК”<br>нижний
-                                периметр<br>магазин
-                                №192
+                            <div class="col-auto block7_text">
+                                пл. Юрия Кононенко, 1,<br>авторынок “ЛОСК”<br>нижний
+                                периметр <br class="block7_br">магазин №192
                             </div>
                         </div>
                     </div>
-                    <div class="col-8 d-flex justify-content-end">
+                    <div class="map_block_body col-xl-8 col-12">
                         <div class="map_block">
-                            <img src="../assets/images/map.png" class="img-fluid">
-                            <!--<div>
+                            <!-- <img src="../assets/images/map.png" class="img-fluid"> -->
+                            <div>
                                 <iframe scrolling="no" marginheight="0" marginwidth="0"
                                     src="https://maps.google.com/maps?width=793&amp;height=340&amp;hl=en&amp;q=%D0%A5%D0%B0%D1%80%D1%8C%D0%BA%D0%BE%D0%B2,%20%D0%97%D0%B5%D1%80%D0%BD%D0%BE%D0%B2%D0%B0%D1%8F%204+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-                                    width="793" height="340" frameborder="0"></iframe>
-                            </div>-->
+                                    width="100%" height="340" frameborder="0">
+                                </iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1084,28 +1418,32 @@
         <footer>
             <div class="container">
                 <div class="row justify-content-between align-items-start">
-                    <div class="col-sm-1 col-12">
+
+                    <div class="footer_catalogue col-xl-1 col-lg-auto col-sm-2 col-12">
                         <a href="catalogue.html" class="bold_w ft-b11">Каталог</a>
                         <a href="catalogue.html" class="reg_w ft-b12">КАМАЗ</a>
                         <a href="catalogue.html" class="reg_w ft-b12">УРАЛ</a>
                         <a href="catalogue.html" class="reg_w ft-b12">МАЗ</a>
                         <a href="catalogue.html" class="reg_w ft-b12">МТЗ</a>
                     </div>
-                    <div class="col-xl-3 col-sm-12">
+
+                    <div class="footer_nav col-xl-3 col-lg-auto col-sm-6 col-12">
+                        <a href="catalogue.html" class="footer_nav_cat bold_w ft-b11">Каталог</a>
                         <a href="delivery.html" class="bold_w ft-b11">Доставка и оплата</a>
                         <a href="about.html" class="bold_w ft-b11">О нас</a>
-                        <a href="contacts.html" class="bold_w">Контакты</a>
+                        <a href="contacts.html" class="bold_w ft-b11">Контакты</a>
                     </div>
-                    <div class="col-xl-3 col-sm-12">
+
+                    <div class="footer_timetable col-xl-3 col-lg-auto col-sm-6 col-12">
                         <div class="bold_w ft-b11">График работы:</div>
-                        <div class="d-flex justify-content-start ">
-                            <div class="col-2">
+                        <div class="d-flex justify-content-start ft-b11">
+                            <div class="col-md-2 col-3">
                                 <div class="small_w">Пн</div>
                                 <div class="small_w">Вт-Пт</div>
                                 <div class="small_w">Сб</div>
                                 <div class="small_w">Вс</div>
                             </div>
-                            <div class="col">
+                            <div class="col-md-10 col-9">
                                 <div class="small_w">9:00 - 12:00</div>
                                 <div class="small_w">9:00 - 17:00</div>
                                 <div class="small_w">9:00 - 14:00</div>
@@ -1113,21 +1451,22 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-sm-12">
+
+                    <div class="footer_adress col-xl-3 col-lg-auto col-sm-6 col-12">
                         <div class="bold_w ft-b12">Адрес офиса:</div>
-                        <div class="reg_w ft-b21">ул. Зерновая, 4-В <br>г. Харьков, Украина</div>
+                        <div class="reg_w ft-b21">ул. Зерновая, 4-В <br class="footer_br">г. Харьков, Украина</div>
                         <div class="bold_w ft-b12">Адрес магазина:</div>
-                        <div class="reg_w">Авторынок “ЛОСК”,<br> нижний периметр место №192</div>
+                        <div class="reg_w ft-b21">Авторынок “ЛОСК”,<br class="footer_br"> нижний периметр место №192</div>
                     </div>
-                    <div class="col-xl-2 col-sm-12">
-                        <div class="d-flex flex-column align-items-end justify-content-around">
+
+                    <div class="footer_cont col-xl-2 col-lg-auto col-sm-6 col-12">
+                        <div class="footer_cont_main">
                             <a href="#" class="col bold_w ft-b51">Khas@gmail.com</a>
-                            <a href="#" class="col bold_w ft-b11">+38 099 99 99 999</a>
-                            <a href="#" class="col bold_w ft-b51">+38 068 99 99 999</a>
+                            <a href="#" class="col bold_w bold_w_ph ft-b11">+38 099 99 99 999</a>
+                            <a href="#" class="col bold_w bold_w_ph ft-b51">+38 068 99 99 999</a>
                         </div>
-                        <div class="d-flex justify-content-between">
+                        <div class="footer_cont_sm ft-b11">
                             <a href="#" class="social_link_svg bold_w">
-                                <!-- <img src="../assets/images/faceb_w.svg"> -->
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="white" fill-opacity="0.9"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -1135,7 +1474,6 @@
                                 </svg>
                             </a>
                             <a href="#" class="social_link_svg bold_w">
-                                <!-- <img src="../assets/images/viber_w.svg"> -->
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="white" fill-opacity="0.9"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g>
@@ -1153,7 +1491,6 @@
                                 </svg>
                             </a>
                             <a href="#" class="social_link_svg bold_w">
-                                <!-- <img src="../assets/images/inst_w.svg"> -->
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="white" fill-opacity="0.9"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -1165,7 +1502,6 @@
                                 </svg>
                             </a>
                             <a href="#" class="social_link_svg bold_w">
-                                <!-- <img src="../assets/images/tg_w.svg"> -->
                                 <svg width="24" height="22" viewBox="0 0 24 22" fill="white" fill-opacity="0.9"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -1174,16 +1510,154 @@
                             </a>
                         </div>
                     </div>
+                    
+                    <div class="footer_footinfo">
+                        <div class="footinfo_top">
+                            <div class="footinfo_top_logo">
+                                <img src="../assets/images/logo_bottom.svg">
+                            </div>
+                            <div class="footinfo_top_name">
+                                Харьков <br>Автоспектр
+                            </div>
+                        </div>
+                        <div class="footinfo_bottom">
+                            © Все права защищены 2019-2021
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </footer>
     </div>
 
+
+    <!-- Modal0 -->
+    <div class="offcanvas offcanvas-start block_modal_burger" data-bs-scroll="false" data-bs-backdrop="true"
+        tabindex="-1" id="Modal0" aria-labelledby="Modal0Label"> 
+
+        <div class="modal_burger_container">
+
+            <div class="modal_burger_head d-flex justify-content-between align-items-center">
+
+                <button class="btn btn-outline-secondary head_btn btn_cabina" data-bs-toggle="modal"
+                data-bs-target="#Modal2">
+                <div class="d-flex align-items-center">
+                    <img src="../assets/images/chel_w.svg">
+                    <div class="cabina_block">Личный<br>кабинет</div>
+                </div>
+                </button>
+
+                <div class="burger_lang d-flex justify-content-around align-items-center">
+                    <a href="#" class="burger_lang_link">RU</a>
+                    <div class="burder_line"></div>
+                    <a href="#" class="burger_lang_link">UA</a>
+                </div>
+
+            </div>
+
+            <div class="modal_burger_body">
+                <a href="catalogue.html" class="burger_nav_link">
+                    <div class="burger_nav_block">
+                        Каталог
+                    </div>
+                </a>
+
+                <a href="categories.html" class="burger_nav_link">
+                    <div class="burger_nav_block">
+                        Категории запчастей
+                    </div>
+                </a>
+
+                <a href="delivery.html" class="burger_nav_link">
+                    <div class="burger_nav_block">
+                        Доставка и оплата
+                    </div>
+                </a>
+
+                <a href="about.html" class="burger_nav_link">
+                    <div class="burger_nav_block">
+                        О нас
+                    </div>
+                </a>
+
+                <a href="contacts.html" class="burger_nav_link">
+                    <div class="burger_nav_block">
+                        Контакты
+                    </div>
+                </a>
+            </div>
+
+            <div class="modal_burger_foot">
+                <div class="burger_cont">
+                    <a href="#" class="burger_cont_mail">
+                        Khas@gmail.com
+                    </a>
+                    <a href="#" class="burger_cont_phone">
+                        +38 099 999 99 99
+                    </a>
+                    <a href="#" class="burger_cont_phone">
+                        +38 068 999 99 99
+                    </a>
+                </div>
+                
+                <div class="burger_sm d-flex justify-content-start">
+
+                    <a href="#" class="burger_sm_link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M21.1875 0H2.8125C1.26169 0 0 1.26169 0 2.8125V21.1875C0 22.7383 1.26169 24 2.8125 24H21.1875C22.7383 24 24 22.7383 24 21.1875V2.8125C24 1.26169 22.7383 0 21.1875 0ZM22.125 21.1875C22.125 21.7044 21.7044 22.125 21.1875 22.125H15.8438V14.4844H18.7402L19.2188 11.5781H15.8438V9.5625C15.8438 8.7668 16.4543 8.15625 17.25 8.15625H19.1719V5.25H17.25C14.863 5.25 12.9385 7.18359 12.9385 9.57066V11.5781H10.125V14.4844H12.9385V22.125H2.8125C2.29556 22.125 1.875 21.7044 1.875 21.1875V2.8125C1.875 2.29556 2.29556 1.875 2.8125 1.875H21.1875C21.7044 1.875 22.125 2.29556 22.125 2.8125V21.1875Z" />
+                        </svg>
+                    </a>
+
+                    <a href="#" class="burger_sm_link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                              <path
+                                d="M23.155 13.8925C23.871 7.86554 22.811 4.06054 20.899 2.33954L20.9 2.33854C17.814 -0.600464 7.39202 -1.03546 3.70002 2.47054C2.04202 4.18554 1.45802 6.70254 1.39402 9.81854C1.33002 12.9355 1.25402 18.7745 6.69502 20.3585H6.70002L6.69502 22.7775C6.69502 22.7775 6.65802 23.7575 7.28402 23.9545C8.00002 24.1865 8.32402 23.7315 10.551 21.0715C14.275 21.3945 17.135 20.6545 17.46 20.5465C18.212 20.2945 22.467 19.7315 23.155 13.8925ZM10.918 19.3695C10.918 19.3695 8.56102 22.3085 7.82802 23.0715C7.58802 23.3195 7.32502 23.2965 7.32902 22.8045C7.32902 22.4815 7.34702 18.7885 7.34702 18.7885C2.73402 17.4665 3.00602 12.4945 3.05602 9.89354C3.10602 7.29154 3.58202 5.16054 4.98602 3.72554C8.22502 0.688536 17.362 1.36754 19.69 3.55554C22.536 6.07854 21.523 13.2065 21.529 13.4495C20.944 18.3235 17.496 18.6325 16.862 18.8435C16.591 18.9335 14.076 19.5805 10.918 19.3695Z" />
+                              <path
+                                d="M12.222 4.29688C11.837 4.29688 11.837 4.89688 12.222 4.90188C15.209 4.92488 17.669 7.00688 17.696 10.8259C17.696 11.2289 18.286 11.2239 18.281 10.8209H18.28C18.248 6.70588 15.562 4.31988 12.222 4.29688Z" />
+                              <path
+                                d="M16.151 10.193C16.142 10.591 16.731 10.61 16.736 10.207C16.785 7.93804 15.386 6.06904 12.757 5.87204C12.372 5.84404 12.332 6.44904 12.716 6.47704C14.996 6.65004 16.197 8.20604 16.151 10.193Z" />
+                              <path
+                                d="M15.521 12.7741C15.027 12.4881 14.524 12.6661 14.316 12.9471L13.881 13.5101C13.66 13.7961 13.247 13.7581 13.247 13.7581C10.233 12.9611 9.427 9.8071 9.427 9.8071C9.427 9.8071 9.39 9.3801 9.666 9.1511L10.21 8.7011C10.482 8.4851 10.654 7.9651 10.377 7.4541C9.637 6.1171 9.14 5.6561 8.887 5.3021C8.621 4.9691 8.221 4.8941 7.805 5.1191H7.796C6.931 5.6251 5.984 6.5721 6.287 7.5471C6.804 8.5751 7.754 11.8521 10.782 14.3281C12.205 15.4991 14.457 16.6991 15.413 16.9761L15.422 16.9901C16.364 17.3041 17.28 16.3201 17.769 15.4291V15.4221C17.986 14.9911 17.914 14.5831 17.597 14.3161C17.035 13.7681 16.187 13.1631 15.521 12.7741Z" />
+                              <path
+                                d="M13.169 8.10369C14.13 8.15969 14.596 8.66169 14.646 9.69269C14.664 10.0957 15.249 10.0677 15.231 9.66469C15.167 8.31869 14.465 7.56869 13.201 7.49869C12.816 7.47569 12.78 8.08069 13.169 8.10369Z" />
+                            </g>
+                        </svg>
+                    </a>
+
+                    <a href="#" class="burger_sm_link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M17.5034 0H6.49657C2.9143 0 0 2.9143 0 6.49657V17.5036C0 21.0857 2.9143 24 6.49657 24H17.5036C21.0857 24 24 21.0857 24 17.5036V6.49657C24 2.9143 21.0857 0 17.5034 0V0ZM22.593 17.5036C22.593 20.3098 20.3098 22.593 17.5034 22.593H6.49657C3.69012 22.593 1.40698 20.3098 1.40698 17.5036V6.49657C1.40698 3.69012 3.69012 1.40698 6.49657 1.40698H17.5036C20.3098 1.40698 22.593 3.69012 22.593 6.49657V17.5036Z" />
+                            <path
+                              d="M12 5.4375C8.38146 5.4375 5.43768 8.38128 5.43768 11.9998C5.43768 15.6183 8.38146 18.5621 12 18.5621C15.6185 18.5621 18.5623 15.6183 18.5623 11.9998C18.5623 8.38128 15.6185 5.4375 12 5.4375ZM12 17.1551C9.15746 17.1551 6.84466 14.8425 6.84466 11.9998C6.84466 9.15728 9.15746 6.84448 12 6.84448C14.8427 6.84448 17.1553 9.15728 17.1553 11.9998C17.1553 14.8425 14.8427 17.1551 12 17.1551Z" />
+                            <path
+                              d="M18.7192 3.10742C17.6499 3.10742 16.7801 3.97735 16.7801 5.04651C16.7801 6.11584 17.6499 6.98577 18.7192 6.98577C19.7885 6.98577 20.6585 6.11584 20.6585 5.04651C20.6585 3.97717 19.7885 3.10742 18.7192 3.10742ZM18.7192 5.57861C18.4259 5.57861 18.1871 5.33984 18.1871 5.04651C18.1871 4.75299 18.4259 4.5144 18.7192 4.5144C19.0127 4.5144 19.2515 4.75299 19.2515 5.04651C19.2515 5.33984 19.0127 5.57861 18.7192 5.57861Z" />
+                        </svg>
+                    </a>
+
+                    <a href="#" class="burger_sm_link">
+                        <svg width="24" height="22" viewBox="0 0 24 22" fill="#333333" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M0.415005 11.1958L6.28401 14.1208C6.51101 14.2328 6.77901 14.2248 6.99601 14.0978L12.22 11.0608L9.05801 13.8628C8.89701 14.0058 8.80501 14.2098 8.80501 14.4248V21.2498C8.80501 21.9698 9.72401 22.2728 10.155 21.7008L12.692 18.3278L18.966 21.9008C19.406 22.1538 19.97 21.8998 20.072 21.3968L23.985 1.8968C24.102 1.3108 23.519 0.832799 22.977 1.0508L0.477005 9.8258C-0.126995 10.0618 -0.165995 10.9068 0.415005 11.1958ZM22.245 2.9468L18.806 20.0838L12.861 16.6978C12.537 16.5128 12.12 16.5948 11.89 16.8988L10.305 19.0058V14.7618L18.856 7.1858C19.533 6.5868 18.755 5.5218 17.982 5.9758L6.59201 12.5978L2.60001 10.6088L22.245 2.9468Z" />
+                        </svg>
+                    </a>
+                    
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Modal0 -->
+
+
     <!-- Modal1 -->
     <div class="offcanvas offcanvas-end block_modal_korzina" data-bs-scroll="false" data-bs-backdrop="true"
         tabindex="-1" id="Modal1" aria-labelledby="Modal1Label">
 
-        <div class="modal_korzina_kontainer">
+        <div class="modal_korzina_container">
 
             <div class="modal_korzina_head d-flex flex-column">
                 <div class="korzina_head_button d-flex justify-content-end">
@@ -1219,7 +1693,6 @@
                                     <path
                                         d="M10.2222 2.60447H9.37777V1.77781H6.62222V2.60447H5.77777V1.77781C5.77749 1.54956 5.86501 1.32995 6.02222 1.16447C6.17942 0.998993 6.39426 0.900328 6.62222 0.888916H9.37777C9.60573 0.900328 9.82057 0.998993 9.97777 1.16447C10.135 1.32995 10.2225 1.54956 10.2222 1.77781V2.60447Z" />
                                 </svg>
-                                <!-- <img src="../assets/images/trash.svg" class="img-fluid"> -->
                             </div>
                         </div>
 
@@ -1230,13 +1703,17 @@
                         </div>
 
                         <div class="mainbox_bottom d-flex justify-content-between align-items-center">
+
+                            <div class="korzina_item_image2">
+                                <img src="../assets/images/gaika.png" class="img-fluid" width="70px" height="70px">
+                            </div>
+
                             <div class="mainbox_amount d-flex align-items-center">
                                 <div class="amount_minus">
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="#333333"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path d="M4.16669 10.8333V10H15.0084L15 10.8333H4.16669Z" />
                                     </svg>
-                                    <!-- <img src="../assets/images/minus.svg" class="img-fluid"> -->
                                 </div>
                                 <div
                                     class="amount_number amount-for-order d-flex justify-content-center align-items-center">
@@ -1248,15 +1725,18 @@
                                         <path
                                             d="M4.16669 10.8333V10H9.16669V5H10V10H15V10.8333H10V15.8333H9.16669V10.8333H4.16669Z" />
                                     </svg>
-                                    <!-- <img src="../assets/images/plus.svg" class="img-fluid"> -->
                                 </div>
                             </div>
+
                             <div class="mainbox_price">
                                 20 грн
                             </div>
+
                         </div>
+
                     </div>
                 </div>
+
 
                 <div class="korzina_item d-flex">
                     <div class="korzina_item_image">
@@ -1267,7 +1747,7 @@
 
                         <div class="mainbox_top d-flex justify-content-between align-items-center">
                             <div class="mainbox_title">
-                                Гайка большая 23-345 АААА
+                                Гайка большая подъемного механизма вращения и перезапуска 510.23-3497905 (Завод)
                             </div>
                             <div class="mainbox_trash">
                                 <svg class="mainbox_trash_svg" width="16" height="16" viewBox="0 0 16 16" fill="#333333"
@@ -1281,7 +1761,6 @@
                                     <path
                                         d="M10.2222 2.60447H9.37777V1.77781H6.62222V2.60447H5.77777V1.77781C5.77749 1.54956 5.86501 1.32995 6.02222 1.16447C6.17942 0.998993 6.39426 0.900328 6.62222 0.888916H9.37777C9.60573 0.900328 9.82057 0.998993 9.97777 1.16447C10.135 1.32995 10.2225 1.54956 10.2222 1.77781V2.60447Z" />
                                 </svg>
-                                <!-- <img src="../assets/images/trash.svg" class="img-fluid"> -->
                             </div>
                         </div>
 
@@ -1292,13 +1771,17 @@
                         </div>
 
                         <div class="mainbox_bottom d-flex justify-content-between align-items-center">
+
+                            <div class="korzina_item_image2">
+                                <img src="../assets/images/gaika.png" class="img-fluid" width="70px" height="70px">
+                            </div>
+
                             <div class="mainbox_amount d-flex align-items-center">
                                 <div class="amount_minus">
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="#333333"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path d="M4.16669 10.8333V10H15.0084L15 10.8333H4.16669Z" />
                                     </svg>
-                                    <!-- <img src="../assets/images/minus.svg" class="img-fluid"> -->
                                 </div>
                                 <div
                                     class="amount_number amount-for-order d-flex justify-content-center align-items-center">
@@ -1310,17 +1793,21 @@
                                         <path
                                             d="M4.16669 10.8333V10H9.16669V5H10V10H15V10.8333H10V15.8333H9.16669V10.8333H4.16669Z" />
                                     </svg>
-                                    <!-- <img src="../assets/images/plus.svg" class="img-fluid"> -->
                                 </div>
                             </div>
+
                             <div class="mainbox_price">
                                 20 грн
                             </div>
+
                         </div>
 
                     </div>
                 </div>
 
+
+
+                
                 <div class="korzina_item d-flex">
                     <div class="korzina_item_image">
                         <img src="../assets/images/gaika.png" class="img-fluid" width="100px" height="100px">
@@ -1354,6 +1841,11 @@
                         </div>
 
                         <div class="mainbox_bottom d-flex justify-content-between align-items-center">
+
+                            <div class="korzina_item_image2">
+                                <img src="../assets/images/gaika.png" class="img-fluid" width="70px" height="70px">
+                            </div>
+
                             <div class="mainbox_amount d-flex align-items-center">
                                 <div class="amount_minus">
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="#333333"
@@ -1373,207 +1865,33 @@
                                     </svg>
                                 </div>
                             </div>
+
                             <div class="mainbox_price">
                                 20 грн
                             </div>
+
                         </div>
 
                     </div>
                 </div>
 
-                <div class="korzina_item d-flex">
-                    <div class="korzina_item_image">
-                        <img src="../assets/images/gaika.png" class="img-fluid" width="100px" height="100px">
-                    </div>
-
-                    <div class="korzina_item_mainbox d-flex flex-column justify-content-between">
-
-                        <div class="mainbox_top d-flex justify-content-between align-items-center">
-                            <div class="mainbox_title">
-                                Гайка большая 23-345 (Завод)
-                            </div>
-                            <div class="mainbox_trash">
-                                <svg class="mainbox_trash_svg" width="16" height="16" viewBox="0 0 16 16" fill="#333333"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M12.0623 15.1111H3.93781C3.76679 15.1071 3.59823 15.0694 3.44178 15.0002C3.28533 14.931 3.14405 14.8316 3.026 14.7078C2.90796 14.584 2.81547 14.4381 2.75382 14.2785C2.69217 14.1189 2.66257 13.9488 2.6667 13.7778V4.99109H3.55559V13.7778C3.55135 13.8321 3.55788 13.8867 3.57482 13.9385C3.59176 13.9902 3.61876 14.0382 3.65428 14.0795C3.68981 14.1208 3.73314 14.1546 3.7818 14.1791C3.83046 14.2036 3.88348 14.2183 3.93781 14.2222H12.0623C12.1166 14.2183 12.1696 14.2036 12.2183 14.1791C12.2669 14.1546 12.3103 14.1208 12.3458 14.0795C12.3813 14.0382 12.4083 13.9902 12.4252 13.9385C12.4422 13.8867 12.4487 13.8321 12.4445 13.7778V4.99109H13.3334V13.7778C13.3375 13.9488 13.3079 14.1189 13.2462 14.2785C13.1846 14.4381 13.0921 14.584 12.9741 14.7078C12.856 14.8316 12.7147 14.931 12.5583 15.0002C12.4018 15.0694 12.2333 15.1071 12.0623 15.1111Z" />
-                                    <path
-                                        d="M13.68 3.99997H2.22222C2.10434 3.99997 1.9913 3.95315 1.90795 3.8698C1.8246 3.78645 1.77777 3.6734 1.77777 3.55553C1.77777 3.43765 1.8246 3.32461 1.90795 3.24126C1.9913 3.15791 2.10434 3.11108 2.22222 3.11108H13.68C13.7979 3.11108 13.9109 3.15791 13.9943 3.24126C14.0776 3.32461 14.1244 3.43765 14.1244 3.55553C14.1244 3.6734 14.0776 3.78645 13.9943 3.8698C13.9109 3.95315 13.7979 3.99997 13.68 3.99997Z" />
-                                    <path d="M9.33331 5.77783H10.2222V12.4445H9.33331V5.77783Z" />
-                                    <path d="M5.77777 5.77783H6.66666V12.4445H5.77777V5.77783Z" />
-                                    <path
-                                        d="M10.2222 2.60447H9.37777V1.77781H6.62222V2.60447H5.77777V1.77781C5.77749 1.54956 5.86501 1.32995 6.02222 1.16447C6.17942 0.998993 6.39426 0.900328 6.62222 0.888916H9.37777C9.60573 0.900328 9.82057 0.998993 9.97777 1.16447C10.135 1.32995 10.2225 1.54956 10.2222 1.77781V2.60447Z" />
-                                </svg>
-                                <!-- <img src="../assets/images/trash.svg" class="img-fluid"> -->
-                            </div>
-                        </div>
-
-                        <div class="mainbox_middle d-flex justify-content-start">
-                            <div class="mainbox_subtitle">
-                                Артикул: А10187
-                            </div>
-                        </div>
-
-                        <div class="mainbox_bottom d-flex justify-content-between align-items-center">
-                            <div class="mainbox_amount d-flex align-items-center">
-                                <div class="amount_minus">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#333333"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M4.16669 10.8333V10H15.0084L15 10.8333H4.16669Z" />
-                                    </svg>
-                                    <!-- <img src="../assets/images/minus.svg" class="img-fluid"> -->
-                                </div>
-                                <div
-                                    class="amount_number amount-for-order d-flex justify-content-center align-items-center">
-                                    1
-                                </div>
-                                <div class="amount_plus">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#333333"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M4.16669 10.8333V10H9.16669V5H10V10H15V10.8333H10V15.8333H9.16669V10.8333H4.16669Z" />
-                                    </svg>
-                                    <!-- <img src="../assets/images/plus.svg" class="img-fluid"> -->
-                                </div>
-                            </div>
-                            <div class="mainbox_price">
-                                20 грн
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
 
 
-                <div class="korzina_item d-flex">
-                    <div class="korzina_item_image">
-                        <img src="../assets/images/gaika.png" class="img-fluid" width="100px" height="100px">
-                    </div>
-
-                    <div class="korzina_item_mainbox d-flex flex-column justify-content-between">
-
-                        <div class="mainbox_top d-flex justify-content-between align-items-center">
-                            <div class="mainbox_title">
-                                Гайка большая 23-345 (Завод)
-                            </div>
-                            <div class="mainbox_trash">
-                                <svg class="mainbox_trash_svg" width="16" height="16" viewBox="0 0 16 16" fill="#333333"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M12.0623 15.1111H3.93781C3.76679 15.1071 3.59823 15.0694 3.44178 15.0002C3.28533 14.931 3.14405 14.8316 3.026 14.7078C2.90796 14.584 2.81547 14.4381 2.75382 14.2785C2.69217 14.1189 2.66257 13.9488 2.6667 13.7778V4.99109H3.55559V13.7778C3.55135 13.8321 3.55788 13.8867 3.57482 13.9385C3.59176 13.9902 3.61876 14.0382 3.65428 14.0795C3.68981 14.1208 3.73314 14.1546 3.7818 14.1791C3.83046 14.2036 3.88348 14.2183 3.93781 14.2222H12.0623C12.1166 14.2183 12.1696 14.2036 12.2183 14.1791C12.2669 14.1546 12.3103 14.1208 12.3458 14.0795C12.3813 14.0382 12.4083 13.9902 12.4252 13.9385C12.4422 13.8867 12.4487 13.8321 12.4445 13.7778V4.99109H13.3334V13.7778C13.3375 13.9488 13.3079 14.1189 13.2462 14.2785C13.1846 14.4381 13.0921 14.584 12.9741 14.7078C12.856 14.8316 12.7147 14.931 12.5583 15.0002C12.4018 15.0694 12.2333 15.1071 12.0623 15.1111Z" />
-                                    <path
-                                        d="M13.68 3.99997H2.22222C2.10434 3.99997 1.9913 3.95315 1.90795 3.8698C1.8246 3.78645 1.77777 3.6734 1.77777 3.55553C1.77777 3.43765 1.8246 3.32461 1.90795 3.24126C1.9913 3.15791 2.10434 3.11108 2.22222 3.11108H13.68C13.7979 3.11108 13.9109 3.15791 13.9943 3.24126C14.0776 3.32461 14.1244 3.43765 14.1244 3.55553C14.1244 3.6734 14.0776 3.78645 13.9943 3.8698C13.9109 3.95315 13.7979 3.99997 13.68 3.99997Z" />
-                                    <path d="M9.33331 5.77783H10.2222V12.4445H9.33331V5.77783Z" />
-                                    <path d="M5.77777 5.77783H6.66666V12.4445H5.77777V5.77783Z" />
-                                    <path
-                                        d="M10.2222 2.60447H9.37777V1.77781H6.62222V2.60447H5.77777V1.77781C5.77749 1.54956 5.86501 1.32995 6.02222 1.16447C6.17942 0.998993 6.39426 0.900328 6.62222 0.888916H9.37777C9.60573 0.900328 9.82057 0.998993 9.97777 1.16447C10.135 1.32995 10.2225 1.54956 10.2222 1.77781V2.60447Z" />
-                                </svg>
-                                <!-- <img src="../assets/images/trash.svg" class="img-fluid"> -->
-                            </div>
-                        </div>
-
-                        <div class="mainbox_middle d-flex justify-content-start">
-                            <div class="mainbox_subtitle">
-                                Артикул: А10187
-                            </div>
-                        </div>
-
-                        <div class="mainbox_bottom d-flex justify-content-between align-items-center">
-                            <div class="mainbox_amount d-flex align-items-center">
-                                <div class="amount_minus">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#333333"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M4.16669 10.8333V10H15.0084L15 10.8333H4.16669Z" />
-                                    </svg>
-                                    <!-- <img src="../assets/images/minus.svg" class="img-fluid"> -->
-                                </div>
-                                <div
-                                    class="amount_number amount-for-order d-flex justify-content-center align-items-center">
-                                    1
-                                </div>
-                                <div class="amount_plus">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#333333"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M4.16669 10.8333V10H9.16669V5H10V10H15V10.8333H10V15.8333H9.16669V10.8333H4.16669Z" />
-                                    </svg>
-                                    <!-- <img src="../assets/images/plus.svg" class="img-fluid"> -->
-                                </div>
-                            </div>
-                            <div class="mainbox_price">
-                                20 грн
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="korzina_item d-flex">
-                    <div class="korzina_item_image">
-                        <img src="../assets/images/gaika.png" class="img-fluid" width="100px" height="100px">
-                    </div>
-
-                    <div class="korzina_item_mainbox d-flex flex-column justify-content-between">
-
-                        <div class="mainbox_top d-flex justify-content-between align-items-center">
-                            <div class="mainbox_title">
-                                Гайка большая 23-345 (Завод)
-                            </div>
-                            <div class="mainbox_trash">
-                                <svg class="mainbox_trash_svg" width="16" height="16" viewBox="0 0 16 16" fill="#333333"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M12.0623 15.1111H3.93781C3.76679 15.1071 3.59823 15.0694 3.44178 15.0002C3.28533 14.931 3.14405 14.8316 3.026 14.7078C2.90796 14.584 2.81547 14.4381 2.75382 14.2785C2.69217 14.1189 2.66257 13.9488 2.6667 13.7778V4.99109H3.55559V13.7778C3.55135 13.8321 3.55788 13.8867 3.57482 13.9385C3.59176 13.9902 3.61876 14.0382 3.65428 14.0795C3.68981 14.1208 3.73314 14.1546 3.7818 14.1791C3.83046 14.2036 3.88348 14.2183 3.93781 14.2222H12.0623C12.1166 14.2183 12.1696 14.2036 12.2183 14.1791C12.2669 14.1546 12.3103 14.1208 12.3458 14.0795C12.3813 14.0382 12.4083 13.9902 12.4252 13.9385C12.4422 13.8867 12.4487 13.8321 12.4445 13.7778V4.99109H13.3334V13.7778C13.3375 13.9488 13.3079 14.1189 13.2462 14.2785C13.1846 14.4381 13.0921 14.584 12.9741 14.7078C12.856 14.8316 12.7147 14.931 12.5583 15.0002C12.4018 15.0694 12.2333 15.1071 12.0623 15.1111Z" />
-                                    <path
-                                        d="M13.68 3.99997H2.22222C2.10434 3.99997 1.9913 3.95315 1.90795 3.8698C1.8246 3.78645 1.77777 3.6734 1.77777 3.55553C1.77777 3.43765 1.8246 3.32461 1.90795 3.24126C1.9913 3.15791 2.10434 3.11108 2.22222 3.11108H13.68C13.7979 3.11108 13.9109 3.15791 13.9943 3.24126C14.0776 3.32461 14.1244 3.43765 14.1244 3.55553C14.1244 3.6734 14.0776 3.78645 13.9943 3.8698C13.9109 3.95315 13.7979 3.99997 13.68 3.99997Z" />
-                                    <path d="M9.33331 5.77783H10.2222V12.4445H9.33331V5.77783Z" />
-                                    <path d="M5.77777 5.77783H6.66666V12.4445H5.77777V5.77783Z" />
-                                    <path
-                                        d="M10.2222 2.60447H9.37777V1.77781H6.62222V2.60447H5.77777V1.77781C5.77749 1.54956 5.86501 1.32995 6.02222 1.16447C6.17942 0.998993 6.39426 0.900328 6.62222 0.888916H9.37777C9.60573 0.900328 9.82057 0.998993 9.97777 1.16447C10.135 1.32995 10.2225 1.54956 10.2222 1.77781V2.60447Z" />
-                                </svg>
-                                <!-- <img src="../assets/images/trash.svg" class="img-fluid"> -->
-                            </div>
-                        </div>
-
-                        <div class="mainbox_middle d-flex justify-content-start">
-                            <div class="mainbox_subtitle">
-                                Артикул: А10187
-                            </div>
-                        </div>
-
-                        <div class="mainbox_bottom d-flex justify-content-between align-items-center">
-                            <div class="mainbox_amount d-flex align-items-center">
-                                <div class="amount_minus">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#333333"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M4.16669 10.8333V10H15.0084L15 10.8333H4.16669Z" />
-                                    </svg>
-                                    <!-- <img src="../assets/images/minus.svg" class="img-fluid"> -->
-                                </div>
-                                <div
-                                    class="amount_number amount-for-order d-flex justify-content-center align-items-center">
-                                    1
-                                </div>
-                                <div class="amount_plus">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#333333"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M4.16669 10.8333V10H9.16669V5H10V10H15V10.8333H10V15.8333H9.16669V10.8333H4.16669Z" />
-                                    </svg>
-                                    <!-- <img src="../assets/images/plus.svg" class="img-fluid"> -->
-                                </div>
-                            </div>
-                            <div class="mainbox_price">
-                                20 грн
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+    
             </div>
 
 
 
             <div class="modal_korzina_foot d-flex flex-column justify-content-between">
+                <div class="korzina_total_price">
+                    <div class="korzina_total">
+                        Итого:
+                    </div>
+                    <div class="korzina_price">
+                        256 790 грн
+                    </div>
+                </div>
                 <div class="korzina_first_button d-flex justify-content-center">
                     <a type="button" class="first_button btn btn-link" data-bs-dismiss="offcanvas">
                         Продолжить покупки
@@ -1667,7 +1985,7 @@
                 <div class="modal_review_head">
 
                     <div class="review_head_btn d-flex justify-content-end align-items-end">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn_cl_w btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
 
                     <div class="modal-title" id="ModalLabel3">Нам важно знать<br>Ваше мнение о компании</div>
@@ -1722,8 +2040,9 @@
                     <div class="mb-3 form-check review_check_block">
                         <input type="checkbox" class="form-check-input" id="reviewCheckBox1">
                         <label class="form-check-label modal_form_check" for="Check1">
+                            Я согласен(-на) на обработку
                             <a href="confidentiality.html" class="review_conf_link">
-                                Я согласен(-на) на обработку персональных данных
+                                 персональных данных
                             </a>
                         </label>
                     </div>
@@ -1732,7 +2051,7 @@
 
                 <div class="modal_review_foot d-flex align-items-start justify-content-center">
                     <a href="#" type="button" class="review_button btn btn-primary mb-3" id="reviewButton1"
-                        data-bs-dismiss="modal">
+                        data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#Modal7">
                         <div>Оставить отзыв</div>
                     </a>
                     <a type="button" class="review_button_disable" id="reviewButton2">
@@ -1746,7 +2065,7 @@
     <!-- Modal3 -->
 
 
-    <!-- Modal4 -->
+    <!-- Modal4 
     <div class="modal block_modal_fast" id="Modal4" tabindex="-1" aria-labelledby="ModalLabel4" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -1779,7 +2098,7 @@
             </div>
         </div>
     </div>
-    <!-- Modal4 -->
+     Modal4 -->
 
 
     <!-- Modal5 -->
@@ -1788,9 +2107,9 @@
             <div class="modal-content">
 
                 <div class="modal_ordersent_head">
-                    <div class="d-flex justify-content-end ordersent_head_close">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
+                    <!-- <div class="d-flex justify-content-end ordersent_head_close"> 
+                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> 
+                     </div> -->
                     <div class="ordersent_head_text">
                         Ваш запрос отправлен в обработку
                     </div>
@@ -1814,6 +2133,50 @@
 
 
     <!-- Modal6 -->
+    <div class="modal block_modal_goods-in-cart" id="Modal6" tabindex="-1" aria-labelledby="ModalLabel6" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal_goods-in-cart_head">
+                </div>
+
+                <div class="modal_goods-in-cart_body d-flex justify-content-center align-items-center">
+                    <div class="goods-in-cart_body_text">
+                        Товар добавлен в корзину!
+                    </div>
+                </div>
+
+                <div class="modal_goods-in-cart_foot">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal6 -->
+
+
+    <!-- Modal7 -->
+    <div class="modal block_modal_reviewsent" id="Modal7" tabindex="-1" aria-labelledby="ModalLabel7" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal_reviewsent_head">
+                </div>
+
+                <div class="modal_reviewsent_body d-flex justify-content-center align-items-center">
+                    <div class="reviewsent_body_text">
+                        Благодарим за Ваш отзыв!
+                    </div>
+                </div>
+
+                <div class="modal_reviewsent_foot">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal7 -->
+
+
+    <!-- Modal8 -->
     <div class="block_modal_cookie">
         <div class="cookie_top">
             <div class="cookie_text">
@@ -1825,7 +2188,7 @@
                 Вашего браузера.
             </div>
         </div>
-        <div class="cookie_bottom d-flex align-items-start justify-content-end">
+        <div class="cookie_bottom d-flex align-items-start justify-content-sm-end justify-content-center">
             <div class="cookie_info">
                 <a href=cookie.html class="btn btn-outline-secondary cookie_info_btn">
                     Подробнее
@@ -1838,7 +2201,7 @@
             </div>
         </div>
     </div>
-    <!-- Modal6 -->
+    <!-- Modal8 -->
 
 
 </body>

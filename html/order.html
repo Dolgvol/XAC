@@ -375,6 +375,11 @@
 
                                 <div class="delivery_addinfo_block2 col-xl-auto" id="deliveryAddinfoBlock2">
 
+                                    <div class="mb-3">
+                                        <label for="oderRegion1" class="form_label form-label">Область*</label>
+                                        <input type="text" class="form_control form-control" id="oderRegion1"
+                                            placeholder="Харьковская область">
+                                    </div>
 
                                     <div class="mb-3">
                                         <label for="oderCity1" class="form_label form-label">Город*</label>
@@ -386,10 +391,10 @@
                                         <label for="oderPost1" class="form_label form-label">Выбор компании
                                             перевозчика*</label>
                                         <select class="form_select form-select" id="oderPost1">
-                                            <option selected>Новая Почта</option>
-                                            <option value="1">SAT</option>
-                                            <option value="2">Delivery</option>
-                                            <option value="3">Автолюкс</option>
+                                            <option class="option_post" selected>Новая Почта</option>
+                                            <option class="option_post" value="1">SAT</option>
+                                            <option class="option_post" value="2">Delivery</option>
+                                            <option class="option_post" value="3">Автолюкс</option>
                                         </select>
                                     </div>
 
@@ -473,7 +478,7 @@
 
 
                             <div class="order_accept_btn">
-                                <button type="submit" class="accept_btn btn btn-primary" tabindex="0">
+                                <button type="submit" class="accept_btn btn btn-primary" tabindex="0" id="orderAcceptBtn1">
                                     <span>Подтвердить заказ</span>
                                 </button>
                             </div>

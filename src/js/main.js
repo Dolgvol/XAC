@@ -1,3 +1,5 @@
+import {Modal} from 'bootstrap'
+
 $(() => {
 
     // Слайдер 1 main
@@ -8,6 +10,39 @@ $(() => {
         slidesToScroll: 1,
         touchThreshold: 10,
         waitForAnimate: false,
+        responsive: [
+            {
+              breakpoint: 1200,
+              settings: {
+                slidesToShow: 3,
+              }
+            },
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 2,
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 3,
+                initialSlide: 0,
+                slidesToScroll: 3,
+                dots: true,
+                arrows: false,
+              }
+            },
+            {
+              breakpoint: 576,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                dots: true,
+                arrows: false,
+              }
+            },
+        ]
     });
 
     // Слайдер 2 main
@@ -18,6 +53,36 @@ $(() => {
         slidesToScroll: 1,
         touchThreshold: 10,
         waitForAnimate: false,
+        responsive: [
+            {
+              breakpoint: 1200,
+              settings: {
+                slidesToShow: 2,
+              }
+            },
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 1,
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                dots: true,
+                arrows: false,
+              }
+            },
+            {
+              breakpoint: 576,
+              settings: {
+                slidesToShow: 1,
+                dots: true,
+                arrows: false,
+              }
+            },
+        ]
     });
 
     // Слайдер 3 catalogue & product
@@ -63,7 +128,9 @@ $(() => {
     });
 
 
-    // $('.head_select_form').select2();
+    // $("#oderPost1").select2({
+    //     minimumResultsForSearch: Infinity
+    // });
 });
 
 
@@ -71,6 +138,7 @@ $(() => {
 // Сворачивание текста
 const btn1 = document.getElementById('block4Btn1')
 const block1 = document.getElementById('block4Invisible')
+const block2 = document.getElementById('block4Invisible_mob')
 const myCollapsible = document.getElementById('collapseText1')
 
 collapseText()
@@ -79,6 +147,7 @@ function collapseText() {
         myCollapsible.addEventListener('show.bs.collapse', () => {
             btn1.innerText = 'Скрыть'
             block1.style.display = 'none'
+            block2.style.display = 'none'
         })
 
         myCollapsible.addEventListener('hide.bs.collapse', () => {
@@ -86,6 +155,7 @@ function collapseText() {
         })
         myCollapsible.addEventListener('hidden.bs.collapse', () => {
             block1.style.display = 'block'
+            block2.style.display = 'block'
         })
     }
 }
@@ -324,11 +394,47 @@ function choosePickupOrDelivery() {
 
 
 
+// Всплывающие окна
 
+// Всплывающее отзыв
+const modalReview = new Modal(document.getElementById('Modal7'))
 
-// Меню бургер
+if (reviewBottomButton) {
+    reviewBottomButton.addEventListener("click", () => {
+        function disableModal () {
+            modalReview.hide()
+        }
+        setTimeout( disableModal, 1000)
+    })
+}
 
+// Всплывающее добавление в корзину
+const modalGoodsInCart = new Modal(document.getElementById('Modal6'))
+const btnsGoodsInCart = document.getElementsByClassName('buy_btn')
 
+if (btnsGoodsInCart) {
+    for (const btnGoods of btnsGoodsInCart) {
+        btnGoods.addEventListener("click", () => {
+            function disableModal () {
+                modalGoodsInCart.hide()
+            }
+            setTimeout( disableModal, 1000)
+        })
+    }    
+}
+
+// Всплывающее уведомление о заказе
+const modalOrderSent = new Modal(document.getElementById('Modal5'))
+const btnOrderSent = document.getElementById('orderAcceptBtn1')
+
+if (btnOrderSent) {
+    btnOrderSent.addEventListener("click", () => {
+        function disableModal () {
+            modalOrderSent.hide()
+        }
+        setTimeout( disableModal, 1000)
+    })
+}
 
 
 // Куки
