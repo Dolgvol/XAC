@@ -1,6 +1,11 @@
 body {
   font-family: "Open Sans", sans-serif;
 
+  * {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+  }
+
   & .underscore {
     border-bottom: 1px solid #5f5e5e4d;
   }
@@ -507,15 +512,27 @@ body {
       min-height: calc(100vh - 390px);
       max-height: max-content;
 
+      @include media-breakpoint-down(md) {
+        margin-top: 100px;
+      }
+
       & .breadcrumb_block {
         & .breadcrumb_nav {
           --bs-breadcrumb-divider: url(/assets/images/breadcrumb.svg);
-          height: 50px;
+          // height: 50px;
           border-bottom: 1px solid #3333331a;
+
+          // @include media-breakpoint-down(md) {
+          //   height: 33px;
+          // }
 
           & .breadcrumb {
             margin: auto;
             padding: 14.5px 0;
+
+            @include media-breakpoint-down(md) {
+              padding: 6px 0;
+            }
 
             & a {
               color: #333333;
@@ -941,6 +958,7 @@ body {
 
     @include media-breakpoint-down(md) {
       width: 280px;
+      // height: 90vh;
     }
 
     & .modal_korzina_container {
@@ -949,11 +967,18 @@ body {
       flex-direction: column;
       justify-content: space-between;
 
+      @include media-breakpoint-down(md) {
+        // height: 90vh;
+        min-height: 100vh;
+        height: 100%;
+        overflow: auto;
+      }
+
       & .modal_korzina_head {
-        flex: 82px 0 0;
+        flex: 0 0 82px;
 
         @include media-breakpoint-down(md) {
-          flex: 52px 0 0;
+          flex: 0 0 52px;
         }
 
         & .korzina_head_button {
@@ -992,19 +1017,21 @@ body {
 
       & .modal_korzina_body {
         overflow: auto;
-        flex: calc(100vh - 278px) 0 0;
+        flex: 1 0 calc(100vh - 278px);
 
         @include media-breakpoint-down(md) {
-          flex: calc(100vh - 185px) 0 0;
+          // flex: 1 0 calc(90vh - 185px);
+          overflow: visible;
+          flex: 1 1 100%;
         }
 
         & .korzina_item {
-          flex: 162px 0 0;
+          flex: 0 0 162px;
           width: 100%;
           border-bottom: 1px solid #5f5e5e4d;
 
           @include media-breakpoint-down(md) {
-            flex: 140px 0 0;
+            flex: 0 0 140px;
             padding: 10px;
           }
 
@@ -1153,10 +1180,10 @@ body {
       }
 
       & .modal_korzina_foot {
-        flex: 196px 0 0;
+        flex: 0 0 196px;
 
         @include media-breakpoint-down(md) {
-          flex: 133px 0 0;
+          flex: 0 0 133px;
         }
 
         & .korzina_total_price {
@@ -1237,6 +1264,7 @@ body {
   & .modal.block_modal_cabinet {
     & .modal-dialog {
       max-width: max-content;
+      margin: auto;
 
       & .modal-content {
         height: 415px;
@@ -1379,6 +1407,7 @@ body {
     user-select: none;
 
     & .modal-dialog {
+      margin: auto;
       max-width: max-content;
 
       & .modal-content {

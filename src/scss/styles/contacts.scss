@@ -1,190 +1,222 @@
-
-
 body {
+  & .wrapper {
+    & main {
+      & .contacts_block {
+        & .contacts_head {
+          & .contacts_head_text {
+            height: 30px;
+            margin: 20px auto 30px 0;
+            width: max-content;
+            position: relative;
 
-   & .wrapper {
-
-      & main {
-
-         & .contacts_block {
-
-            & .contacts_head {
-
-               & .contacts_head_text {
-                  height: 30px;
-                  margin: 20px auto 30px 0;
-                  width: max-content;
-                  position: relative;
-
-                  & .contacts_text {
-                     position: relative;
-                     left: 0;
-                     z-index: 10;
-                     color: #333333;
-                     font-size: 22px;
-                     font-weight: 400;
-                     line-height: 30px;
-                  }
-
-                  & .contacts_decor {
-                     position: absolute;
-                     bottom: 2px;
-                     left: 0;
-                     right: -5px;
-                     z-index: 5;
-                     height: 8px;
-                     background-color: $primary;
-                  }
-               }
+            @include media-breakpoint-down(md) {
+              margin: 15px auto 20px 0;
             }
 
-            & .contacts_body {
-               
-               & .contacts_body_left {
-                  margin-bottom: 30px;
-
-                  & a {
-                     display: block;
-
-                     &:hover {
-                        color: $primary;
-                     }
-                     &:active {
-                        color: #000;
-                     }
-                  }
-
-                  & svg {
-                        
-                     &:hover {
-                        fill: $primary;
-                     }
-                     &:active {
-                        fill: #000;
-                     }
-                  }
-
-                  & .contacts_number {
-                     color: #333333;
-                     font-size: 16px;
-                     font-weight: 600;
-                     line-height: 26px;
-                     text-decoration: none;
-                     margin-bottom: 6px;
-                  }
-
-                  & .contacts_mail {
-                     color: #333333;
-                     font-size: 16px;
-                     font-weight: 400;
-                     line-height: 26px;
-                     text-decoration: none;
-                     margin: 24px 0;
-
-                     & svg {
-                        margin-right: 12px;
-                     }
-
-                     &:hover svg{
-                        fill: $primary;
-                        color: $primary;
-                        
-                     }
-                     &:active svg{
-                        fill: #000;
-                        color: #000;
-                     }
-               
-                  }
-
-                  & .contacts_social_head {
-                     color: #333333;
-                     font-size: 16px;
-                     font-weight: 400;
-                     line-height: 26px;
-                     margin: 12px 0;
-               
-                  }
-
-                  & .contacts_social_body {
-                     max-width: 190px;
-                  }
-
-               }
-
-               & .contacts_body_right {
-                  margin-bottom: 30px;
-                  
-                  & .contacts_info1 {
-                     color: #333333;
-                     font-size: 16px;
-                     font-weight: 400;
-                     line-height: 26px;
-                     margin: 0 auto 30px;
-                  }
-
-                  & .contacts_info2 {
-                     
-                     & .info_place {
-                        
-                        & .info_place_name {
-                           color: #333333;
-                           font-size: 16px;
-                           font-weight: 600;
-                           line-height: 29px;
-                           min-width: 95px;
-                        }
-
-                        & .info_place_text {
-                           color: #333333;
-                           font-size: 16px;
-                           font-weight: 400;
-                           line-height: 29px;
-                        }
-                     }
-
-                     & .info_time {
-                        
-                        & .info_time_head {
-                           color: #333333;
-                           font-size: 18px;
-                           font-weight: 400;
-                           line-height: 25px;
-                           margin: 0 auto 10px;
-                        }
-
-                        & .info_time_body {
-
-                           & .info_day {
-                              margin: 0 10px 0 0;
-                           }
-
-                           & .time_text {
-                              color: #333333;
-                              font-size: 14px;
-                              font-weight: 400;
-                              line-height: 19px;
-                           }               
-                        }
-                     }
-                  }
-
-               }
+            & .contacts_text {
+              position: relative;
+              left: 0;
+              z-index: 10;
+              color: #333333;
+              font-size: 22px;
+              font-weight: 400;
+              line-height: 30px;
             }
 
+            & .contacts_decor {
+              position: absolute;
+              bottom: 2px;
+              left: 0;
+              right: -5px;
+              z-index: 5;
+              height: 8px;
+              background-color: $primary;
+            }
+          }
+        }
 
-            & .map_body {
-               
-               & .map_block2 {
-                  margin: 40px 0 60px 0;
-                  width: 100%;
-                  height: 361px;
-               }
+        & .contacts_body {
+          & .contacts_body_left {
+            margin-bottom: 30px;
+
+            @include media-breakpoint-down(md) {
+              margin-bottom: 20px;
             }
 
-         }
+            & a {
+              display: block;
 
-       }
-   }
+              &:hover {
+                color: $primary;
+              }
+              &:active {
+                color: #000;
+              }
+            }
+
+            & svg {
+              &:hover {
+                fill: $primary;
+              }
+              &:active {
+                fill: #000;
+              }
+            }
+
+            & .contacts_number {
+              color: #333333;
+              font-size: 16px;
+              font-weight: 600;
+              line-height: 26px;
+              text-decoration: none;
+              margin-bottom: 6px;
+            }
+
+            & .contacts_mail {
+              color: #333333;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 26px;
+              text-decoration: none;
+              margin: 24px 0;
+
+              @include media-breakpoint-down(md) {
+                margin: 24px 0;
+              }
+
+              & svg {
+                margin-right: 12px;
+
+                @include media-breakpoint-down(md) {
+                  margin-right: 8px;
+                }
+              }
+
+              &:hover svg {
+                fill: $primary;
+                color: $primary;
+              }
+              &:active svg {
+                fill: #000;
+                color: #000;
+              }
+            }
+
+            & .contacts_social_head {
+              color: #333333;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 26px;
+              margin: 12px 0;
+
+              @include media-breakpoint-down(md) {
+                font-size: 14px;
+                line-height: 24px;
+                margin: 8px 0;
+              }
+            }
+
+            & .contacts_social_body {
+              max-width: 190px;
+            }
+          }
+
+          & .contacts_body_right {
+            margin-bottom: 30px;
+
+            @include media-breakpoint-down(md) {
+              margin-bottom: 0;
+            }
+
+            & .contacts_info1 {
+              color: #333333;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 26px;
+              margin: 0 auto 30px;
+
+              @include media-breakpoint-down(md) {
+                font-size: 14px;
+                line-height: 24px;
+                margin: 0 auto 15px;
+              }
+
+              & .contacts_br1 {
+                @include media-breakpoint-down(lg) {
+                  display: none;
+                }
+              }
+            }
+
+            & .contacts_info2 {
+              & .info_place {
+                @include media-breakpoint-down(md) {
+                  margin-bottom: 15px;
+                }
+                & .info_place_name {
+                  color: #333333;
+                  font-size: 16px;
+                  font-weight: 600;
+                  line-height: 29px;
+                  min-width: 95px;
+
+                  @include media-breakpoint-down(md) {
+                    font-size: 14px;
+                    line-height: 27px;
+                  }
+                }
+
+                & .info_place_text {
+                  color: #333333;
+                  font-size: 16px;
+                  font-weight: 400;
+                  line-height: 29px;
+
+                  @include media-breakpoint-down(md) {
+                    font-size: 14px;
+                    line-height: 27px;
+                  }
+                }
+              }
+
+              & .info_time {
+                & .info_time_head {
+                  color: #333333;
+                  font-size: 18px;
+                  font-weight: 400;
+                  line-height: 25px;
+                  margin: 0 auto 10px;
+                }
+
+                & .info_time_body {
+                  & .info_day {
+                    margin: 0 10px 0 0;
+                  }
+
+                  & .time_text {
+                    color: #333333;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 19px;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        & .map_body {
+          & .map_block2 {
+            margin: 40px 0 60px 0;
+            width: 100%;
+            height: 361px;
+
+            @include media-breakpoint-down(md) {
+              margin: 20px 0 20px 0;
+            }
+          }
+        }
+      }
+    }
+  }
 }
-

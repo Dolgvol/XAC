@@ -47,6 +47,16 @@ body {
                 background-color: #f4f4f4;
                 border-radius: 2px;
 
+                & .categ_svg_wrapper {
+                  transform: rotate(0deg);
+                  transition: transform 0.2s ease-in;
+                }
+
+                & .svg_rotate {
+                  transform: rotate(180deg);
+                  transition: transform 0.2s ease-in;
+                }
+
                 &:hover {
                   color: #ffffff;
                   background-color: $secondary;
@@ -88,7 +98,6 @@ body {
           }
 
           @include media-breakpoint-down(md) {
-            margin-top: 112px;
             margin-bottom: 10px;
           }
 
@@ -1134,6 +1143,158 @@ body {
           & .map_block {
             flex: 0 1 100%;
             height: 340px;
+          }
+        }
+      }
+    }
+  }
+
+  & .wrapper_categories_mob {
+    display: none;
+
+    & .header_mob_top_cont {
+      background-color: $primary;
+      border-bottom: 10px solid #ea8f10;
+
+      & .header_mob_top {
+        height: 50px;
+
+        & .header_mob_col-l {
+          & .header_burger_menu {
+            padding: 0;
+          }
+        }
+
+        & .header_mob_col-r {
+          & .btn_korzina {
+            padding: 0;
+
+            & .korzina_block {
+              font-size: 12px;
+              font-weight: 700;
+              line-height: 14px;
+              padding: 0 5px;
+              margin-left: 6px;
+              border-radius: 3px;
+              border: 1.5px solid #333333;
+            }
+          }
+        }
+      }
+    }
+
+    & .left_list_cont {
+      & .left_list {
+        & .items_main_head {
+          margin-bottom: 1px;
+          background-color: #50422d;
+
+          & .list_main_head {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 400;
+            user-select: none;
+            background-color: #50422d;
+          }
+        }
+
+        & .items_group_head {
+          margin: 1px 0;
+          // background-color: #f4f4f4;
+
+          // &:hover {
+          //   color: #ffffff;
+          //   background-color: #50422d;
+          // }
+
+          // &:active {
+          //   color: #ffffff;
+          //   background-color: #50422d;
+          // }
+
+          & .head_list_item {
+            color: $secondary;
+            font-size: 16px;
+            font-weight: 400;
+            background-color: #f4f4f4;
+
+            & .categ_svg_wrapper {
+              transform: rotate(0deg);
+              transition: transform 0.2s ease-in;
+            }
+
+            & .svg_rotate {
+              transform: rotate(180deg);
+              transition: transform 0.2s ease-in;
+            }
+
+            &:hover {
+              color: #ffffff;
+              background-color: #50422d;
+            }
+
+            &:active {
+              color: #ffffff;
+              background-color: #50422d;
+            }
+
+            &:hover svg {
+              fill: #ffffff;
+            }
+
+            &:active svg {
+              fill: #ffffff;
+            }
+          }
+        }
+
+        & .items_group_body {
+          & .body_list_item {
+            color: #333333;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 19px;
+          }
+        }
+      }
+    }
+
+    & .back_btn_cat {
+      & .back_btn_cont {
+        height: 62px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+
+        & .back_btn {
+          color: #333333;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 16px;
+          width: 70px;
+          height: 30px;
+          display: flex;
+          align-content: center;
+          justify-content: space-between;
+          padding: 5.5px 8px;
+          border: 1px solid #333333;
+
+          &:hover {
+            background-color: #ffffff;
+            color: #000;
+          }
+
+          &:active {
+            background-color: #ffffff;
+            color: #000;
+          }
+
+          &:hover svg {
+            fill: #000;
+          }
+
+          &:active svg {
+            fill: #000;
           }
         }
       }

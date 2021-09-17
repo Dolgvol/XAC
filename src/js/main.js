@@ -93,6 +93,38 @@ $(() => {
         slidesToScroll: 1,
         touchThreshold: 10,
         waitForAnimate: false,
+        responsive: [
+            {
+              breakpoint: 1200,
+              settings: {
+                slidesToShow: 4,
+              }
+            },
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 3,
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                dots: true,
+                arrows: false,
+              }
+            },
+            {
+              breakpoint: 576,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                dots: true,
+                arrows: false,
+              }
+            },
+        ]
     });
 
     // Слайдер 4 product
@@ -101,7 +133,7 @@ $(() => {
         arrows: false,
         dots: false,
         slidesToScroll: 1,
-        slidesToShow: 4,
+        slidesToShow: 3,
         waitForAnimate: false,
         vertical: true,
         verticalSwiping: true,
@@ -110,6 +142,33 @@ $(() => {
         // centerMode: true,
 
         asNavFor: ".main_prod",
+
+        responsive: [
+            {
+              breakpoint: 1200,
+              settings: {
+              }
+            },
+            {
+              breakpoint: 992,
+              settings: {
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                vertical: false,
+                verticalSwiping: false,
+              }
+            },
+            {
+              breakpoint: 576,
+              settings: {
+                vertical: false,
+                verticalSwiping: false,
+              }
+            },
+        ]
     });
 
     $('.main_prod').slick({
@@ -121,10 +180,38 @@ $(() => {
         waitForAnimate: false,
         vertical: true,
         verticalSwiping: true,
-        draggable: false,
+        // centerMode: true,
+        // draggable: false,
 
         // fade: true,
         asNavFor: ".add_prod",
+
+        responsive: [
+            {
+              breakpoint: 1200,
+              settings: {
+              }
+            },
+            {
+              breakpoint: 992,
+              settings: {
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                vertical: false,
+                verticalSwiping: false,
+              }
+            },
+            {
+              breakpoint: 576,
+              settings: {
+                vertical: false,
+                verticalSwiping: false,
+              }
+            },
+        ]
     });
 
 
@@ -306,7 +393,7 @@ function changeHeaderOnScroll() {
 }
 
 
-// Каталог (передвижение на странице каталога)
+// Категории (передвижение на странице каталога)
 
 
 
@@ -457,4 +544,43 @@ function removeCookieWarning() {
             })
         }
     }
+}
+
+
+
+// Стрелки в блоке категорий
+const COLLAPSE_CONTENTS = document.getElementsByClassName('items_group_body')
+
+if (COLLAPSE_CONTENTS) {
+    for (const collapseContent of COLLAPSE_CONTENTS) {
+        collapseContent.addEventListener("show.bs.collapse", () => {
+            collapseContent.previousElementSibling.firstElementChild.lastElementChild.classList.add('svg_rotate')   
+        })
+        collapseContent.addEventListener("hide.bs.collapse", () => {
+            collapseContent.previousElementSibling.firstElementChild.lastElementChild.classList.remove('svg_rotate')   
+        })  
+    } 
+}
+  
+
+
+// Блок категорий в мобильной версии
+const MAIN_WRAPPER = document.querySelector('#mainWrapper1')
+const MOB_WRAPPER = document.querySelector('#mobWrapper2')
+
+const btnMainWrapper = document.querySelector('#forwardBtnCat1')
+const btnMobWrapper = document.querySelector('#backBtnCat1')
+
+if (btnMainWrapper) {
+    btnMainWrapper.addEventListener("click", () => {
+        MAIN_WRAPPER.style.display = 'none'
+        MOB_WRAPPER.style.display = 'block'
+    })
+}
+
+if (btnMobWrapper) {
+    btnMobWrapper.addEventListener("click", () => {
+        MAIN_WRAPPER.style.display = 'block'
+        MOB_WRAPPER.style.display = 'none'
+    })
 }
