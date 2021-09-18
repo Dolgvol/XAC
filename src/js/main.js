@@ -497,7 +497,12 @@ if (reviewBottomButton) {
 
 // Всплывающее добавление в корзину
 const modalGoodsInCart = new Modal(document.getElementById('Modal6'))
-const btnsGoodsInCart = document.getElementsByClassName('buy_btn')
+const btnsGoodsInCart1 = Array.from(document.getElementsByClassName('buy_btn'))
+const btnsGoodsInCart2 = Array.from(document.getElementsByClassName('buy_btn_mini'))
+const btnsGoodsInCart3 = Array.from(document.getElementsByClassName('maininfo_btn'))
+const btnsGoodsInCart = btnsGoodsInCart1.concat(btnsGoodsInCart2, btnsGoodsInCart3)
+
+// console.log(btnsGoodsInCart);
 
 if (btnsGoodsInCart) {
     for (const btnGoods of btnsGoodsInCart) {
@@ -568,14 +573,16 @@ if (COLLAPSE_CONTENTS) {
 const MAIN_WRAPPER = document.querySelector('#mainWrapper1')
 const MOB_WRAPPER = document.querySelector('#mobWrapper2')
 
-const btnMainWrapper = document.querySelector('#forwardBtnCat1')
+const btnsMainWrapper = document.querySelectorAll('.forward_btn_cat')
 const btnMobWrapper = document.querySelector('#backBtnCat1')
 
-if (btnMainWrapper) {
-    btnMainWrapper.addEventListener("click", () => {
-        MAIN_WRAPPER.style.display = 'none'
-        MOB_WRAPPER.style.display = 'block'
-    })
+if (btnsMainWrapper) {
+    for (const btnMainWrapper of btnsMainWrapper) {
+        btnMainWrapper.addEventListener("click", () => {
+            MAIN_WRAPPER.style.display = 'none'
+            MOB_WRAPPER.style.display = 'block'
+        })
+    }
 }
 
 if (btnMobWrapper) {
@@ -584,3 +591,23 @@ if (btnMobWrapper) {
         MOB_WRAPPER.style.display = 'none'
     })
 }
+
+
+// Смена языка
+const langButtonDropdown = document.getElementById('dropdownMenuButtonLang')
+const langItem1 = document.getElementById('langItem1')
+const langItem2 = document.getElementById('langItem2')
+
+if (langItem1) {
+    langItem1.addEventListener("click", () => {
+        langButtonDropdown.innerText = langItem1.innerText
+    })
+}
+
+if (langItem2) {
+    langItem2.addEventListener("click", () => {
+        langButtonDropdown.innerText = langItem2.innerText
+    })
+}
+
+

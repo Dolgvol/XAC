@@ -248,13 +248,14 @@ body {
               }
             }
 
-            //  & div .head_select_form {
-            //     border: none;
-            //     padding: 0;
-            //     width: 50px;
-            //     font-size: 14px;
-            //     cursor: pointer;
-            //  }
+            & div .head_select_form {
+              display: none;
+              border: none;
+              padding: 0;
+              width: 50px;
+              font-size: 14px;
+              cursor: pointer;
+            }
 
             & .head_lang {
               & .head_lang_btn {
@@ -1020,9 +1021,9 @@ body {
         flex: 1 0 calc(100vh - 278px);
 
         @include media-breakpoint-down(md) {
-          // flex: 1 0 calc(90vh - 185px);
+          flex: 1 0 calc(90vh - 185px);
           overflow: visible;
-          flex: 1 1 100%;
+          // flex: 1 1 100%;
         }
 
         & .korzina_item {
@@ -1038,7 +1039,7 @@ body {
           & .korzina_item_image {
             margin: auto 20px;
             flex: 0 0 100px;
-            height: auto;
+            max-height: 100px;
 
             @include media-breakpoint-down(md) {
               display: none !important;
@@ -1111,6 +1112,8 @@ body {
 
             & .mainbox_bottom {
               & .korzina_item_image2 {
+                flex: 0 0 70px;
+                max-height: 70px;
                 display: none !important;
 
                 @include media-breakpoint-down(md) {
@@ -1184,6 +1187,7 @@ body {
 
         @include media-breakpoint-down(md) {
           flex: 0 0 133px;
+          margin-bottom: 10vh;
         }
 
         & .korzina_total_price {

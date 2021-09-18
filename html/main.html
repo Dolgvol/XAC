@@ -73,22 +73,22 @@
                                     </button>
 
 
-                                    <!-- 
+                                    <!--
                                     <select class="head_select_form form-select bg-primary" name="lang">
                                         <option class="bg-primary"><a>RU</a></option>
                                         <option class="bg-primary"><a>UA</a></option>
                                     </select>
-                                    -->
+                                      -->
 
                                     <div class="head_lang btn-group">
                                         <button class="head_lang_btn btn btn-outline-secondary head_btn dropdown-toggle"
-                                            type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                            type="button" id="dropdownMenuButtonLang" data-bs-toggle="dropdown"
                                             aria-expanded="false">
                                             RU
                                         </button>
-                                        <ul class="lang_menu dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <li><a class="lang_item dropdown-item" href="main.html">RU</a></li>
-                                            <li><a class="lang_item dropdown-item" href="#">UA</a></li>
+                                        <ul class="lang_menu dropdown-menu" aria-labelledby="dropdownMenuButtonLang">
+                                            <li><a class="lang_item dropdown-item" id="langItem1">RU</a></li>
+                                            <li><a class="lang_item dropdown-item" id="langItem2">UA</a></li>
                                         </ul>
                                     </div>
 
@@ -431,7 +431,7 @@
                         </div>
 
                         <div class="block1_btn_cat">
-                            <a class="block1_btn_cat1 btn btn-secondary" tabindex="0" id="forwardBtnCat1">Категории запчастей</a>
+                            <a class="block1_btn_cat1 forward_btn_cat btn btn-secondary" tabindex="0" id="forwardBtnCat1">Категории запчастей</a>
                         </div>
 
                         <div class="d-flex justify-content-xl-end flex-xl-row flex-md-column-reverse justify-content-md-start align-items-md-start block1_row2">
@@ -1736,7 +1736,7 @@
                     </div>
                 </a>
 
-                <a href="categories.html" class="burger_nav_link">
+                <a class="burger_nav_link forward_btn_cat">
                     <div class="burger_nav_block">
                         Категории запчастей
                     </div>

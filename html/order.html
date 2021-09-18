@@ -15,9 +15,15 @@
 
     <!-- Bootstrap CSS -->
     <link href="../dist/app.css" rel="stylesheet">
-
+    
     <!-- JavaScript -->
     <script src="../dist/app.js" defer></script>
+
+    <style>
+        @media (max-width: 767.98px) {
+          main { margin-top: 51px !important; }
+        }
+    </style>
 </head>
 
 <body>
@@ -237,66 +243,27 @@
             </div>
 
 
-            <div class="header_mob bg-primary">
+            <div class="header_mob2 bg-primary">
                 <div class="container">
 
-                    <div class="header_mob_top row align-items-center justify-content-between">
-                        <div class="header_mob_col-l col-2 d-flex justify-content-start">
-                            <button class="btn btn-outline-secondary head_btn header_burger_menu" type="button"
-                            data-bs-toggle="offcanvas" data-bs-target="#Modal0" aria-controls="Modal0">
-                                <img src="../assets/images/burger_menu.svg" type="button"
-                                data-bs-toggle="offcanvas" data-bs-target="#Modal0" aria-controls="Modal0">
-                            </button>
+                   <div class="header_mob_cont d-flex justify-content-between align-items-center order_header">
+
+                    <div class="left_order_header">
+                        <a href="./main.html" class="logo_link_mob">
+                            <img src="../assets/images/logo_head_mobile.svg">
+                        </a>
+                    </div>
+
+                    <div class="right_order_header">
+                        <div class="right_order_text">
+                            Вопросы по телефону
                         </div>
-
-                        <div class="col-8 d-flex justify-content-center">
-                            <a href="./main.html" class="logo_link_mob">
-                                <img src="../assets/images/logo_head_mobile.svg">
-                            </a>
-                        </div>
-
-                        <div class="header_mob_col-r col-2 d-flex justify-content-end">
-
-                            <button class="btn btn-outline-secondary head_btn btn_korzina" type="button"
-                            data-bs-toggle="offcanvas" data-bs-target="#Modal1" aria-controls="Modal1">
-
-                                <div class="d-flex align-items-center" type="button"
-                                    data-bs-toggle="offcanvas" data-bs-target="#Modal1"
-                                    aria-controls="Modal1">
-                                    <img src="../assets/images/korzina.svg" type="button"
-                                        data-bs-toggle="offcanvas" data-bs-target="#Modal1"
-                                        aria-controls="Modal1">
-                                    <div class="korzina_block basket-number-block-in-head" type="button"
-                                        data-bs-toggle="offcanvas" data-bs-target="#Modal1"
-                                        aria-controls="Modal1">
-                                        0
-                                    </div>
-                                </div>
-
-                            </button>
-
+                        <div class="right_order_mob">
+                            <a href="#">+38 099 999 99 99</a>
                         </div>
                     </div>
 
-                    <div class="header_mob_bottom row align-items-start justify-content-center">
-                        <div class="col-12">
-
-                            <form class="d-flex justify-content-center">
-                                <div class="input-group">
-
-                                    <input class="form-control search1" name="s"
-                                        placeholder="Поиск товаров"
-                                        type="search">
-
-                                    <button type="submit" class="btn btn-secondary btn_search">
-                                        <img src="../assets/images/search.svg" class="img-fluid">
-                                    </button>
-
-                                </div>
-                            </form>
-
-                        </div>
-                    </div>
+                   </div>
 
                 </div>
             </div>
@@ -321,7 +288,7 @@
 
                 <div class="row">
 
-                    <div class="order_left_block col-xl-8">
+                    <div class="order_left_block col-xl-8 col-lg-7 order-lg-1 order-2">
 
                         <form>
 
@@ -335,7 +302,7 @@
 
                                     <div class="row">
 
-                                        <div class="col-auto">
+                                        <div class="col-xxl-auto col-xl-6">
                                             <div class="mb-3">
                                                 <label for="oderName1" class="form_label form-label">Имя*</label>
                                                 <input type="text" class="form_control form-control" id="oderName1"
@@ -343,7 +310,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-auto">
+                                        <div class="col-xxl-auto col-xl-6">
                                             <div class="mb-3">
                                                 <label for="oderNumber1" class="form_label form-label">Номер
                                                     телефона*</label>
@@ -356,7 +323,7 @@
 
                                     <div class="row">
 
-                                        <div class="col-auto">
+                                        <div class="col-xxl-auto col-xl-6">
                                             <div class="mb-3">
                                                 <label for="oderSurname1" class="form_label form-label">Фамилия*</label>
                                                 <input type="text" class="form_control form-control" id="oderSurname1"
@@ -364,7 +331,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-auto">
+                                        <div class="col-xxl-auto col-xl-6">
                                             <div class="mb-3">
                                                 <label for="oderEmail1" class="form_label form-label">E-mail</label>
                                                 <input type="email" class="form_control form-control" id="oderEmail1"
@@ -445,7 +412,7 @@
                                 </div>
 
 
-                                <div class="delivery_addinfo_block2 col-xl-auto" id="deliveryAddinfoBlock2">
+                                <div class="delivery_addinfo_block2 col-xxl-auto offset-xxl-0 col-xl-6 offset-xl-2" id="deliveryAddinfoBlock2">
 
                                     <div class="mb-3">
                                         <label for="oderRegion1" class="form_label form-label">Область*</label>
@@ -567,7 +534,7 @@
 
 
 
-                    <div class="order_right_block col-xl-4">
+                    <div class="order_right_block col-xl-4 col-lg-5 order-lg-2 order-1">
 
 
 
@@ -649,6 +616,269 @@
                                     </div>
 
                                 </div>
+
+
+
+
+
+                                <div class="bill_item d-flex align-items-start justify-content-between">
+
+                                    <div class="bill_item_img">
+                                        <img src="../assets/images/gaiki2.png" width="60px" height="60px">
+                                    </div>
+
+                                    <div class="bill_item_description">
+
+                                        <div class="item_desc_main">
+                                            Поворот балансира ГУРа на наколесник
+                                        </div>
+
+                                        <div class="item_desc_number">
+                                            5678-345678876-Э
+                                        </div>
+
+                                        <div class="item_desc_place">
+                                            Димитровград
+                                        </div>
+
+                                    </div>
+
+                                    <div class="bill_item_price">
+
+                                        <div class="item_price_name">
+                                            Цена
+                                        </div>
+
+                                        <div class="item_price_number">
+                                            97865
+                                        </div>
+
+                                    </div>
+
+                                    <div class="bill_item_amount">
+
+                                        <div class="item_amount_name">
+                                            Кол-во
+                                        </div>
+
+                                        <div class="item_amount_number">
+                                            789
+                                        </div>
+
+                                    </div>
+
+                                    <div class="bill_item_total">
+
+                                        <div class="item_total_name">
+                                            Сумма
+                                        </div>
+
+                                        <div class="item_total_number">
+                                            56789
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+
+
+
+
+
+                                <div class="bill_item d-flex align-items-start justify-content-between">
+
+                                    <div class="bill_item_img">
+                                        <img src="../assets/images/gaiki2.png" width="60px" height="60px">
+                                    </div>
+
+                                    <div class="bill_item_description">
+
+                                        <div class="item_desc_main">
+                                            Поворот балансира ГУРа на наколесник
+                                        </div>
+
+                                        <div class="item_desc_number">
+                                            5678-345678876-Э
+                                        </div>
+
+                                        <div class="item_desc_place">
+                                            Димитровград
+                                        </div>
+
+                                    </div>
+
+                                    <div class="bill_item_price">
+
+                                        <div class="item_price_name">
+                                            Цена
+                                        </div>
+
+                                        <div class="item_price_number">
+                                            97865
+                                        </div>
+
+                                    </div>
+
+                                    <div class="bill_item_amount">
+
+                                        <div class="item_amount_name">
+                                            Кол-во
+                                        </div>
+
+                                        <div class="item_amount_number">
+                                            789
+                                        </div>
+
+                                    </div>
+
+                                    <div class="bill_item_total">
+
+                                        <div class="item_total_name">
+                                            Сумма
+                                        </div>
+
+                                        <div class="item_total_number">
+                                            56789
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+
+
+
+
+
+                                <div class="bill_item d-flex align-items-start justify-content-between">
+
+                                    <div class="bill_item_img">
+                                        <img src="../assets/images/gaiki2.png" width="60px" height="60px">
+                                    </div>
+
+                                    <div class="bill_item_description">
+
+                                        <div class="item_desc_main">
+                                            Поворот балансира ГУРа на наколесник
+                                        </div>
+
+                                        <div class="item_desc_number">
+                                            5678-345678876-Э
+                                        </div>
+
+                                        <div class="item_desc_place">
+                                            Димитровград
+                                        </div>
+
+                                    </div>
+
+                                    <div class="bill_item_price">
+
+                                        <div class="item_price_name">
+                                            Цена
+                                        </div>
+
+                                        <div class="item_price_number">
+                                            97865
+                                        </div>
+
+                                    </div>
+
+                                    <div class="bill_item_amount">
+
+                                        <div class="item_amount_name">
+                                            Кол-во
+                                        </div>
+
+                                        <div class="item_amount_number">
+                                            789
+                                        </div>
+
+                                    </div>
+
+                                    <div class="bill_item_total">
+
+                                        <div class="item_total_name">
+                                            Сумма
+                                        </div>
+
+                                        <div class="item_total_number">
+                                            56789
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+
+
+
+
+
+                                <div class="bill_item d-flex align-items-start justify-content-between">
+
+                                    <div class="bill_item_img">
+                                        <img src="../assets/images/gaiki2.png" width="60px" height="60px">
+                                    </div>
+
+                                    <div class="bill_item_description">
+
+                                        <div class="item_desc_main">
+                                            Поворот балансира ГУРа на наколесник
+                                        </div>
+
+                                        <div class="item_desc_number">
+                                            5678-345678876-Э
+                                        </div>
+
+                                        <div class="item_desc_place">
+                                            Димитровград
+                                        </div>
+
+                                    </div>
+
+                                    <div class="bill_item_price">
+
+                                        <div class="item_price_name">
+                                            Цена
+                                        </div>
+
+                                        <div class="item_price_number">
+                                            97865
+                                        </div>
+
+                                    </div>
+
+                                    <div class="bill_item_amount">
+
+                                        <div class="item_amount_name">
+                                            Кол-во
+                                        </div>
+
+                                        <div class="item_amount_number">
+                                            789
+                                        </div>
+
+                                    </div>
+
+                                    <div class="bill_item_total">
+
+                                        <div class="item_total_name">
+                                            Сумма
+                                        </div>
+
+                                        <div class="item_total_number">
+                                            56789
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
 
 
 
@@ -993,6 +1223,9 @@
 
                 </div>
 
+                <div class="row">
+                </div>
+
             </div>
 
 
@@ -1146,7 +1379,7 @@
                     </div>
                 </a>
 
-                <a href="categories.html" class="burger_nav_link">
+                <a class="burger_nav_link forward_btn_cat">
                     <div class="burger_nav_block">
                         Категории запчастей
                     </div>

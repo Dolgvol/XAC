@@ -1,103 +1,174 @@
-
 body {
+  & .wrapper {
+    & main {
+      & .breadcrumb_block {
+        & .breadcrumb_nav {
+          & .breadcrumb {
+            & .breadcrumb_a1 {
+              display: inline;
 
-   & .wrapper {
+              @include media-breakpoint-down(md) {
+                display: none;
+              }
+            }
+            & .breadcrumb_a2 {
+              display: none;
 
-      & main {
+              @include media-breakpoint-down(md) {
+                display: inline;
+              }
+            }
+          }
+        }
+      }
 
-         & .maintext_block {
+      & .maintext_block {
+        & .maintext_header {
+          margin: 12px 0 39px 0;
 
-            & .maintext_header {
+          @include media-breakpoint-down(md) {
+            margin: 8px 0 18px 0;
+          }
 
-               & .maintext_header_text {
-                  height: 30px;
-                  margin: 12px auto 39px 0;
-                  width: max-content;
-                  position: relative;
+          & .maintext_header_text {
+            height: 30px;
+            margin: 0 auto 0 0;
+            width: max-content;
+            position: relative;
 
-                  & .maintext_text {
-                     position: relative;
-                     left: 0;
-                     z-index: 10;
-                     color: #333333;
-                     font-size: 22px;
-                     font-weight: 400;
-                     line-height: 30px;
-                  }
-
-                  & .maintext_header_decor {
-                     position: absolute;
-                     bottom: 2px;
-                     left: 0;
-                     right: -5px;
-                     z-index: 5;
-                     height: 8px;
-                     background-color: $primary;
-                  }
-               }
+            @include media-breakpoint-down(md) {
+              display: none;
             }
 
-            & .maintext_body {
-
-               & .maintext_body_text {
-                  color: #333333;
-                  font-size: 16px;
-                  font-weight: 400;
-                  line-height: 26px;
-                  margin-bottom: 36px;
-
-                  &:last-child {
-                     margin-bottom: 0;
-                  }
-
-                  & ul {
-                     margin: 0;
-                  }
-
-                  & ol {
-                     margin: 0;
-                     padding: 0;
-                     list-style-type: none; /* Убираем исходные маркеры */
-                     counter-reset:  item; /* Обнуляем счетчик списка */
-
-                     & li:before {
-                        content: counter(item) ') '; /* Добавляем к числам скобку */
-                        counter-increment: item; /* Задаём имя счетчика */
-                       }
-                  }
-               } 
-
-               & .maintext_body_header {
-                  color: #333333;
-                  font-size: 18px;
-                  font-weight: 600;
-                  line-height: 25px;
-                  margin-bottom: 20px;
-               }
+            & .maintext_text {
+              position: relative;
+              left: 0;
+              z-index: 10;
+              color: #333333;
+              font-size: 22px;
+              font-weight: 400;
+              line-height: 30px;
             }
 
-            & .maintext_footer {
+            & .maintext_header_decor {
+              position: absolute;
+              bottom: 2px;
+              left: 0;
+              right: -5px;
+              z-index: 5;
+              height: 8px;
+              background-color: $primary;
+            }
+          }
 
-               & .maintext_footer_btn {
-                  width: max-content;
-                  margin: 50px auto 75px auto;
+          & .maintext_header_text2 {
+            display: none;
+            height: 24px;
+            margin: 0 auto 0 0;
+            width: max-content;
+            position: relative;
 
-                  & .cookie_btn {
-                     color: #fff;
-                     font-size: 22px;
-                     font-weight: 600;
-                     line-height: 30px;
-                     padding: 17px 131px;
-
-                     &:active {
-                        background: linear-gradient(180deg, #FFD647 0%, #FF8206 104.29%);                           
-                    }
-                  }
-               }
+            @include media-breakpoint-down(md) {
+              display: block;
             }
 
-         }
+            & .maintext_text {
+              position: relative;
+              left: 0;
+              z-index: 10;
+              color: #333333;
+              font-size: 18px;
+              font-weight: 600;
+              line-height: 24px;
+            }
 
-       }
-   }
+            & .maintext_header_decor {
+              position: absolute;
+              bottom: 2px;
+              left: 0;
+              right: -5px;
+              z-index: 5;
+              height: 5px;
+              background-color: #ffcf5e;
+            }
+          }
+        }
+
+        & .maintext_body {
+          & .maintext_body_text {
+            color: #333333;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 26px;
+            margin-bottom: 36px;
+
+            @include media-breakpoint-down(md) {
+              font-size: 14px;
+              line-height: 24px;
+              margin-bottom: 15px;
+            }
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            & ul {
+              margin: 0;
+            }
+
+            & ol {
+              margin: 0;
+              padding: 0;
+              list-style-type: none; /* Убираем исходные маркеры */
+              counter-reset: item; /* Обнуляем счетчик списка */
+
+              & li:before {
+                content: counter(item) ") "; /* Добавляем к числам скобку */
+                counter-increment: item; /* Задаём имя счетчика */
+              }
+            }
+          }
+
+          & .maintext_body_header {
+            color: #333333;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 25px;
+            margin-bottom: 20px;
+
+            @include media-breakpoint-down(md) {
+              font-size: 16px;
+              line-height: 22px;
+              margin-bottom: 15px;
+            }
+          }
+        }
+
+        & .maintext_footer {
+          & .maintext_footer_btn {
+            width: max-content;
+            margin: 50px auto 75px auto;
+
+            @include media-breakpoint-down(md) {
+              margin: 25px auto 30px auto;
+            }
+
+            & .cookie_btn {
+              color: #fff;
+              font-size: 22px;
+              font-weight: 600;
+              line-height: 30px;
+              padding: 17px 131px;
+
+              @include media-breakpoint-down(md) {
+                font-size: 18px;
+                line-height: 26px;
+                padding: 10px 80px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
