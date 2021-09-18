@@ -972,7 +972,7 @@ body {
         // height: 90vh;
         min-height: 100vh;
         height: 100%;
-        overflow: auto;
+        // overflow: auto;
       }
 
       & .modal_korzina_head {
@@ -1022,7 +1022,7 @@ body {
 
         @include media-breakpoint-down(md) {
           flex: 1 0 calc(90vh - 185px);
-          overflow: visible;
+          // overflow: visible;
           // flex: 1 1 100%;
         }
 
@@ -1622,6 +1622,9 @@ body {
           min-height: 78px;
           width: 100%;
           background-color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
 
           @include media-breakpoint-down(md) {
             min-height: 49px;

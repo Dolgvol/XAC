@@ -501,7 +501,6 @@ const btnsGoodsInCart1 = Array.from(document.getElementsByClassName('buy_btn'))
 const btnsGoodsInCart2 = Array.from(document.getElementsByClassName('buy_btn_mini'))
 const btnsGoodsInCart3 = Array.from(document.getElementsByClassName('maininfo_btn'))
 const btnsGoodsInCart = btnsGoodsInCart1.concat(btnsGoodsInCart2, btnsGoodsInCart3)
-
 // console.log(btnsGoodsInCart);
 
 if (btnsGoodsInCart) {
@@ -517,15 +516,23 @@ if (btnsGoodsInCart) {
 
 // Всплывающее уведомление о заказе
 const modalOrderSent = new Modal(document.getElementById('Modal5'))
+const orderForm1 = document.getElementById('orderForm1')
 const btnOrderSent = document.getElementById('orderAcceptBtn1')
 
 if (btnOrderSent) {
-    btnOrderSent.addEventListener("click", () => {
+        btnOrderSent.addEventListener('click', event => {
+            event.preventDefault()
+            modalOnSentForm()
+        }, false)     
+}
+
+function modalOnSentForm() {
+        modalOrderSent.show()
         function disableModal () {
             modalOrderSent.hide()
+            orderForm1.submit()
         }
-        setTimeout( disableModal, 1000)
-    })
+        setTimeout( disableModal, 1500)
 }
 
 
@@ -589,6 +596,12 @@ if (btnMobWrapper) {
     btnMobWrapper.addEventListener("click", () => {
         MAIN_WRAPPER.style.display = 'block'
         MOB_WRAPPER.style.display = 'none'
+        $('.items_prod').slick('setPosition');
+        $('.items_review').slick('setPosition');
+        $('.items_mini').slick('setPosition');
+        $('.add_prod').slick('setPosition');
+        $('.main_prod').slick('setPosition');
+
     })
 }
 
