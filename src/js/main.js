@@ -1,4 +1,4 @@
-import {Modal} from 'bootstrap'
+import {Modal, Offcanvas} from 'bootstrap'
 
 $(() => {
 
@@ -448,11 +448,19 @@ const ITEMS_COUNTERS = document.querySelectorAll('.amount-for-order')
 
 
 
+
 // Блоки на странице заказа
 const infoPickup = document.getElementById('deliveryInfoPickup')
 const infoDelivery = document.getElementById('deliveryInfoDelivery')
 const AddinfoBlock1 = document.getElementById('deliveryAddinfoBlock1')
 const AddinfoBlock2 = document.getElementById('deliveryAddinfoBlock2')
+
+if (AddinfoBlock1) {
+    var inputsInBlock1 = AddinfoBlock1.getElementsByClassName('validate_input')
+}
+if (AddinfoBlock1) {
+    var inputsInBlock2 = AddinfoBlock2.getElementsByClassName('validate_input')
+}
 
 choosePickupOrDelivery()
 function choosePickupOrDelivery() {
@@ -463,6 +471,12 @@ function choosePickupOrDelivery() {
             if (infoPickup.checked) {
                 AddinfoBlock1.style.display = 'block'
                 AddinfoBlock2.style.display = 'none'
+                for (let input1 of inputsInBlock1) {
+                    input1.classList.remove('ignore')
+                }
+                for (let input2 of inputsInBlock2) {
+                    input2.classList.add('ignore')
+                }
             }
         })
     }
@@ -474,8 +488,73 @@ function choosePickupOrDelivery() {
             if (infoDelivery.checked) {
                 AddinfoBlock1.style.display = 'none'
                 AddinfoBlock2.style.display = 'block'
+                for (let input1 of inputsInBlock1) {
+                    input1.classList.add('ignore')
+                }
+                for (let input2 of inputsInBlock2) {
+                    input2.classList.remove('ignore')
+                }
             }
         })
+    }
+}
+
+
+// Валидация формы на странице заказа (jQuery)
+const orderAcceptBtn1 = $('#orderAcceptBtn1')
+const orderDisabledBtn2 = $('#orderDisabledBtn2')
+const oderForm = $('#orderForm1')
+
+const validator =  oderForm.validate({
+    ignore: ".ignore",
+    rules : {
+        name: {
+            required: true,
+            minlength: 2,
+        },
+        surname: {
+            required: true,
+            minlength: 2,
+        },
+        tel: {
+            required: true,
+            minlength: 10,
+        },
+        deliveryInfo: {
+            required: true,
+        },
+        payInfo: {
+            required: true,
+        },
+
+        deliveryAddInfo: {
+            required: true,
+        },
+
+        oderRegion: {
+            required: true,
+            minlength: 2,
+        },
+        oderCity: {
+            required: true,
+            minlength: 2,
+        },
+        oderBranch: {
+            required: true,
+            minlength: 1,
+        },
+    },
+})
+
+$('.validate_input').on({'blur':enableButton, 'mouseout':enableButton, 'click':enableButton, 'focus':enableButton,})
+
+function enableButton() {
+    if (validator.form()) {
+        orderAcceptBtn1.css('display', 'block')
+        orderDisabledBtn2.css('display', 'none')
+    } else {
+        orderAcceptBtn1.css('display', 'none')
+        orderDisabledBtn2.css('display', 'block')
     }
 }
 
@@ -532,7 +611,7 @@ function modalOnSentForm() {
             modalOrderSent.hide()
             orderForm1.submit()
         }
-        setTimeout( disableModal, 1500)
+        setTimeout( disableModal, 2500)
 }
 
 
@@ -583,11 +662,14 @@ const MOB_WRAPPER = document.querySelector('#mobWrapper2')
 const btnsMainWrapper = document.querySelectorAll('.forward_btn_cat')
 const btnMobWrapper = document.querySelector('#backBtnCat1')
 
+const modalBurger = new Offcanvas(document.getElementById('Modal0'))
+
 if (btnsMainWrapper) {
     for (const btnMainWrapper of btnsMainWrapper) {
         btnMainWrapper.addEventListener("click", () => {
             MAIN_WRAPPER.style.display = 'none'
             MOB_WRAPPER.style.display = 'block'
+            modalBurger.hide()
         })
     }
 }
@@ -596,14 +678,15 @@ if (btnMobWrapper) {
     btnMobWrapper.addEventListener("click", () => {
         MAIN_WRAPPER.style.display = 'block'
         MOB_WRAPPER.style.display = 'none'
-        $('.items_prod').slick('setPosition');
-        $('.items_review').slick('setPosition');
-        $('.items_mini').slick('setPosition');
-        $('.add_prod').slick('setPosition');
-        $('.main_prod').slick('setPosition');
-
+        // jQuery code -->
+        $('.items_prod').slick('setPosition')
+        $('.items_review').slick('setPosition')
+        $('.items_mini').slick('setPosition')
+        $('.add_prod').slick('setPosition')
+        $('.main_prod').slick('setPosition')
     })
 }
+
 
 
 // Смена языка

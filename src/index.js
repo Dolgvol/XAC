@@ -13,6 +13,8 @@ import 'slick-carousel/slick/slick.min.js';
 
 import 'select2';
 
+import 'jquery-validation/dist/jquery.validate.min.js';
+
 import '../src/js/main';
 
 

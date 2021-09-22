@@ -122,7 +122,7 @@ body {
       z-index: 30;
     }
 
-    &:hover {
+    &:not(.disabled_btn):hover {
       color: #ffffff;
       background-color: #ffc05e;
       border-color: #ffbc54;
@@ -138,7 +138,7 @@ body {
       }
     }
 
-    &:active {
+    &:not(.disabled_btn):active {
       &::before {
         opacity: 0;
         visibility: hidden;
@@ -150,7 +150,7 @@ body {
       }
     }
 
-    &:focus {
+    &:not(.disabled_btn):focus {
       box-shadow: 0 0 0 0.25rem #ffb64183;
     }
   }
@@ -868,6 +868,7 @@ body {
       & .modal_burger_body {
         & .burger_nav_link {
           text-decoration: none;
+          cursor: pointer;
 
           & .burger_nav_block {
             height: 46px;
@@ -1512,14 +1513,32 @@ body {
         }
 
         & .modal_review_foot {
-          & .review_button_disable {
+          // & .review_button_disable {
+          //   font-size: 14px;
+          //   font-weight: 600;
+          //   padding: 10px 87px;
+          //   text-decoration: none;
+          //   margin-bottom: 40px;
+          //   color: #333333;
+          //   background-color: #c9c9c9;
+
+          //   @include media-breakpoint-down(md) {
+          //     margin-bottom: 20px;
+          //   }
+          // }
+
+          & .disabled_btn.btn.btn-outline-primary {
             font-size: 14px;
             font-weight: 600;
-            color: #333333;
-            background-color: #c9c9c9;
             padding: 10px 87px;
             text-decoration: none;
             margin-bottom: 40px;
+            pointer-events: none;
+
+            &:hover {
+              background-color: #fff;
+              color: $primary;
+            }
 
             @include media-breakpoint-down(md) {
               margin-bottom: 20px;

@@ -102,6 +102,10 @@ body {
 
       & .order_body {
         & .order_left_block {
+          & label.error {
+            display: none !important;
+          }
+
           & .customer_info {
             margin: 0 auto 20px 0;
 
@@ -144,7 +148,8 @@ body {
           }
 
           & .delivery_info {
-            margin-bottom: 35px;
+            margin-bottom: 20px;
+            position: relative;
 
             @include media-breakpoint-down(xl) {
               margin-bottom: 10px;
@@ -200,12 +205,17 @@ body {
           & .delivery_addinfo_block1 {
             display: none;
             margin-top: 42px;
+            margin-left: 300px;
+            position: absolute;
+            z-index: 4;
 
             @include media-breakpoint-down(xl) {
+              position: static;
               border-bottom: 1px solid #5f5e5e1e;
               border-top: 1px solid #5f5e5e1e;
               margin-top: -10px;
               margin-bottom: 20px;
+              margin-left: 0;
             }
 
             & .form-check {
@@ -244,13 +254,16 @@ body {
 
           & .delivery_addinfo_block2 {
             display: none;
-            margin-left: 115px;
+            margin-left: 405px;
+            position: absolute;
+            z-index: 4;
 
             @include media-breakpoint-down(xxl) {
-              margin-left: 130px;
+              margin-left: 400px;
             }
 
             @include media-breakpoint-down(xl) {
+              position: static;
               margin-left: 0;
               margin-bottom: 20px;
               border-bottom: 1px solid #5f5e5e1e;
@@ -376,6 +389,7 @@ body {
             }
 
             & .accept_btn.btn.btn-primary {
+              display: none;
               font-weight: 600;
               font-size: 22px;
               line-height: 30px;
@@ -385,6 +399,28 @@ body {
                 font-size: 18px;
                 line-height: 25px;
                 padding: 11.5px 40px;
+              }
+            }
+
+            & .disabled_btn.btn.btn-outline-primary {
+              display: block;
+              font-weight: 600;
+              font-size: 22px;
+              line-height: 30px;
+              padding: 17.5px 86.5px;
+              pointer-events: none;
+              max-width: 389px;
+
+              &:hover {
+                background-color: #fff;
+                color: $primary;
+              }
+
+              @include media-breakpoint-down(md) {
+                font-size: 18px;
+                line-height: 25px;
+                padding: 11.5px 40px;
+                max-width: 257px;
               }
             }
           }
